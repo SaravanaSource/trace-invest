@@ -1,0 +1,17 @@
+universe:
+  stocks:
+    - Manappuram Finance
+    - South Indian Bank
+    - ITC
+    - Tata Motors
+    - CDSL
+    - HDFC Bank
+    - Hindustan Unilever
+    - TCS
+    - Larsen & Toubro
+    - Asian Paints
+
+cadence:
+  prices: weekly
+  fundamentals: quarterly
+

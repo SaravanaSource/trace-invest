@@ -1,0 +1,10 @@
+environment: dev
+
+logging:
+  level: INFO
+  file: trace-invest.log
+
+timezone: Asia/Kolkata
+
+data_dir: data/
+

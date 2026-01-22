@@ -1,0 +1,16 @@
+markets:
+  commodities:
+    enabled: true
+    instruments:
+      - gold
+      - silver
+      - copper
+      - aluminium
+      - uranium
+
+  equities:
+    enabled: false
+
+  forex:
+    enabled: false
+

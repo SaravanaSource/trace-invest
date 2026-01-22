@@ -1,0 +1,13 @@
+data_sources:
+  prices:
+    cadence: weekly
+    source: primary
+
+  fundamentals:
+    cadence: quarterly
+    source: filings
+
+  news:
+    enabled: true
+    governance_focus: true
+
