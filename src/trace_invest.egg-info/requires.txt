@@ -6,6 +6,7 @@ python-dateutil>=2.9.0
 pytz>=2024.1
 loguru>=0.7.2
 yfinance>=0.2.40
+streamlit>=1.31.0
 
 [dev]
 pytest>=8.0.0
