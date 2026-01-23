@@ -47,9 +47,9 @@ def load_cached_fundamentals(snapshot_path: Path) -> dict:
     f = snapshot_path / "fundamentals.json"
     return json.loads(f.read_text()) if f.exists() else {}
 
-def latest_snapshot_path() -> Path:
-    snaps = list_snapshots()
-    return max(snaps) if snaps else None
+def latest_snapshot_path():
+    snapshots = sorted(Path("data/snapshots").iterdir())
+    return snapshots[-1] if snapshots else None
 
 
 rows = []
