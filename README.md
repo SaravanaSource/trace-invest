@@ -7,3 +7,4 @@ not predictions, not trading signals, not noise.
 
 This system is designed to help people think clearly about markets,
 build conviction slowly, and document decisions over time.
+

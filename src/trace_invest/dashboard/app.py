@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 
 import sys
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -17,9 +18,6 @@ from trace_invest.intelligence.conviction import conviction_score
 from trace_invest.outputs.signals import generate_signal
 from trace_invest.outputs.journal import create_journal_entry
 from trace_invest.dashboard.snapshots import list_snapshots, load_snapshot
-from trace_invest.ingestion.fundamentals import fetch_fundamentals
-from trace_invest.processing.fundamentals import build_processed_fundamentals
-
 
 
 # ------------------------------------------------------------------------------
@@ -45,21 +43,28 @@ stocks = config["universe"]["universe"]["stocks"]
 # Compute system outputs (NO UI HERE)
 # ------------------------------------------------------------------------------
 
+def load_cached_fundamentals(snapshot_path: Path) -> dict:
+    f = snapshot_path / "fundamentals.json"
+    return json.loads(f.read_text()) if f.exists() else {}
+
+def latest_snapshot_path() -> Path:
+    snaps = list_snapshots()
+    return max(snaps) if snaps else None
+
+
 rows = []
 signals_by_stock = {}
 journals_by_stock = {}
+
+fsnap_path = latest_snapshot_path()
+cached_fundamentals = load_cached_fundamentals(snap_path) if snap_path else {}
 
 for stock in stocks:
     name = stock["name"]
     symbol = stock["symbol"]
 
-    # 1. Load real fundamentals (read-only)
-    raw_fundamentals = fetch_fundamentals(symbol)
+    processed = cached_fundamentals.get(symbol, {})
 
-    # 2. Build processed metrics (quality + valuation)
-    processed = build_processed_fundamentals(raw_fundamentals)
-
-    # 3. Fraud & governance validation
     validation = run_validation(
         {
             "financials": processed.get("financials", {}),
@@ -67,23 +72,20 @@ for stock in stocks:
         }
     )
 
-    # 4. Intelligence + outputs
     conviction = conviction_score(processed, validation)
     signal = generate_signal(conviction)
     journal = create_journal_entry(name, signal)
 
-    # 5. Store per-stock state for dashboard
     signals_by_stock[name] = signal
     journals_by_stock[name] = journal
 
-    rows.append(
-        {
-            "Stock": name,
-            "Conviction": conviction["conviction_score"],
-            "Zone": signal["zone"],
-            "Risk": conviction["overall_risk"],
-        }
-    )
+    rows.append({
+        "Stock": name,
+        "Conviction": conviction["conviction_score"],
+        "Zone": signal["zone"],
+        "Risk": conviction["overall_risk"],
+    })
+
 
 
 df = pd.DataFrame(rows)
