@@ -24,3 +24,20 @@
 2026-01-23 13:29:35 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ASIANPAINT.NS
 2026-01-23 13:29:36 | INFO | trace_invest.ingestion.prices:write_raw_prices:47 | Raw weekly prices written for ASIANPAINT.NS
 2026-01-23 13:29:36 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-23 14:51:17 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-23 14:51:17 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-23 14:51:17 | INFO | __main__:run_weekly_pipeline:20 | ===== Weekly Trace Invest run started =====
+2026-01-23 14:51:17 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-23 14:51:17 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-23 14:51:18 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-23 14:51:18 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for HDFCBANK.NS
+2026-01-23 14:51:18 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for HDFCBANK.NS. Skipping write.
+2026-01-23 14:51:18 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for TCS.NS
+2026-01-23 14:51:18 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for TCS.NS. Skipping write.
+2026-01-23 14:51:18 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for LT.NS
+2026-01-23 14:51:19 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for LT.NS. Skipping write.
+2026-01-23 14:51:19 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ASIANPAINT.NS
+2026-01-23 14:51:19 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ASIANPAINT.NS. Skipping write.
+2026-01-23 14:51:19 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-23 14:51:19 | INFO | __main__:run_weekly_pipeline:68 | Weekly snapshot written: data\snapshots\weekly_2026-01-23.json
+2026-01-23 14:51:19 | INFO | __main__:run_weekly_pipeline:69 | ===== Weekly Trace Invest run completed =====
