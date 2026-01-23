@@ -1,15 +1,16 @@
 universe:
   stocks:
-    - Manappuram Finance
-    - South Indian Bank
-    - ITC
-    - Tata Motors
-    - CDSL
-    - HDFC Bank
-    - Hindustan Unilever
-    - TCS
-    - Larsen & Toubro
-    - Asian Paints
+    - name: ITC
+      symbol: ITC.NS
+    - name: HDFC Bank
+      symbol: HDFCBANK.NS
+    - name: TCS
+      symbol: TCS.NS
+    - name: Larsen & Toubro
+      symbol: LT.NS
+    - name: Asian Paints
+      symbol: ASIANPAINT.NS
+
 
 cadence:
   prices: weekly

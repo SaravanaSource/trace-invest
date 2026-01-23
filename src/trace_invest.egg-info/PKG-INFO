@@ -10,6 +10,7 @@ Requires-Dist: requests>=2.31.0
 Requires-Dist: python-dateutil>=2.9.0
 Requires-Dist: pytz>=2024.1
 Requires-Dist: loguru>=0.7.2
+Requires-Dist: yfinance>=0.2.40
 Provides-Extra: dev
 Requires-Dist: pytest>=8.0.0; extra == "dev"
 Requires-Dist: black>=24.1.0; extra == "dev"

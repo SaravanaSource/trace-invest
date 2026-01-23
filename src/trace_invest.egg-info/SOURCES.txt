@@ -9,6 +9,7 @@ src/trace_invest.egg-info/top_level.txt
 src/trace_invest/config/__init__.py
 src/trace_invest/config/loader.py
 src/trace_invest/ingestion/__init__.py
+src/trace_invest/ingestion/prices.py
 src/trace_invest/intelligence/__init__.py
 src/trace_invest/outputs/__init__.py
 src/trace_invest/utils/__init__.py

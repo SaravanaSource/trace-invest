@@ -5,6 +5,7 @@ requests>=2.31.0
 python-dateutil>=2.9.0
 pytz>=2024.1
 loguru>=0.7.2
+yfinance>=0.2.40
 
 [dev]
 pytest>=8.0.0
