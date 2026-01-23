@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+pyyaml
+requests
+loguru
+yfinance
+python-dateutil
+pytz
+
