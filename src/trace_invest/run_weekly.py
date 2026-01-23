@@ -5,6 +5,9 @@ from trace_invest.intelligence.conviction import conviction_score
 from trace_invest.outputs.signals import generate_signal
 from trace_invest.outputs.journal import create_journal_entry
 from trace_invest.config.loader import load_config
+from trace_invest.ingestion.fundamentals import (fetch_fundamentals,write_raw_fundamentals,)
+from trace_invest.processing.fundamentals import build_processed_fundamentals
+
 
 from pathlib import Path
 import json
@@ -32,34 +35,30 @@ def run_weekly_pipeline():
 
     for stock in stocks:
         name = stock["name"]
+        symbol = stock["symbol"]
 
-        # Placeholder processed data (will be real in STEP 11)
-        processed = {
-            "quality_metrics": {
-                "roe": 18,
-                "debt_to_equity": 0.3,
-                "revenue_growth_5y": 12,
-                "operating_margin": 18,
-            },
-            "valuation_metrics": {
-                "pe_ratio": 22,
-                "pb_ratio": 2.5,
-                "fcf_yield": 4.5,
-            },
-            "financials": {},
-            "governance": {},
-        }
+        # 1. Fetch + store raw fundamentals (immutable)
+        raw_fundamentals = fetch_fundamentals(symbol)
+        write_raw_fundamentals(symbol, raw_fundamentals)
 
-        validation = run_validation({
-            "financials": {},
-            "governance": {},
-        })
+        # 2. Build processed fundamentals (explainable metrics)
+        processed = build_processed_fundamentals(raw_fundamentals)
 
+        # 3. Run fraud & governance validation
+        validation = run_validation(
+            {
+                "financials": processed.get("financials", {}),
+                "governance": processed.get("governance", {}),
+            }
+        )
+
+        # 4. Intelligence + outputs
         conviction = conviction_score(processed, validation)
         signal = generate_signal(conviction)
         journal = create_journal_entry(name, signal)
 
         snapshot["decisions"].append(journal)
+
 
     # 2. Write snapshot (immutable)
     snapshot_file = SNAPSHOT_DIR / f"weekly_{datetime.utcnow().date()}.json"
