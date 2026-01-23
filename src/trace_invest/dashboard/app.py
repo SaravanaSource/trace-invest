@@ -3,6 +3,14 @@
 import streamlit as st
 import pandas as pd
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+
 from trace_invest.config.loader import load_config
 from trace_invest.validation.runner import run_validation
 from trace_invest.intelligence.conviction import conviction_score
