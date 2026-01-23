@@ -27,12 +27,12 @@ from trace_invest.processing.fundamentals import build_processed_fundamentals
 # ------------------------------------------------------------------------------
 
 st.set_page_config(
-    page_title="Trace Invest Dashboard",
+    page_title="TRACE MARKETS",
     layout="wide",
 )
 
-st.title("Trace Invest — Investing Dashboard")
-st.caption("Calm. Explainable. Long-term.")
+st.title("TRACE MARKETS")
+st.caption("A calm, structured manual for understanding markets")
 
 # ------------------------------------------------------------------------------
 # Load config

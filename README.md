@@ -1,20 +1,9 @@
-# Trace Invest
+# TRACE MARKETS
 
-A professional, fraud-aware, long-term Indian stock investing system.
+TRACE MARKETS is a calm, structured manual for understanding markets.
 
-## Vision
-Trace Invest is a personal investing operating system designed to:
-- Protect capital
-- Enforce discipline
-- Detect governance risk
-- Compound knowledge and wealth over time
+It focuses on fundamentals, governance, risk, and long-term decision-making —
+not predictions, not trading signals, not noise.
 
-## Principles
-- Stock-first, long-term investing
-- Weekly signal cadence
-- Rule-based decisions
-- Human-in-the-loop execution
-- Built to scale into a product
-
-## Status
-🚧 In active development (Phase 1: Foundation)
+This system is designed to help people think clearly about markets,
+build conviction slowly, and document decisions over time.
