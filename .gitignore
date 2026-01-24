@@ -8,10 +8,19 @@ __pycache__/
 # Environment variables
 .env
 
-# Data (keep raw data out of git)
+# Ignore all generated data by default
+data/*
+
+# Allow snapshots (bootstrap + demo only)
+!data/snapshots/
+!data/snapshots/**
+
+# Still ignore other data layers
 data/raw/
 data/processed/
-data/snapshots/
+data/dataprocessed/
+data/dataraw/
+data/datasnapshots/
 
 # OS
 .DS_Store
