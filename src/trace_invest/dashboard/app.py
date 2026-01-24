@@ -74,6 +74,8 @@ def run_app():
 
         processed = cached_fundamentals.get(symbol, {})
 
+        quality = processed.get("quality", {})
+
         validation = run_validation(
             {
                 "financials": processed.get("financials", {}),
@@ -93,9 +95,14 @@ def run_app():
             "Conviction": conviction["conviction_score"],
             "Zone": signal["zone"],
             "Risk": conviction["overall_risk"],
+            "Confidence": quality.get("confidence", "N/A"),
         })
 
     df = pd.DataFrame(rows)
+
+    st.header("Watchlist Overview")
+    st.dataframe(df, use_container_width=True)
+
 
     # --------------------------------------------------------------------------
     # Watchlist Overview
@@ -118,6 +125,16 @@ def run_app():
 
     st.subheader(f"Decision for {selected_stock}")
     st.json(journals_by_stock[selected_stock])
+
+
+    st.subheader("Data Quality")
+
+    symbol = next(s["symbol"] for s in stocks if s["name"] == selected_stock)
+    q = cached_fundamentals.get(symbol, {}).get("quality", {})
+
+    st.metric("Confidence", q.get("confidence", "N/A"))
+    st.json(q)
+
 
     # --------------------------------------------------------------------------
     # Snapshot Viewer
