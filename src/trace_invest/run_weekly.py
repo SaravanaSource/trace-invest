@@ -14,6 +14,10 @@ from trace_invest.ingestion.fundamentals import (
     write_raw_fundamentals,
 )
 from trace_invest.processing.fundamentals import build_processed_fundamentals
+from trace_invest.quality.coverage import coverage_score
+from trace_invest.quality.freshness import freshness_score
+from trace_invest.quality.confidence import confidence_band
+
 
 
 logger = setup_logger()
@@ -72,6 +76,23 @@ def run_weekly_pipeline():
 
         # Processed fundamentals (cached)
         processed = build_processed_fundamentals(raw_fundamentals)
+
+        # Data quality metrics
+
+        coverage = coverage_score(processed.get("financials", {}))
+
+        # pick latest period safely (example)
+        latest_period = processed.get("meta", {}).get("latest_period", "2024-03-31")
+        freshness = freshness_score(latest_period)
+
+        confidence = confidence_band(coverage, freshness)
+
+        processed["quality"] = {
+            "coverage": coverage,
+            "freshness": freshness,
+            "confidence": confidence,
+        }
+
         write_processed_fundamentals(snapshot_dir, symbol, processed)
 
         # Validation

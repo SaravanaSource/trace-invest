@@ -1,0 +1,86 @@
+{
+  "run_date": "2026-01-24",
+  "run_timestamp": "2026-01-24T13:31:22.190073+00:00",
+  "decisions": [
+    {
+      "timestamp": "2026-01-24T13:31:29.487572",
+      "stock": "ITC",
+      "decision_zone": "REDUCE",
+      "conviction_score": 38,
+      "overall_risk": "LOW",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-01-24T13:31:31.112402",
+      "stock": "HDFC Bank",
+      "decision_zone": "REDUCE",
+      "conviction_score": 43,
+      "overall_risk": "LOW",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-01-24T13:31:32.568735",
+      "stock": "TCS",
+      "decision_zone": "REDUCE",
+      "conviction_score": 38,
+      "overall_risk": "LOW",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-01-24T13:31:33.693752",
+      "stock": "Larsen & Toubro",
+      "decision_zone": "EXIT",
+      "conviction_score": 25,
+      "overall_risk": "LOW",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      }
+    },
+    {
+      "timestamp": "2026-01-24T13:31:34.648399",
+      "stock": "Asian Paints",
+      "decision_zone": "EXIT",
+      "conviction_score": 25,
+      "overall_risk": "LOW",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage"
+        ],
+        "valuation": []
+      }
+    }
+  ]
+}

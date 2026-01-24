@@ -16,3 +16,12 @@ st.caption("⚠️ Experimental environment. Not for users.")
 # -------------------------------
 from app import *  # noqa
 
+st.subheader("Data Quality")
+
+
+q = processed.get("quality", {})
+st.metric("Confidence", q.get("confidence", "N/A"))
+st.write("Coverage:", q.get("coverage"))
+st.write("Freshness:", q.get("freshness"))
+
+
