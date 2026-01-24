@@ -1,8 +1,5 @@
 import streamlit as st
 
-# -------------------------------
-# STAGING IDENTITY (VERY IMPORTANT)
-# -------------------------------
 st.set_page_config(
     page_title="TRACE MARKETS — STAGING",
     layout="wide",
@@ -11,17 +8,10 @@ st.set_page_config(
 st.title("TRACE MARKETS — STAGING")
 st.caption("⚠️ Experimental environment. Not for users.")
 
-# -------------------------------
-# LOAD PROD APP LOGIC
-# -------------------------------
-from app import *  # noqa
+# IMPORTANT:
+# Staging must NOT access internal variables like `processed`
+# It only calls the main app runner.
 
-st.subheader("Data Quality")
+from app import run_app
 
-
-q = processed.get("quality", {})
-st.metric("Confidence", q.get("confidence", "N/A"))
-st.write("Coverage:", q.get("coverage"))
-st.write("Freshness:", q.get("freshness"))
-
-
+run_app()
