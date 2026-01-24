@@ -2,15 +2,17 @@
 
 import streamlit as st
 import pandas as pd
-
 import sys
 import json
 from pathlib import Path
 
+# ------------------------------------------------------------------------------
+# Path setup
+# ------------------------------------------------------------------------------
+
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-
 
 from trace_invest.config.loader import load_config
 from trace_invest.validation.runner import run_validation
@@ -21,26 +23,7 @@ from trace_invest.dashboard.snapshots import list_snapshots, load_snapshot
 
 
 # ------------------------------------------------------------------------------
-# Page setup
-# ------------------------------------------------------------------------------
-
-st.set_page_config(
-    page_title="TRACE MARKETS",
-    layout="wide",
-)
-
-st.title("TRACE MARKETS")
-st.caption("A calm, structured manual for understanding markets")
-
-# ------------------------------------------------------------------------------
-# Load config
-# ------------------------------------------------------------------------------
-
-config = load_config()
-stocks = config["universe"]["universe"]["stocks"]
-
-# ------------------------------------------------------------------------------
-# Compute system outputs (NO UI HERE)
+# Helpers (NO UI)
 # ------------------------------------------------------------------------------
 
 def load_cached_fundamentals(snapshot_path: Path) -> dict:
@@ -49,96 +32,106 @@ def load_cached_fundamentals(snapshot_path: Path) -> dict:
 
 def latest_snapshot_path():
     base = Path("data/snapshots")
-
     if not base.exists():
         return None
-
     snapshots = [p for p in base.iterdir() if p.is_dir()]
-    if not snapshots:
-        return None
-
-    return sorted(snapshots)[-1]
+    return sorted(snapshots)[-1] if snapshots else None
 
 
-rows = []
-signals_by_stock = {}
-journals_by_stock = {}
+# ------------------------------------------------------------------------------
+# MAIN APP (CALLABLE)
+# ------------------------------------------------------------------------------
 
-snap_path = latest_snapshot_path()
-cached_fundamentals = load_cached_fundamentals(snap_path) if snap_path else {}
+def run_app():
 
-if snap_path is None:
-    st.warning("No snapshots available yet. Run the weekly pipeline to generate data.")
-    st.stop()
-
-
-for stock in stocks:
-    name = stock["name"]
-    symbol = stock["symbol"]
-
-    processed = cached_fundamentals.get(symbol, {})
-
-    validation = run_validation(
-        {
-            "financials": processed.get("financials", {}),
-            "governance": processed.get("governance", {}),
-        }
+    st.set_page_config(
+        page_title="TRACE MARKETS",
+        layout="wide",
     )
 
-    conviction = conviction_score(processed, validation)
-    signal = generate_signal(conviction)
-    journal = create_journal_entry(name, signal)
+    st.title("TRACE MARKETS")
+    st.caption("A calm, structured manual for understanding markets")
 
-    signals_by_stock[name] = signal
-    journals_by_stock[name] = journal
+    # Load config
+    config = load_config()
+    stocks = config["universe"]["universe"]["stocks"]
 
-    rows.append({
-        "Stock": name,
-        "Conviction": conviction["conviction_score"],
-        "Zone": signal["zone"],
-        "Risk": conviction["overall_risk"],
-    })
+    # Load snapshot data
+    snap_path = latest_snapshot_path()
+    if snap_path is None:
+        st.warning("No snapshots available yet. Run the weekly pipeline to generate data.")
+        st.stop()
 
+    cached_fundamentals = load_cached_fundamentals(snap_path)
 
+    rows = []
+    signals_by_stock = {}
+    journals_by_stock = {}
 
-df = pd.DataFrame(rows)
+    for stock in stocks:
+        name = stock["name"]
+        symbol = stock["symbol"]
 
-# ------------------------------------------------------------------------------
-# Watchlist Overview
-# ------------------------------------------------------------------------------
+        processed = cached_fundamentals.get(symbol, {})
 
-st.header("Watchlist Overview")
-st.dataframe(df, use_container_width=True)
+        validation = run_validation(
+            {
+                "financials": processed.get("financials", {}),
+                "governance": processed.get("governance", {}),
+            }
+        )
 
-# ------------------------------------------------------------------------------
-# Decision Journal
-# ------------------------------------------------------------------------------
+        conviction = conviction_score(processed, validation)
+        signal = generate_signal(conviction)
+        journal = create_journal_entry(name, signal)
 
-st.header("Decision Journal")
+        signals_by_stock[name] = signal
+        journals_by_stock[name] = journal
 
-selected_stock = st.selectbox(
-    "Select a stock",
-    df["Stock"].tolist(),
-    key="current_stock_selector",
-)
+        rows.append({
+            "Stock": name,
+            "Conviction": conviction["conviction_score"],
+            "Zone": signal["zone"],
+            "Risk": conviction["overall_risk"],
+        })
 
-journal = journals_by_stock[selected_stock]
+    df = pd.DataFrame(rows)
 
-st.subheader(f"Decision for {selected_stock}")
-st.json(journal)
+    # --------------------------------------------------------------------------
+    # Watchlist Overview
+    # --------------------------------------------------------------------------
 
-# ------------------------------------------------------------------------------
-# Snapshot Viewer
-# ------------------------------------------------------------------------------
+    st.header("Watchlist Overview")
+    st.dataframe(df, use_container_width=True)
 
-st.divider()
-st.header("Snapshot Viewer")
+    # --------------------------------------------------------------------------
+    # Decision Journal
+    # --------------------------------------------------------------------------
 
-snapshots = list_snapshots()
+    st.header("Decision Journal")
 
-if not snapshots:
-    st.info("No snapshots found yet. Run the weekly pipeline first.")
-else:
+    selected_stock = st.selectbox(
+        "Select a stock",
+        df["Stock"].tolist(),
+        key="current_stock_selector",
+    )
+
+    st.subheader(f"Decision for {selected_stock}")
+    st.json(journals_by_stock[selected_stock])
+
+    # --------------------------------------------------------------------------
+    # Snapshot Viewer
+    # --------------------------------------------------------------------------
+
+    st.divider()
+    st.header("Snapshot Viewer")
+
+    snapshots = list_snapshots()
+
+    if not snapshots:
+        st.info("No snapshots found yet. Run the weekly pipeline first.")
+        return
+
     snapshot_names = [p.name for p in snapshots]
 
     selected_snapshot_name = st.selectbox(
@@ -169,3 +162,10 @@ else:
 
     decision = next(d for d in decisions if d["stock"] == selected_snapshot_stock)
     st.json(decision)
+
+
+# ------------------------------------------------------------------------------
+# PROD ENTRYPOINT
+# ------------------------------------------------------------------------------
+
+run_app()
