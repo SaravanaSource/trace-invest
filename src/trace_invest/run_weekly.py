@@ -79,12 +79,8 @@ def run_weekly_pipeline():
 
         # Data quality metrics
 
-        coverage = coverage_score(processed.get("financials", {}))
-
-        # pick latest period safely (example)
-        latest_period = processed.get("meta", {}).get("latest_period", "2024-03-31")
-        freshness = freshness_score(latest_period)
-
+        coverage = coverage_score(processed)
+        freshness = freshness_score(coverage.get("years", []))
         confidence = confidence_band(coverage, freshness)
 
         processed["quality"] = {
