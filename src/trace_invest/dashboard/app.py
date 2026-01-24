@@ -48,16 +48,29 @@ def load_cached_fundamentals(snapshot_path: Path) -> dict:
     return json.loads(f.read_text()) if f.exists() else {}
 
 def latest_snapshot_path():
-    snapshots = sorted(Path("data/snapshots").iterdir())
-    return snapshots[-1] if snapshots else None
+    base = Path("data/snapshots")
+
+    if not base.exists():
+        return None
+
+    snapshots = [p for p in base.iterdir() if p.is_dir()]
+    if not snapshots:
+        return None
+
+    return sorted(snapshots)[-1]
 
 
 rows = []
 signals_by_stock = {}
 journals_by_stock = {}
 
-fsnap_path = latest_snapshot_path()
+snap_path = latest_snapshot_path()
 cached_fundamentals = load_cached_fundamentals(snap_path) if snap_path else {}
+
+if snap_path is None:
+    st.warning("No snapshots available yet. Run the weekly pipeline to generate data.")
+    st.stop()
+
 
 for stock in stocks:
     name = stock["name"]
