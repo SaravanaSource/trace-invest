@@ -30,7 +30,9 @@ def build_processed_fundamentals(raw: Dict) -> Dict:
     return {
         "quality_metrics": compute_quality_metrics(raw),
         "valuation_metrics": compute_valuation_metrics(raw),
-        "financials": {},    # extend later
+        "financials": raw.get("financials", []),
+        "balance_sheet": raw.get("balance_sheet", []),
+        "cashflow": raw.get("cashflow", []),
         "governance": {},    # extend later
     }
 
