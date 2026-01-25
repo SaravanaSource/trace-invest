@@ -146,7 +146,7 @@ def run_weekly_pipeline():
         conviction = conviction_score(processed, validation)
         signal = generate_signal(conviction)
         journal = create_journal_entry(name, signal)
-
+        journal["validation"] = validation
         snapshot["decisions"].append(journal)
 
     # ------------------------------------------------------------------
