@@ -7,7 +7,27 @@ def freshness_score(years: list[str]) -> dict:
             "freshness": "UNKNOWN",
         }
 
-    latest_year = max(int(y) for y in years)
+    parsed_years = []
+
+    for y in years:
+        try:
+            # Handles "2025-03-31 00:00:00"
+            dt = datetime.fromisoformat(str(y))
+            parsed_years.append(dt.year)
+        except Exception:
+            try:
+                # Handles "2025"
+                parsed_years.append(int(y))
+            except Exception:
+                continue
+
+    if not parsed_years:
+        return {
+            "age_days": None,
+            "freshness": "UNKNOWN",
+        }
+
+    latest_year = max(parsed_years)
     latest_date = datetime(latest_year, 3, 31, tzinfo=timezone.utc)
 
     age_days = (datetime.now(timezone.utc) - latest_date).days

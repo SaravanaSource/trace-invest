@@ -98,28 +98,22 @@ def run_weekly_pipeline():
 
         # Raw fundamentals (immutable)
         raw_fundamentals = fetch_fundamentals(symbol)
+
+        if symbol == stocks[0]["symbol"]:
+            import pprint
+            pprint.pprint(raw_fundamentals.keys())
+            pprint.pprint(raw_fundamentals.get("income_statement", {}).keys())
+
+
         write_raw_fundamentals(symbol, raw_fundamentals)
 
         # Processed fundamentals (cached)
         processed = build_processed_fundamentals(raw_fundamentals)
 
 
-        # DEBUG: inspect processed structure ONCE
-        if symbol == stocks[0]["symbol"]:
-            import pprint
-            pprint.pprint(
-                {
-                    "keys": list(processed.keys()),
-                    "income_statement_sample": processed.get("income_statement", [])[:1],
-                    "balance_sheet_sample": processed.get("balance_sheet", [])[:1],
-                    "cashflow_sample": processed.get("cashflow", [])[:1],
-                }
-            )
-
-
         # Data quality metrics
 
-        coverage = coverage_score(raw_fundamentals)
+        coverage = coverage_score(processed)
         freshness = freshness_score(coverage.get("years", []))
         confidence = confidence_band(coverage, freshness)
 

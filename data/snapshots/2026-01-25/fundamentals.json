@@ -1500,16 +1500,23 @@
     "governance": {},
     "quality": {
       "coverage": {
-        "available_years": 0,
+        "available_years": 5,
         "expected_years": 6,
-        "coverage_ratio": 0.0,
-        "years": []
+        "coverage_ratio": 0.83,
+        "years": [
+          "2025-03-31 00:00:00",
+          "2024-03-31 00:00:00",
+          "2023-03-31 00:00:00",
+          "2022-03-31 00:00:00",
+          "2021-03-31 00:00:00"
+        ]
       },
       "freshness": {
-        "age_days": null,
-        "freshness": "UNKNOWN"
+        "latest_year": 2025,
+        "age_days": 300,
+        "freshness": "STALE"
       },
-      "confidence": "LOW"
+      "confidence": "MEDIUM"
     }
   },
   "HDFCBANK.NS": {
@@ -2861,16 +2868,23 @@
     "governance": {},
     "quality": {
       "coverage": {
-        "available_years": 0,
+        "available_years": 5,
         "expected_years": 6,
-        "coverage_ratio": 0.0,
-        "years": []
+        "coverage_ratio": 0.83,
+        "years": [
+          "2025-03-31 00:00:00",
+          "2024-03-31 00:00:00",
+          "2023-03-31 00:00:00",
+          "2022-03-31 00:00:00",
+          "2021-03-31 00:00:00"
+        ]
       },
       "freshness": {
-        "age_days": null,
-        "freshness": "UNKNOWN"
+        "latest_year": 2025,
+        "age_days": 300,
+        "freshness": "STALE"
       },
-      "confidence": "LOW"
+      "confidence": "MEDIUM"
     }
   },
   "TCS.NS": {
@@ -4223,16 +4237,22 @@
     "governance": {},
     "quality": {
       "coverage": {
-        "available_years": 0,
+        "available_years": 4,
         "expected_years": 6,
-        "coverage_ratio": 0.0,
-        "years": []
+        "coverage_ratio": 0.67,
+        "years": [
+          "2025-03-31 00:00:00",
+          "2024-03-31 00:00:00",
+          "2023-03-31 00:00:00",
+          "2022-03-31 00:00:00"
+        ]
       },
       "freshness": {
-        "age_days": null,
-        "freshness": "UNKNOWN"
+        "latest_year": 2025,
+        "age_days": 300,
+        "freshness": "STALE"
       },
-      "confidence": "LOW"
+      "confidence": "MEDIUM"
     }
   },
   "LT.NS": {
@@ -5792,16 +5812,23 @@
     "governance": {},
     "quality": {
       "coverage": {
-        "available_years": 0,
+        "available_years": 5,
         "expected_years": 6,
-        "coverage_ratio": 0.0,
-        "years": []
+        "coverage_ratio": 0.83,
+        "years": [
+          "2025-03-31 00:00:00",
+          "2024-03-31 00:00:00",
+          "2023-03-31 00:00:00",
+          "2022-03-31 00:00:00",
+          "2021-03-31 00:00:00"
+        ]
       },
       "freshness": {
-        "age_days": null,
-        "freshness": "UNKNOWN"
+        "latest_year": 2025,
+        "age_days": 300,
+        "freshness": "STALE"
       },
-      "confidence": "LOW"
+      "confidence": "MEDIUM"
     }
   },
   "ASIANPAINT.NS": {
@@ -7417,16 +7444,23 @@
     "governance": {},
     "quality": {
       "coverage": {
-        "available_years": 0,
+        "available_years": 5,
         "expected_years": 6,
-        "coverage_ratio": 0.0,
-        "years": []
+        "coverage_ratio": 0.83,
+        "years": [
+          "2025-03-31 00:00:00",
+          "2024-03-31 00:00:00",
+          "2023-03-31 00:00:00",
+          "2022-03-31 00:00:00",
+          "2021-03-31 00:00:00"
+        ]
       },
       "freshness": {
-        "age_days": null,
-        "freshness": "UNKNOWN"
+        "latest_year": 2025,
+        "age_days": 300,
+        "freshness": "STALE"
       },
-      "confidence": "LOW"
+      "confidence": "MEDIUM"
     }
   }
 }

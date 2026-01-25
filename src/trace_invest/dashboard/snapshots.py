@@ -8,9 +8,23 @@ SNAPSHOT_DIR = Path("data/snapshots")
 def list_snapshots() -> List[Path]:
     if not SNAPSHOT_DIR.exists():
         return []
-    return sorted(SNAPSHOT_DIR.glob("weekly_*.json"), reverse=True)
+
+    dated_dirs = [
+        d for d in SNAPSHOT_DIR.iterdir()
+        if d.is_dir()
+    ]
+
+    if not dated_dirs:
+        return []
+
+    latest_dir = sorted(dated_dirs, reverse=True)[0]
+    snapshot_file = latest_dir / "snapshot.json"
+
+    if snapshot_file.exists():
+        return [snapshot_file]
+
+    return []
 
 
 def load_snapshot(path: Path) -> Dict:
     return json.loads(path.read_text())
-

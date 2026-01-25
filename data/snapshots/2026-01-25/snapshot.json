@@ -1,9 +1,9 @@
 {
   "run_date": "2026-01-25",
-  "run_timestamp": "2026-01-25T14:14:52.261089+00:00",
+  "run_timestamp": "2026-01-25T16:03:25.577185+00:00",
   "decisions": [
     {
-      "timestamp": "2026-01-25T14:14:55.195867",
+      "timestamp": "2026-01-25T16:03:29.121307",
       "stock": "ITC",
       "decision_zone": "REDUCE",
       "conviction_score": 38,
@@ -38,7 +38,7 @@
       }
     },
     {
-      "timestamp": "2026-01-25T14:14:56.031786",
+      "timestamp": "2026-01-25T16:03:30.347585",
       "stock": "HDFC Bank",
       "decision_zone": "REDUCE",
       "conviction_score": 43,
@@ -74,7 +74,7 @@
       }
     },
     {
-      "timestamp": "2026-01-25T14:14:56.826412",
+      "timestamp": "2026-01-25T16:03:34.868879",
       "stock": "TCS",
       "decision_zone": "REDUCE",
       "conviction_score": 38,
@@ -109,7 +109,7 @@
       }
     },
     {
-      "timestamp": "2026-01-25T14:14:57.805824",
+      "timestamp": "2026-01-25T16:03:36.082466",
       "stock": "Larsen & Toubro",
       "decision_zone": "EXIT",
       "conviction_score": 25,
@@ -141,7 +141,7 @@
       }
     },
     {
-      "timestamp": "2026-01-25T14:14:58.758240",
+      "timestamp": "2026-01-25T16:03:37.327420",
       "stock": "Asian Paints",
       "decision_zone": "EXIT",
       "conviction_score": 25,

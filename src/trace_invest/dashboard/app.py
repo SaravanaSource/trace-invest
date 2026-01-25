@@ -95,14 +95,10 @@ def run_app():
             "Conviction": conviction["conviction_score"],
             "Zone": signal["zone"],
             "Risk": conviction["overall_risk"],
-            "Confidence": quality.get("confidence", "N/A"),
+            "Confidence": quality.get("confidence", "N/A"), 
         })
 
     df = pd.DataFrame(rows)
-
-    st.header("Watchlist Overview")
-    st.dataframe(df, use_container_width=True)
-
 
     # --------------------------------------------------------------------------
     # Watchlist Overview

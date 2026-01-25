@@ -1,4 +1,4 @@
-from typing import Dict, List, Any
+from typing import Dict, List
 
 
 def check_basic_fraud_flags(financials: Dict) -> Dict:
@@ -24,26 +24,17 @@ def check_basic_fraud_flags(financials: Dict) -> Dict:
     recv_growth = financials.get("receivables_growth_pct")
     rpt_pct = financials.get("related_party_txn_pct")
 
-    # Profit vs Cashflow divergence
     if cfo is not None and profit is not None:
         if cfo < 0 and profit > 0:
-            flags.append(
-                "Net profit positive but operating cash flow negative"
-            )
+            flags.append("Net profit positive but operating cash flow negative")
 
-    # Receivables spike
     if recv_growth is not None:
         if recv_growth > 30:
-            flags.append(
-                "Receivables growing unusually fast"
-            )
+            flags.append("Receivables growing unusually fast")
 
-    # Related party exposure
     if rpt_pct is not None:
         if rpt_pct > 10:
-            flags.append(
-                "High related party transactions"
-            )
+            flags.append("High related party transactions")
 
     return {
         "layer": "fraud",
