@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import time
 from datetime import datetime, timezone
 
 from trace_invest.utils.logger import setup_logger
@@ -38,9 +39,18 @@ SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
 
 def write_processed_fundamentals(snapshot_dir: Path, symbol: str, processed: dict):
     path = snapshot_dir / "fundamentals.json"
-    data = json.loads(path.read_text()) if path.exists() else {}
+
+    if path.exists():
+        try:
+            data = json.loads(path.read_text())
+        except Exception:
+            data = {}
+    else:
+        data = {}
+
     data[symbol] = processed
     path.write_text(json.dumps(data, indent=2))
+
 
 
 def build_validation_financials(processed: dict) -> dict:
@@ -126,8 +136,11 @@ def run_weekly_pipeline():
     # -------------------------------------------------------
 
     config = load_config()
-    # stocks = config["universe"]["universe"]["stocks"]
-    stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+    stocks = config["universe"]["universe"]["stocks"]
+    # stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+
+    logger.info(f"Universe size: {len(stocks)}")
+
     
 
     # -------------------------------------------------------
@@ -184,6 +197,9 @@ def run_weekly_pipeline():
             journal["validation"] = validation
 
             snapshot["decisions"].append(journal)
+            
+            time.sleep(1)
+
 
         except Exception:
             logger.exception(f"FAILED processing {symbol}")
