@@ -11,6 +11,9 @@ universe:
     - name: Asian Paints
       symbol: ASIANPAINT.NS
 
+  stocks_file: data/universe/nifty500.json
+
+
 
 cadence:
   prices: weekly

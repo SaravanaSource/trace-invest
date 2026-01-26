@@ -1,0 +1,13 @@
+{
+  "total_stocks": 500,
+  "by_decision_zone": {
+    "EXIT": 451,
+    "REDUCE": 41,
+    "HOLD": 8
+  },
+  "by_overall_risk": {
+    "LOW": 6,
+    "MEDIUM": 488,
+    "HIGH": 6
+  }
+}

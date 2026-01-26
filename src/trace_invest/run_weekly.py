@@ -17,14 +17,24 @@ from trace_invest.processing.fundamentals import build_processed_fundamentals
 from trace_invest.quality.coverage import coverage_score
 from trace_invest.quality.freshness import freshness_score
 from trace_invest.quality.confidence import confidence_band
+from trace_invest.quality.raw_profiler import profile_raw_fundamentals
+from trace_invest.quality.raw_schema import inspect_raw_schema
+from trace_invest.quality.raw_field_inventory import build_raw_field_inventory
 
 
+# -----------------------------------------------------------
+# Setup
+# -----------------------------------------------------------
 
 logger = setup_logger()
 
 SNAPSHOT_DIR = Path("data/snapshots")
 SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
 
+
+# -----------------------------------------------------------
+# Helpers
+# -----------------------------------------------------------
 
 def write_processed_fundamentals(snapshot_dir: Path, symbol: str, processed: dict):
     path = snapshot_dir / "fundamentals.json"
@@ -33,18 +43,77 @@ def write_processed_fundamentals(snapshot_dir: Path, symbol: str, processed: dic
     path.write_text(json.dumps(data, indent=2))
 
 
+def build_validation_financials(processed: dict) -> dict:
+    summary = {}
+
+    cashflow = processed.get("cashflow") or []
+    if cashflow:
+        latest = cashflow[0]
+        summary["cash_flow_from_ops"] = next(
+            (
+                v
+                for k, v in latest.items()
+                if "Operating Cash Flow" in k
+                or "Total Cash From Operating Activities" in k
+            ),
+            0,
+        )
+
+    financials = processed.get("financials") or []
+    if financials:
+        latest = financials[0]
+        summary["net_profit"] = next(
+            (
+                v
+                for k, v in latest.items()
+                if "Net Income" in k
+                or "Net Profit" in k
+            ),
+            0,
+        )
+
+    return summary
+
+
+def generate_market_summary(decisions: list) -> dict:
+    summary = {
+        "total_stocks": len(decisions),
+        "by_decision_zone": {},
+        "by_overall_risk": {},
+    }
+
+    for d in decisions:
+        zone = d.get("decision_zone")
+        risk = d.get("overall_risk")
+
+        summary["by_decision_zone"][zone] = (
+            summary["by_decision_zone"].get(zone, 0) + 1
+        )
+
+        summary["by_overall_risk"][risk] = (
+            summary["by_overall_risk"].get(risk, 0) + 1
+        )
+
+    return summary
+
+
+# -----------------------------------------------------------
+# Main Pipeline
+# -----------------------------------------------------------
+
 def run_weekly_pipeline():
     logger.info("===== Weekly TRACE MARKETS run started =====")
 
-    # ------------------------------------------------------------------
-    # 1. Snapshot setup (MUST be first)
-    # ------------------------------------------------------------------
-    run_date = datetime.now(timezone.utc).date().isoformat()
+    # -------------------------------------------------------
+    # Snapshot setup
+    # -------------------------------------------------------
 
+    run_date = datetime.now(timezone.utc).date().isoformat()
     snapshot_dir = SNAPSHOT_DIR / run_date
     snapshot_dir.mkdir(parents=True, exist_ok=True)
 
     snapshot_file = snapshot_dir / "snapshot.json"
+    market_summary_file = snapshot_dir / "market_summary.json"
 
     snapshot = {
         "run_date": run_date,
@@ -52,105 +121,95 @@ def run_weekly_pipeline():
         "decisions": [],
     }
 
-    # ------------------------------------------------------------------
-    # 2. Load config + universe
-    # ------------------------------------------------------------------
-    config = load_config()
-    stocks = config["universe"]["universe"]["stocks"]
+    # -------------------------------------------------------
+    # Load config + universe
+    # -------------------------------------------------------
 
-    # ------------------------------------------------------------------
-    # 3. Ingest prices (safe to re-run)
-    # ------------------------------------------------------------------
+    config = load_config()
+    # stocks = config["universe"]["universe"]["stocks"]
+    stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+    
+
+    # -------------------------------------------------------
+    # Weekly price ingestion
+    # -------------------------------------------------------
+
     run_weekly_price_ingestion()
 
-    # ------------------------------------------------------------------
-    # 4. Per-stock processing (loop)
-    # ------------------------------------------------------------------
-    
-    def build_validation_financials(processed: dict) -> dict:
-        """ Extract scalar financials needed for fraud checks."""
-        summary = {}
+    # -------------------------------------------------------
+    # Per-stock processing
+    # -------------------------------------------------------
 
-        # Example extraction from cashflow statement
-        cashflow = processed.get("cashflow", [])
-        if cashflow:
-            latest = cashflow[0]  # most recent row
-            summary["cash_flow_from_ops"] = next(
-                (v for k, v in latest.items() if "Operating Cash Flow" in k or "Total Cash From Operating Activities" in k),
-                0,
-            )
-
-        # Example extraction from income statement
-        financials = processed.get("financials", [])
-        if financials:
-            latest = financials[0]
-            summary["net_profit"] = next(
-                (v for k, v in latest.items() if "Net Income" in k or "Net Profit" in k),
-                0,
-            )
-
-        return summary
-
-    
     for stock in stocks:
         name = stock["name"]
         symbol = stock["symbol"]
 
-        # Raw fundamentals (immutable)
-        raw_fundamentals = fetch_fundamentals(symbol)
+        try:
+            logger.info(f"Processing {symbol}")
 
-        if symbol == stocks[0]["symbol"]:
-            import pprint
-            pprint.pprint(raw_fundamentals.keys())
-            pprint.pprint(raw_fundamentals.get("income_statement", {}).keys())
+            # Raw fundamentals
+            raw_fundamentals = fetch_fundamentals(symbol)
+            write_raw_fundamentals(symbol, raw_fundamentals)
 
+            # Processed fundamentals
+            processed = build_processed_fundamentals(raw_fundamentals)
 
-        write_raw_fundamentals(symbol, raw_fundamentals)
+            processed["raw_profile"] = profile_raw_fundamentals(raw_fundamentals)
+            processed["raw_schema"] = inspect_raw_schema(raw_fundamentals)
+            processed["raw_field_inventory"] = build_raw_field_inventory(
+                raw_fundamentals
+            )
 
-        # Processed fundamentals (cached)
-        processed = build_processed_fundamentals(raw_fundamentals)
+            # Quality layer
+            coverage = coverage_score(processed)
+            freshness = freshness_score(coverage.get("years", []))
+            confidence = confidence_band(coverage, freshness)
 
-
-        # Data quality metrics
-
-        coverage = coverage_score(processed)
-        freshness = freshness_score(coverage.get("years", []))
-        confidence = confidence_band(coverage, freshness)
-
-        processed["quality"] = {
-            "coverage": coverage,
-            "freshness": freshness,
-            "confidence": confidence,
-        }
-
-        write_processed_fundamentals(snapshot_dir, symbol, processed)
-
-        # Validation
-        validation_financials = build_validation_financials(processed)
-
-        validation = run_validation(
-            {
-                "financials": validation_financials,
-                "governance": processed.get("governance", {}),
+            processed["quality"] = {
+                "coverage": coverage,
+                "freshness": freshness,
+                "confidence": confidence,
             }
-        )
 
+            write_processed_fundamentals(snapshot_dir, symbol, processed)
 
-        # Intelligence + outputs
-        conviction = conviction_score(processed, validation)
-        signal = generate_signal(conviction)
-        journal = create_journal_entry(name, signal)
-        journal["validation"] = validation
-        snapshot["decisions"].append(journal)
+            # Validation
+            validation = run_validation(processed)
 
-    # ------------------------------------------------------------------
-    # 5. Write snapshot (immutable, once)
-    # ------------------------------------------------------------------
+            # Intelligence
+            conviction = conviction_score(processed, validation)
+            signal = generate_signal(conviction)
+
+            journal = create_journal_entry(name, signal)
+            journal["validation"] = validation
+
+            snapshot["decisions"].append(journal)
+
+        except Exception:
+            logger.exception(f"FAILED processing {symbol}")
+            continue
+
+    # -------------------------------------------------------
+    # Market Summary
+    # -------------------------------------------------------
+
+    market_summary = generate_market_summary(snapshot["decisions"])
+    market_summary_file.write_text(json.dumps(market_summary, indent=2))
+
+    # -------------------------------------------------------
+    # Write snapshot
+    # -------------------------------------------------------
+
     snapshot_file.write_text(json.dumps(snapshot, indent=2))
 
     logger.info(f"Weekly snapshot written: {snapshot_file}")
+    logger.info(f"Market summary written: {market_summary_file}")
     logger.info("===== Weekly TRACE MARKETS run completed =====")
 
+
+# -----------------------------------------------------------
+# Entrypoint
+# -----------------------------------------------------------
 
 if __name__ == "__main__":
     run_weekly_pipeline()
