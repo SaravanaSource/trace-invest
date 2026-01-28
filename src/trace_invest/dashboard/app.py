@@ -54,7 +54,9 @@ def run_app():
 
     # Load config
     config = load_config()
-    stocks = config["universe"]["universe"]["stocks"]
+    # stocks = config["universe"]["universe"]["stocks"]
+    stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+
 
     # Load snapshot data
     snap_path = latest_snapshot_path()
