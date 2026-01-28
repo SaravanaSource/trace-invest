@@ -1,0 +1,12 @@
+{
+  "total_stocks": 47,
+  "by_decision_zone": {
+    "EXIT": 44,
+    "REDUCE": 3
+  },
+  "by_overall_risk": {
+    "MEDIUM": 19,
+    "HIGH": 27,
+    "LOW": 1
+  }
+}

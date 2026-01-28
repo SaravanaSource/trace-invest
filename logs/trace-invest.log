@@ -2980,3 +2980,746 @@ NameError: name 'governance_summary' is not defined
 2026-01-26 21:43:34 | INFO | __main__:run_weekly_pipeline:221 | Weekly snapshot written: data\snapshots\2026-01-26\snapshot.json
 2026-01-26 21:43:34 | INFO | __main__:run_weekly_pipeline:222 | Market summary written: data\snapshots\2026-01-26\market_summary.json
 2026-01-26 21:43:34 | INFO | __main__:run_weekly_pipeline:223 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-27 10:05:17 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:05:17 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:05:17 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:05:17 | INFO | __main__:run_weekly_pipeline:115 | ===== Weekly TRACE MARKETS run started =====
+2026-01-27 10:05:17 | INFO | __main__:run_weekly_pipeline:142 | Universe size: 1
+2026-01-27 10:05:17 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-27 10:05:17 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-27 10:05:22 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-27 10:05:22 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-27 10:05:22 | INFO | __main__:run_weekly_pipeline:161 | Processing ITC.NS
+2026-01-27 10:05:22 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-27 10:05:23 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-27 10:05:23 | ERROR | __main__:run_weekly_pipeline:205 | FAILED processing ITC.NS
+Traceback (most recent call last):
+
+  File "F:\Projects\Trace_Finance\trace-invest\src\trace_invest\run_weekly.py", line 231, in <module>
+    run_weekly_pipeline()
+    └ <function run_weekly_pipeline at 0x000001D3C2FB2AC0>
+
+> File "F:\Projects\Trace_Finance\trace-invest\src\trace_invest\run_weekly.py", line 190, in run_weekly_pipeline
+    validation = run_validation(processed)
+                 │              └ {'quality_metrics': {'roe': 27.811000000000003, 'debt_to_equity': 0.00507, 'operating_margin': 32.099, 'revenue_growth_5y': -...
+                 └ <function run_validation at 0x000001D3C2F73560>
+
+  File "F:\Projects\Trace_Finance\trace-invest\src\trace_invest\validation\runner.py", line 51, in run_validation
+    "governance": governance_summary,
+
+NameError: name 'governance_summary' is not defined
+2026-01-27 10:05:23 | INFO | __main__:run_weekly_pipeline:221 | Weekly snapshot written: data\snapshots\2026-01-27\snapshot.json
+2026-01-27 10:05:23 | INFO | __main__:run_weekly_pipeline:222 | Market summary written: data\snapshots\2026-01-27\market_summary.json
+2026-01-27 10:05:23 | INFO | __main__:run_weekly_pipeline:223 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-27 10:14:25 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:14:25 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:14:25 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:14:25 | INFO | __main__:run_weekly_pipeline:115 | ===== Weekly TRACE MARKETS run started =====
+2026-01-27 10:14:25 | INFO | __main__:run_weekly_pipeline:142 | Universe size: 1
+2026-01-27 10:14:25 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-27 10:14:25 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-27 10:14:25 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-27 10:14:25 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-27 10:14:25 | INFO | __main__:run_weekly_pipeline:161 | Processing ITC.NS
+2026-01-27 10:14:25 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-27 10:14:26 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-27 10:14:27 | INFO | __main__:run_weekly_pipeline:221 | Weekly snapshot written: data\snapshots\2026-01-27\snapshot.json
+2026-01-27 10:14:27 | INFO | __main__:run_weekly_pipeline:222 | Market summary written: data\snapshots\2026-01-27\market_summary.json
+2026-01-27 10:14:27 | INFO | __main__:run_weekly_pipeline:223 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-27 10:21:25 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:21:25 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:21:25 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:21:25 | INFO | __main__:run_weekly_pipeline:117 | ===== Weekly TRACE MARKETS run started =====
+2026-01-27 10:21:25 | INFO | __main__:run_weekly_pipeline:144 | Universe size: 1
+2026-01-27 10:21:25 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-27 10:21:25 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-27 10:21:26 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-27 10:21:26 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-27 10:21:26 | INFO | __main__:run_weekly_pipeline:163 | Processing ITC.NS
+2026-01-27 10:21:26 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-27 10:21:27 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-27 10:21:28 | INFO | __main__:run_weekly_pipeline:232 | Weekly snapshot written: data\snapshots\2026-01-27\snapshot.json
+2026-01-27 10:21:28 | INFO | __main__:run_weekly_pipeline:233 | Market summary written: data\snapshots\2026-01-27\market_summary.json
+2026-01-27 10:21:28 | INFO | __main__:run_weekly_pipeline:234 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-27 10:29:26 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:29:26 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:29:26 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-27 10:29:26 | INFO | __main__:run_weekly_pipeline:117 | ===== Weekly TRACE MARKETS run started =====
+2026-01-27 10:29:26 | INFO | __main__:run_weekly_pipeline:144 | Universe size: 1
+2026-01-27 10:29:26 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-27 10:29:26 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-27 10:29:28 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-27 10:29:28 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-27 10:29:28 | INFO | __main__:run_weekly_pipeline:163 | Processing ITC.NS
+2026-01-27 10:29:28 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-27 10:29:29 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-27 10:29:30 | INFO | __main__:run_weekly_pipeline:232 | Weekly snapshot written: data\snapshots\2026-01-27\snapshot.json
+2026-01-27 10:29:30 | INFO | __main__:run_weekly_pipeline:233 | Market summary written: data\snapshots\2026-01-27\market_summary.json
+2026-01-27 10:29:30 | INFO | __main__:run_weekly_pipeline:234 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 09:59:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 09:59:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 09:59:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 09:59:59 | INFO | __main__:run_weekly_pipeline:117 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 09:59:59 | INFO | __main__:run_weekly_pipeline:144 | Universe size: 1
+2026-01-28 09:59:59 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 09:59:59 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 10:00:04 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 10:00:04 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 10:00:04 | INFO | __main__:run_weekly_pipeline:163 | Processing ITC.NS
+2026-01-28 10:00:04 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 10:00:05 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 10:00:06 | INFO | __main__:run_weekly_pipeline:232 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 10:00:06 | INFO | __main__:run_weekly_pipeline:233 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 10:00:06 | INFO | __main__:run_weekly_pipeline:234 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 10:06:03 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:06:03 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:06:04 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:06:04 | INFO | __main__:run_weekly_pipeline:117 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 10:06:04 | INFO | __main__:run_weekly_pipeline:144 | Universe size: 1
+2026-01-28 10:06:04 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 10:06:04 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 10:06:05 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 10:06:05 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 10:06:05 | INFO | __main__:run_weekly_pipeline:163 | Processing ITC.NS
+2026-01-28 10:06:05 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 10:06:06 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 10:06:07 | INFO | __main__:run_weekly_pipeline:232 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 10:06:07 | INFO | __main__:run_weekly_pipeline:233 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 10:06:07 | INFO | __main__:run_weekly_pipeline:234 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 10:08:06 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:08:06 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:08:06 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:08:06 | INFO | __main__:run_weekly_pipeline:119 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 10:08:06 | INFO | __main__:run_weekly_pipeline:146 | Universe size: 1
+2026-01-28 10:08:06 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 10:08:06 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 10:08:07 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 10:08:07 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 10:08:07 | INFO | __main__:run_weekly_pipeline:165 | Processing ITC.NS
+2026-01-28 10:08:07 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 10:08:08 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 10:08:09 | INFO | __main__:run_weekly_pipeline:250 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 10:08:09 | INFO | __main__:run_weekly_pipeline:251 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 10:08:09 | INFO | __main__:run_weekly_pipeline:252 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 10:11:36 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:11:36 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:11:36 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:11:36 | INFO | __main__:run_weekly_pipeline:119 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 10:11:36 | INFO | __main__:run_weekly_pipeline:146 | Universe size: 1
+2026-01-28 10:11:36 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 10:11:36 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 10:11:38 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 10:11:38 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 10:11:38 | INFO | __main__:run_weekly_pipeline:165 | Processing ITC.NS
+2026-01-28 10:11:38 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 10:11:39 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 10:11:40 | INFO | __main__:run_weekly_pipeline:250 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 10:11:40 | INFO | __main__:run_weekly_pipeline:251 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 10:11:40 | INFO | __main__:run_weekly_pipeline:252 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 10:12:54 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:12:54 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:12:54 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:12:54 | INFO | __main__:run_weekly_pipeline:119 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 10:12:54 | INFO | __main__:run_weekly_pipeline:146 | Universe size: 5
+2026-01-28 10:12:54 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 10:12:54 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 10:12:55 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 10:12:55 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for HDFCBANK.NS
+2026-01-28 10:12:55 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for HDFCBANK.NS. Skipping write.
+2026-01-28 10:12:55 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for TCS.NS
+2026-01-28 10:12:56 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for TCS.NS. Skipping write.
+2026-01-28 10:12:56 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for LT.NS
+2026-01-28 10:12:56 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for LT.NS. Skipping write.
+2026-01-28 10:12:56 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ASIANPAINT.NS
+2026-01-28 10:12:56 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ASIANPAINT.NS. Skipping write.
+2026-01-28 10:12:56 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 10:12:56 | INFO | __main__:run_weekly_pipeline:165 | Processing ITC.NS
+2026-01-28 10:12:56 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 10:12:58 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 10:12:59 | INFO | __main__:run_weekly_pipeline:165 | Processing HDFCBANK.NS
+2026-01-28 10:12:59 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCBANK.NS
+2026-01-28 10:13:00 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCBANK.NS, skipping
+2026-01-28 10:13:01 | INFO | __main__:run_weekly_pipeline:165 | Processing TCS.NS
+2026-01-28 10:13:01 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TCS.NS
+2026-01-28 10:13:02 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TCS.NS, skipping
+2026-01-28 10:13:03 | INFO | __main__:run_weekly_pipeline:165 | Processing LT.NS
+2026-01-28 10:13:03 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for LT.NS
+2026-01-28 10:13:04 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for LT.NS, skipping
+2026-01-28 10:13:05 | INFO | __main__:run_weekly_pipeline:165 | Processing ASIANPAINT.NS
+2026-01-28 10:13:05 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ASIANPAINT.NS
+2026-01-28 10:13:07 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ASIANPAINT.NS, skipping
+2026-01-28 10:13:08 | INFO | __main__:run_weekly_pipeline:250 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 10:13:08 | INFO | __main__:run_weekly_pipeline:251 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 10:13:08 | INFO | __main__:run_weekly_pipeline:252 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 10:17:24 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:17:24 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:17:24 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 10:17:24 | INFO | __main__:run_weekly_pipeline:119 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 10:17:24 | INFO | __main__:run_weekly_pipeline:146 | Universe size: 47
+2026-01-28 10:17:24 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 10:17:24 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 10:17:25 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 10:17:25 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for HDFCBANK.NS
+2026-01-28 10:17:25 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for HDFCBANK.NS. Skipping write.
+2026-01-28 10:17:25 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for TCS.NS
+2026-01-28 10:17:26 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for TCS.NS. Skipping write.
+2026-01-28 10:17:26 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for LT.NS
+2026-01-28 10:17:26 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for LT.NS. Skipping write.
+2026-01-28 10:17:26 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ASIANPAINT.NS
+2026-01-28 10:17:26 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ASIANPAINT.NS. Skipping write.
+2026-01-28 10:17:26 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 10:17:26 | INFO | __main__:run_weekly_pipeline:165 | Processing ADANIENT.NS
+2026-01-28 10:17:26 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ADANIENT.NS
+2026-01-28 10:17:28 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ADANIENT.NS, skipping
+2026-01-28 10:17:29 | INFO | __main__:run_weekly_pipeline:165 | Processing ADANIPORTS.NS
+2026-01-28 10:17:29 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ADANIPORTS.NS
+2026-01-28 10:17:30 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ADANIPORTS.NS, skipping
+2026-01-28 10:17:31 | INFO | __main__:run_weekly_pipeline:165 | Processing APOLLOHOSP.NS
+2026-01-28 10:17:31 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for APOLLOHOSP.NS
+2026-01-28 10:17:32 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for APOLLOHOSP.NS, skipping
+2026-01-28 10:17:33 | INFO | __main__:run_weekly_pipeline:165 | Processing ASIANPAINT.NS
+2026-01-28 10:17:33 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ASIANPAINT.NS
+2026-01-28 10:17:35 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ASIANPAINT.NS, skipping
+2026-01-28 10:17:36 | INFO | __main__:run_weekly_pipeline:165 | Processing AXISBANK.NS
+2026-01-28 10:17:36 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for AXISBANK.NS
+2026-01-28 10:17:38 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for AXISBANK.NS, skipping
+2026-01-28 10:17:39 | INFO | __main__:run_weekly_pipeline:165 | Processing BAJAJ-AUTO.NS
+2026-01-28 10:17:39 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJAJ-AUTO.NS
+2026-01-28 10:17:40 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJAJ-AUTO.NS, skipping
+2026-01-28 10:17:41 | INFO | __main__:run_weekly_pipeline:165 | Processing BAJFINANCE.NS
+2026-01-28 10:17:41 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJFINANCE.NS
+2026-01-28 10:17:42 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJFINANCE.NS, skipping
+2026-01-28 10:17:43 | INFO | __main__:run_weekly_pipeline:165 | Processing BAJAJFINSV.NS
+2026-01-28 10:17:43 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJAJFINSV.NS
+2026-01-28 10:17:45 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJAJFINSV.NS, skipping
+2026-01-28 10:17:46 | INFO | __main__:run_weekly_pipeline:165 | Processing BPCL.NS
+2026-01-28 10:17:46 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BPCL.NS
+2026-01-28 10:17:47 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BPCL.NS, skipping
+2026-01-28 10:17:48 | INFO | __main__:run_weekly_pipeline:165 | Processing BHARTIARTL.NS
+2026-01-28 10:17:48 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BHARTIARTL.NS
+2026-01-28 10:17:49 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BHARTIARTL.NS, skipping
+2026-01-28 10:17:50 | INFO | __main__:run_weekly_pipeline:165 | Processing BRITANNIA.NS
+2026-01-28 10:17:50 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BRITANNIA.NS
+2026-01-28 10:17:52 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BRITANNIA.NS, skipping
+2026-01-28 10:17:53 | INFO | __main__:run_weekly_pipeline:165 | Processing CIPLA.NS
+2026-01-28 10:17:53 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for CIPLA.NS
+2026-01-28 10:17:54 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for CIPLA.NS, skipping
+2026-01-28 10:17:55 | INFO | __main__:run_weekly_pipeline:165 | Processing COALINDIA.NS
+2026-01-28 10:17:55 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for COALINDIA.NS
+2026-01-28 10:17:56 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for COALINDIA.NS, skipping
+2026-01-28 10:17:58 | INFO | __main__:run_weekly_pipeline:165 | Processing DIVISLAB.NS
+2026-01-28 10:17:58 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for DIVISLAB.NS
+2026-01-28 10:17:59 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for DIVISLAB.NS, skipping
+2026-01-28 10:18:00 | INFO | __main__:run_weekly_pipeline:165 | Processing DRREDDY.NS
+2026-01-28 10:18:00 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for DRREDDY.NS
+2026-01-28 10:18:01 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for DRREDDY.NS, skipping
+2026-01-28 10:18:02 | INFO | __main__:run_weekly_pipeline:165 | Processing EICHERMOT.NS
+2026-01-28 10:18:02 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for EICHERMOT.NS
+2026-01-28 10:18:03 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for EICHERMOT.NS, skipping
+2026-01-28 10:18:04 | INFO | __main__:run_weekly_pipeline:165 | Processing GRASIM.NS
+2026-01-28 10:18:04 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for GRASIM.NS
+2026-01-28 10:18:06 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for GRASIM.NS, skipping
+2026-01-28 10:18:07 | INFO | __main__:run_weekly_pipeline:165 | Processing HCLTECH.NS
+2026-01-28 10:18:07 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HCLTECH.NS
+2026-01-28 10:18:09 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HCLTECH.NS, skipping
+2026-01-28 10:18:10 | INFO | __main__:run_weekly_pipeline:165 | Processing HDFCBANK.NS
+2026-01-28 10:18:10 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCBANK.NS
+2026-01-28 10:18:11 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCBANK.NS, skipping
+2026-01-28 10:18:12 | INFO | __main__:run_weekly_pipeline:165 | Processing HDFCLIFE.NS
+2026-01-28 10:18:12 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCLIFE.NS
+2026-01-28 10:18:13 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCLIFE.NS, skipping
+2026-01-28 10:18:15 | INFO | __main__:run_weekly_pipeline:165 | Processing HEROMOTOCO.NS
+2026-01-28 10:18:15 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HEROMOTOCO.NS
+2026-01-28 10:18:16 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HEROMOTOCO.NS, skipping
+2026-01-28 10:18:17 | INFO | __main__:run_weekly_pipeline:165 | Processing HINDALCO.NS
+2026-01-28 10:18:17 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HINDALCO.NS
+2026-01-28 10:18:18 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HINDALCO.NS, skipping
+2026-01-28 10:18:20 | INFO | __main__:run_weekly_pipeline:165 | Processing HINDUNILVR.NS
+2026-01-28 10:18:20 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HINDUNILVR.NS
+2026-01-28 10:18:21 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HINDUNILVR.NS, skipping
+2026-01-28 10:18:22 | INFO | __main__:run_weekly_pipeline:165 | Processing ICICIBANK.NS
+2026-01-28 10:18:22 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ICICIBANK.NS
+2026-01-28 10:18:23 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ICICIBANK.NS, skipping
+2026-01-28 10:18:25 | INFO | __main__:run_weekly_pipeline:165 | Processing INDUSINDBK.NS
+2026-01-28 10:18:25 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for INDUSINDBK.NS
+2026-01-28 10:18:26 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for INDUSINDBK.NS, skipping
+2026-01-28 10:18:27 | INFO | __main__:run_weekly_pipeline:165 | Processing INFY.NS
+2026-01-28 10:18:27 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for INFY.NS
+2026-01-28 10:18:29 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for INFY.NS, skipping
+2026-01-28 10:18:30 | INFO | __main__:run_weekly_pipeline:165 | Processing ITC.NS
+2026-01-28 10:18:30 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 10:18:31 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 10:18:32 | INFO | __main__:run_weekly_pipeline:165 | Processing JSWSTEEL.NS
+2026-01-28 10:18:32 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for JSWSTEEL.NS
+2026-01-28 10:18:34 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for JSWSTEEL.NS, skipping
+2026-01-28 10:18:35 | INFO | __main__:run_weekly_pipeline:165 | Processing KOTAKBANK.NS
+2026-01-28 10:18:35 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for KOTAKBANK.NS
+2026-01-28 10:18:36 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for KOTAKBANK.NS, skipping
+2026-01-28 10:18:37 | INFO | __main__:run_weekly_pipeline:165 | Processing LT.NS
+2026-01-28 10:18:37 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for LT.NS
+2026-01-28 10:18:39 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for LT.NS, skipping
+2026-01-28 10:18:40 | INFO | __main__:run_weekly_pipeline:165 | Processing M&M.NS
+2026-01-28 10:18:40 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for M&M.NS
+2026-01-28 10:18:41 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for M&M.NS, skipping
+2026-01-28 10:18:42 | INFO | __main__:run_weekly_pipeline:165 | Processing MARUTI.NS
+2026-01-28 10:18:42 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for MARUTI.NS
+2026-01-28 10:18:43 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for MARUTI.NS, skipping
+2026-01-28 10:18:45 | INFO | __main__:run_weekly_pipeline:165 | Processing NESTLEIND.NS
+2026-01-28 10:18:45 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for NESTLEIND.NS
+2026-01-28 10:18:46 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for NESTLEIND.NS, skipping
+2026-01-28 10:18:47 | INFO | __main__:run_weekly_pipeline:165 | Processing NTPC.NS
+2026-01-28 10:18:47 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for NTPC.NS
+2026-01-28 10:18:48 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for NTPC.NS, skipping
+2026-01-28 10:18:49 | INFO | __main__:run_weekly_pipeline:165 | Processing ONGC.NS
+2026-01-28 10:18:49 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ONGC.NS
+2026-01-28 10:18:50 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ONGC.NS, skipping
+2026-01-28 10:18:52 | INFO | __main__:run_weekly_pipeline:165 | Processing POWERGRID.NS
+2026-01-28 10:18:52 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for POWERGRID.NS
+2026-01-28 10:18:53 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for POWERGRID.NS, skipping
+2026-01-28 10:18:54 | INFO | __main__:run_weekly_pipeline:165 | Processing RELIANCE.NS
+2026-01-28 10:18:54 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for RELIANCE.NS
+2026-01-28 10:18:56 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for RELIANCE.NS, skipping
+2026-01-28 10:18:57 | INFO | __main__:run_weekly_pipeline:165 | Processing SBIN.NS
+2026-01-28 10:18:57 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for SBIN.NS
+2026-01-28 10:18:58 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for SBIN.NS, skipping
+2026-01-28 10:18:59 | INFO | __main__:run_weekly_pipeline:165 | Processing SUNPHARMA.NS
+2026-01-28 10:18:59 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for SUNPHARMA.NS
+2026-01-28 10:19:00 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for SUNPHARMA.NS, skipping
+2026-01-28 10:19:01 | INFO | __main__:run_weekly_pipeline:165 | Processing TATACONSUM.NS
+2026-01-28 10:19:01 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATACONSUM.NS
+2026-01-28 10:19:03 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATACONSUM.NS, skipping
+2026-01-28 10:19:04 | INFO | __main__:run_weekly_pipeline:165 | Processing TATAMOTORS.NS
+2026-01-28 10:19:04 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATAMOTORS.NS
+2026-01-28 10:19:05 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATAMOTORS.NS, skipping
+2026-01-28 10:19:06 | INFO | __main__:run_weekly_pipeline:165 | Processing TATASTEEL.NS
+2026-01-28 10:19:06 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATASTEEL.NS
+2026-01-28 10:19:08 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATASTEEL.NS, skipping
+2026-01-28 10:19:09 | INFO | __main__:run_weekly_pipeline:165 | Processing TCS.NS
+2026-01-28 10:19:09 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TCS.NS
+2026-01-28 10:19:10 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TCS.NS, skipping
+2026-01-28 10:19:11 | INFO | __main__:run_weekly_pipeline:165 | Processing TECHM.NS
+2026-01-28 10:19:11 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TECHM.NS
+2026-01-28 10:19:12 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TECHM.NS, skipping
+2026-01-28 10:19:14 | INFO | __main__:run_weekly_pipeline:165 | Processing TITAN.NS
+2026-01-28 10:19:14 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TITAN.NS
+2026-01-28 10:19:15 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TITAN.NS, skipping
+2026-01-28 10:19:16 | INFO | __main__:run_weekly_pipeline:165 | Processing ULTRACEMCO.NS
+2026-01-28 10:19:16 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ULTRACEMCO.NS
+2026-01-28 10:19:17 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ULTRACEMCO.NS, skipping
+2026-01-28 10:19:19 | INFO | __main__:run_weekly_pipeline:165 | Processing WIPRO.NS
+2026-01-28 10:19:19 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for WIPRO.NS
+2026-01-28 10:19:20 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for WIPRO.NS, skipping
+2026-01-28 10:19:21 | INFO | __main__:run_weekly_pipeline:250 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 10:19:21 | INFO | __main__:run_weekly_pipeline:251 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 10:19:21 | INFO | __main__:run_weekly_pipeline:252 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 17:02:21 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:02:21 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:02:21 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:02:21 | INFO | __main__:run_weekly_pipeline:121 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 17:02:21 | INFO | __main__:run_weekly_pipeline:148 | Universe size: 47
+2026-01-28 17:02:21 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:54 | Starting weekly price ingestion
+2026-01-28 17:02:21 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ITC.NS
+2026-01-28 17:02:22 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 17:02:22 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for HDFCBANK.NS
+2026-01-28 17:02:22 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for HDFCBANK.NS. Skipping write.
+2026-01-28 17:02:22 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for TCS.NS
+2026-01-28 17:02:22 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for TCS.NS. Skipping write.
+2026-01-28 17:02:22 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for LT.NS
+2026-01-28 17:02:22 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for LT.NS. Skipping write.
+2026-01-28 17:02:22 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:23 | Fetching weekly prices for ASIANPAINT.NS
+2026-01-28 17:02:23 | WARNING | trace_invest.ingestion.prices:write_raw_prices:43 | Raw price file already exists for ASIANPAINT.NS. Skipping write.
+2026-01-28 17:02:23 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Weekly price ingestion completed
+2026-01-28 17:02:23 | INFO | __main__:run_weekly_pipeline:167 | Processing ADANIENT.NS
+2026-01-28 17:02:23 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ADANIENT.NS
+2026-01-28 17:02:24 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ADANIENT.NS, skipping
+2026-01-28 17:02:25 | INFO | __main__:run_weekly_pipeline:167 | Processing ADANIPORTS.NS
+2026-01-28 17:02:25 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ADANIPORTS.NS
+2026-01-28 17:02:26 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ADANIPORTS.NS, skipping
+2026-01-28 17:02:28 | INFO | __main__:run_weekly_pipeline:167 | Processing APOLLOHOSP.NS
+2026-01-28 17:02:28 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for APOLLOHOSP.NS
+2026-01-28 17:02:29 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for APOLLOHOSP.NS, skipping
+2026-01-28 17:02:30 | INFO | __main__:run_weekly_pipeline:167 | Processing ASIANPAINT.NS
+2026-01-28 17:02:30 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ASIANPAINT.NS
+2026-01-28 17:02:31 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ASIANPAINT.NS, skipping
+2026-01-28 17:02:32 | INFO | __main__:run_weekly_pipeline:167 | Processing AXISBANK.NS
+2026-01-28 17:02:32 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for AXISBANK.NS
+2026-01-28 17:02:33 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for AXISBANK.NS, skipping
+2026-01-28 17:02:34 | INFO | __main__:run_weekly_pipeline:167 | Processing BAJAJ-AUTO.NS
+2026-01-28 17:02:34 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJAJ-AUTO.NS
+2026-01-28 17:02:35 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJAJ-AUTO.NS, skipping
+2026-01-28 17:02:37 | INFO | __main__:run_weekly_pipeline:167 | Processing BAJFINANCE.NS
+2026-01-28 17:02:37 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJFINANCE.NS
+2026-01-28 17:02:38 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJFINANCE.NS, skipping
+2026-01-28 17:02:39 | INFO | __main__:run_weekly_pipeline:167 | Processing BAJAJFINSV.NS
+2026-01-28 17:02:39 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJAJFINSV.NS
+2026-01-28 17:02:40 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJAJFINSV.NS, skipping
+2026-01-28 17:02:42 | INFO | __main__:run_weekly_pipeline:167 | Processing BPCL.NS
+2026-01-28 17:02:42 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BPCL.NS
+2026-01-28 17:02:43 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BPCL.NS, skipping
+2026-01-28 17:02:44 | INFO | __main__:run_weekly_pipeline:167 | Processing BHARTIARTL.NS
+2026-01-28 17:02:44 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BHARTIARTL.NS
+2026-01-28 17:02:45 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BHARTIARTL.NS, skipping
+2026-01-28 17:02:47 | INFO | __main__:run_weekly_pipeline:167 | Processing BRITANNIA.NS
+2026-01-28 17:02:47 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BRITANNIA.NS
+2026-01-28 17:02:47 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BRITANNIA.NS, skipping
+2026-01-28 17:02:49 | INFO | __main__:run_weekly_pipeline:167 | Processing CIPLA.NS
+2026-01-28 17:02:49 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for CIPLA.NS
+2026-01-28 17:02:50 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for CIPLA.NS, skipping
+2026-01-28 17:02:51 | INFO | __main__:run_weekly_pipeline:167 | Processing COALINDIA.NS
+2026-01-28 17:02:51 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for COALINDIA.NS
+2026-01-28 17:02:52 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for COALINDIA.NS, skipping
+2026-01-28 17:02:53 | INFO | __main__:run_weekly_pipeline:167 | Processing DIVISLAB.NS
+2026-01-28 17:02:53 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for DIVISLAB.NS
+2026-01-28 17:02:54 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for DIVISLAB.NS, skipping
+2026-01-28 17:02:56 | INFO | __main__:run_weekly_pipeline:167 | Processing DRREDDY.NS
+2026-01-28 17:02:56 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for DRREDDY.NS
+2026-01-28 17:02:57 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for DRREDDY.NS, skipping
+2026-01-28 17:02:58 | INFO | __main__:run_weekly_pipeline:167 | Processing EICHERMOT.NS
+2026-01-28 17:02:58 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for EICHERMOT.NS
+2026-01-28 17:02:59 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for EICHERMOT.NS, skipping
+2026-01-28 17:03:00 | INFO | __main__:run_weekly_pipeline:167 | Processing GRASIM.NS
+2026-01-28 17:03:00 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for GRASIM.NS
+2026-01-28 17:03:02 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for GRASIM.NS, skipping
+2026-01-28 17:03:03 | INFO | __main__:run_weekly_pipeline:167 | Processing HCLTECH.NS
+2026-01-28 17:03:03 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HCLTECH.NS
+2026-01-28 17:03:04 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HCLTECH.NS, skipping
+2026-01-28 17:03:06 | INFO | __main__:run_weekly_pipeline:167 | Processing HDFCBANK.NS
+2026-01-28 17:03:06 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCBANK.NS
+2026-01-28 17:03:07 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCBANK.NS, skipping
+2026-01-28 17:03:08 | INFO | __main__:run_weekly_pipeline:167 | Processing HDFCLIFE.NS
+2026-01-28 17:03:08 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCLIFE.NS
+2026-01-28 17:03:09 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCLIFE.NS, skipping
+2026-01-28 17:03:10 | INFO | __main__:run_weekly_pipeline:167 | Processing HEROMOTOCO.NS
+2026-01-28 17:03:10 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HEROMOTOCO.NS
+2026-01-28 17:03:12 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HEROMOTOCO.NS, skipping
+2026-01-28 17:03:13 | INFO | __main__:run_weekly_pipeline:167 | Processing HINDALCO.NS
+2026-01-28 17:03:13 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HINDALCO.NS
+2026-01-28 17:03:14 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HINDALCO.NS, skipping
+2026-01-28 17:03:16 | INFO | __main__:run_weekly_pipeline:167 | Processing HINDUNILVR.NS
+2026-01-28 17:03:16 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HINDUNILVR.NS
+2026-01-28 17:03:17 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HINDUNILVR.NS, skipping
+2026-01-28 17:03:18 | INFO | __main__:run_weekly_pipeline:167 | Processing ICICIBANK.NS
+2026-01-28 17:03:18 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ICICIBANK.NS
+2026-01-28 17:03:19 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ICICIBANK.NS, skipping
+2026-01-28 17:03:20 | INFO | __main__:run_weekly_pipeline:167 | Processing INDUSINDBK.NS
+2026-01-28 17:03:20 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for INDUSINDBK.NS
+2026-01-28 17:03:21 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for INDUSINDBK.NS, skipping
+2026-01-28 17:03:22 | INFO | __main__:run_weekly_pipeline:167 | Processing INFY.NS
+2026-01-28 17:03:22 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for INFY.NS
+2026-01-28 17:03:23 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for INFY.NS, skipping
+2026-01-28 17:03:25 | INFO | __main__:run_weekly_pipeline:167 | Processing ITC.NS
+2026-01-28 17:03:25 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 17:03:26 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 17:03:27 | INFO | __main__:run_weekly_pipeline:167 | Processing JSWSTEEL.NS
+2026-01-28 17:03:27 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for JSWSTEEL.NS
+2026-01-28 17:03:28 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for JSWSTEEL.NS, skipping
+2026-01-28 17:03:29 | INFO | __main__:run_weekly_pipeline:167 | Processing KOTAKBANK.NS
+2026-01-28 17:03:29 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for KOTAKBANK.NS
+2026-01-28 17:03:30 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for KOTAKBANK.NS, skipping
+2026-01-28 17:03:31 | INFO | __main__:run_weekly_pipeline:167 | Processing LT.NS
+2026-01-28 17:03:31 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for LT.NS
+2026-01-28 17:03:32 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for LT.NS, skipping
+2026-01-28 17:03:33 | INFO | __main__:run_weekly_pipeline:167 | Processing M&M.NS
+2026-01-28 17:03:33 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for M&M.NS
+2026-01-28 17:03:34 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for M&M.NS, skipping
+2026-01-28 17:03:36 | INFO | __main__:run_weekly_pipeline:167 | Processing MARUTI.NS
+2026-01-28 17:03:36 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for MARUTI.NS
+2026-01-28 17:03:36 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for MARUTI.NS, skipping
+2026-01-28 17:03:38 | INFO | __main__:run_weekly_pipeline:167 | Processing NESTLEIND.NS
+2026-01-28 17:03:38 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for NESTLEIND.NS
+2026-01-28 17:03:39 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for NESTLEIND.NS, skipping
+2026-01-28 17:03:40 | INFO | __main__:run_weekly_pipeline:167 | Processing NTPC.NS
+2026-01-28 17:03:40 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for NTPC.NS
+2026-01-28 17:03:41 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for NTPC.NS, skipping
+2026-01-28 17:03:42 | INFO | __main__:run_weekly_pipeline:167 | Processing ONGC.NS
+2026-01-28 17:03:42 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ONGC.NS
+2026-01-28 17:03:43 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ONGC.NS, skipping
+2026-01-28 17:03:44 | INFO | __main__:run_weekly_pipeline:167 | Processing POWERGRID.NS
+2026-01-28 17:03:44 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for POWERGRID.NS
+2026-01-28 17:03:45 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for POWERGRID.NS, skipping
+2026-01-28 17:03:47 | INFO | __main__:run_weekly_pipeline:167 | Processing RELIANCE.NS
+2026-01-28 17:03:47 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for RELIANCE.NS
+2026-01-28 17:03:47 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for RELIANCE.NS, skipping
+2026-01-28 17:03:49 | INFO | __main__:run_weekly_pipeline:167 | Processing SBIN.NS
+2026-01-28 17:03:49 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for SBIN.NS
+2026-01-28 17:03:50 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for SBIN.NS, skipping
+2026-01-28 17:03:51 | INFO | __main__:run_weekly_pipeline:167 | Processing SUNPHARMA.NS
+2026-01-28 17:03:51 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for SUNPHARMA.NS
+2026-01-28 17:03:52 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for SUNPHARMA.NS, skipping
+2026-01-28 17:03:53 | INFO | __main__:run_weekly_pipeline:167 | Processing TATACONSUM.NS
+2026-01-28 17:03:53 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATACONSUM.NS
+2026-01-28 17:03:54 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATACONSUM.NS, skipping
+2026-01-28 17:03:56 | INFO | __main__:run_weekly_pipeline:167 | Processing TATAMOTORS.NS
+2026-01-28 17:03:56 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATAMOTORS.NS
+2026-01-28 17:03:57 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATAMOTORS.NS, skipping
+2026-01-28 17:03:58 | INFO | __main__:run_weekly_pipeline:167 | Processing TATASTEEL.NS
+2026-01-28 17:03:58 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATASTEEL.NS
+2026-01-28 17:03:59 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATASTEEL.NS, skipping
+2026-01-28 17:04:00 | INFO | __main__:run_weekly_pipeline:167 | Processing TCS.NS
+2026-01-28 17:04:00 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TCS.NS
+2026-01-28 17:04:01 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TCS.NS, skipping
+2026-01-28 17:04:02 | INFO | __main__:run_weekly_pipeline:167 | Processing TECHM.NS
+2026-01-28 17:04:02 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TECHM.NS
+2026-01-28 17:04:03 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TECHM.NS, skipping
+2026-01-28 17:04:04 | INFO | __main__:run_weekly_pipeline:167 | Processing TITAN.NS
+2026-01-28 17:04:04 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TITAN.NS
+2026-01-28 17:04:05 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TITAN.NS, skipping
+2026-01-28 17:04:07 | INFO | __main__:run_weekly_pipeline:167 | Processing ULTRACEMCO.NS
+2026-01-28 17:04:07 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ULTRACEMCO.NS
+2026-01-28 17:04:07 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ULTRACEMCO.NS, skipping
+2026-01-28 17:04:09 | INFO | __main__:run_weekly_pipeline:167 | Processing WIPRO.NS
+2026-01-28 17:04:09 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for WIPRO.NS
+2026-01-28 17:04:10 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for WIPRO.NS, skipping
+2026-01-28 17:04:11 | INFO | __main__:run_weekly_pipeline:254 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 17:04:11 | INFO | __main__:run_weekly_pipeline:255 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 17:04:11 | INFO | __main__:run_weekly_pipeline:256 | ===== Weekly TRACE MARKETS run completed =====
+2026-01-28 17:49:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:50:00 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:50:00 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:50:00 | INFO | __main__:run_weekly_pipeline:126 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 17:50:00 | INFO | __main__:run_weekly_pipeline:153 | Universe size: 47
+2026-01-28 17:55:21 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:55:21 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:55:21 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-01-28 17:55:21 | INFO | __main__:run_weekly_pipeline:122 | ===== Weekly TRACE MARKETS run started =====
+2026-01-28 17:55:21 | INFO | __main__:run_weekly_pipeline:150 | Universe size: 47
+2026-01-28 17:55:21 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-01-28 17:55:21 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ADANIENT.NS
+2026-01-28 17:55:22 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for ADANIENT.NS
+2026-01-28 17:55:22 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ADANIPORTS.NS
+2026-01-28 17:55:22 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for ADANIPORTS.NS
+2026-01-28 17:55:22 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for APOLLOHOSP.NS
+2026-01-28 17:55:23 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for APOLLOHOSP.NS
+2026-01-28 17:55:23 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ASIANPAINT.NS
+2026-01-28 17:55:23 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ASIANPAINT.NS. Skipping write.
+2026-01-28 17:55:23 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for AXISBANK.NS
+2026-01-28 17:55:23 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for AXISBANK.NS
+2026-01-28 17:55:23 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for BAJAJ-AUTO.NS
+2026-01-28 17:55:24 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for BAJAJ-AUTO.NS
+2026-01-28 17:55:24 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for BAJFINANCE.NS
+2026-01-28 17:55:24 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for BAJFINANCE.NS
+2026-01-28 17:55:24 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for BAJAJFINSV.NS
+2026-01-28 17:55:25 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for BAJAJFINSV.NS
+2026-01-28 17:55:25 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for BPCL.NS
+2026-01-28 17:55:25 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for BPCL.NS
+2026-01-28 17:55:25 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for BHARTIARTL.NS
+2026-01-28 17:55:26 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for BHARTIARTL.NS
+2026-01-28 17:55:26 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for BRITANNIA.NS
+2026-01-28 17:55:26 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for BRITANNIA.NS
+2026-01-28 17:55:26 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for CIPLA.NS
+2026-01-28 17:55:26 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for CIPLA.NS
+2026-01-28 17:55:26 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for COALINDIA.NS
+2026-01-28 17:55:27 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for COALINDIA.NS
+2026-01-28 17:55:27 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for DIVISLAB.NS
+2026-01-28 17:55:27 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for DIVISLAB.NS
+2026-01-28 17:55:27 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for DRREDDY.NS
+2026-01-28 17:55:28 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for DRREDDY.NS
+2026-01-28 17:55:28 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for EICHERMOT.NS
+2026-01-28 17:55:28 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for EICHERMOT.NS
+2026-01-28 17:55:28 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for GRASIM.NS
+2026-01-28 17:55:29 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for GRASIM.NS
+2026-01-28 17:55:29 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HCLTECH.NS
+2026-01-28 17:55:29 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for HCLTECH.NS
+2026-01-28 17:55:29 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HDFCBANK.NS
+2026-01-28 17:55:30 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for HDFCBANK.NS. Skipping write.
+2026-01-28 17:55:30 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HDFCLIFE.NS
+2026-01-28 17:55:30 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for HDFCLIFE.NS
+2026-01-28 17:55:30 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HEROMOTOCO.NS
+2026-01-28 17:55:31 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for HEROMOTOCO.NS
+2026-01-28 17:55:31 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HINDALCO.NS
+2026-01-28 17:55:31 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for HINDALCO.NS
+2026-01-28 17:55:31 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HINDUNILVR.NS
+2026-01-28 17:55:32 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for HINDUNILVR.NS
+2026-01-28 17:55:32 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ICICIBANK.NS
+2026-01-28 17:55:32 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for ICICIBANK.NS
+2026-01-28 17:55:32 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for INDUSINDBK.NS
+2026-01-28 17:55:33 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for INDUSINDBK.NS
+2026-01-28 17:55:33 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for INFY.NS
+2026-01-28 17:55:33 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for INFY.NS
+2026-01-28 17:55:33 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-01-28 17:55:34 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-01-28 17:55:34 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for JSWSTEEL.NS
+2026-01-28 17:55:34 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for JSWSTEEL.NS
+2026-01-28 17:55:34 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for KOTAKBANK.NS
+2026-01-28 17:55:35 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for KOTAKBANK.NS
+2026-01-28 17:55:35 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for LT.NS
+2026-01-28 17:55:35 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for LT.NS. Skipping write.
+2026-01-28 17:55:35 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for M&M.NS
+2026-01-28 17:55:35 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for M&M.NS
+2026-01-28 17:55:35 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for MARUTI.NS
+2026-01-28 17:55:36 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for MARUTI.NS
+2026-01-28 17:55:36 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for NESTLEIND.NS
+2026-01-28 17:55:36 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for NESTLEIND.NS
+2026-01-28 17:55:36 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for NTPC.NS
+2026-01-28 17:55:37 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for NTPC.NS
+2026-01-28 17:55:37 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ONGC.NS
+2026-01-28 17:55:37 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for ONGC.NS
+2026-01-28 17:55:37 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for POWERGRID.NS
+2026-01-28 17:55:37 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for POWERGRID.NS
+2026-01-28 17:55:37 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for RELIANCE.NS
+2026-01-28 17:55:38 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for RELIANCE.NS
+2026-01-28 17:55:38 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for SBIN.NS
+2026-01-28 17:55:38 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for SBIN.NS
+2026-01-28 17:55:38 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for SUNPHARMA.NS
+2026-01-28 17:55:39 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for SUNPHARMA.NS
+2026-01-28 17:55:39 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TATACONSUM.NS
+2026-01-28 17:55:40 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for TATACONSUM.NS
+2026-01-28 17:55:40 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TATAMOTORS.NS
+2026-01-28 17:55:41 | ERROR | trace_invest.ingestion.prices:run_weekly_price_ingestion:64 | Failed to ingest prices for TATAMOTORS.NS: No price data returned for TATAMOTORS.NS
+2026-01-28 17:55:41 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TATASTEEL.NS
+2026-01-28 17:55:41 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for TATASTEEL.NS
+2026-01-28 17:55:41 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TCS.NS
+2026-01-28 17:55:42 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for TCS.NS. Skipping write.
+2026-01-28 17:55:42 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TECHM.NS
+2026-01-28 17:55:42 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for TECHM.NS
+2026-01-28 17:55:42 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TITAN.NS
+2026-01-28 17:55:42 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for TITAN.NS
+2026-01-28 17:55:42 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ULTRACEMCO.NS
+2026-01-28 17:55:43 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for ULTRACEMCO.NS
+2026-01-28 17:55:43 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for WIPRO.NS
+2026-01-28 17:55:44 | INFO | trace_invest.ingestion.prices:write_raw_prices:48 | Raw weekly prices written for WIPRO.NS
+2026-01-28 17:55:44 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-01-28 17:55:44 | INFO | __main__:run_weekly_pipeline:169 | Processing ADANIENT.NS
+2026-01-28 17:55:44 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ADANIENT.NS
+2026-01-28 17:55:45 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ADANIENT.NS, skipping
+2026-01-28 17:55:46 | INFO | __main__:run_weekly_pipeline:169 | Processing ADANIPORTS.NS
+2026-01-28 17:55:46 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ADANIPORTS.NS
+2026-01-28 17:55:47 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ADANIPORTS.NS, skipping
+2026-01-28 17:55:48 | INFO | __main__:run_weekly_pipeline:169 | Processing APOLLOHOSP.NS
+2026-01-28 17:55:48 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for APOLLOHOSP.NS
+2026-01-28 17:55:50 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for APOLLOHOSP.NS, skipping
+2026-01-28 17:55:51 | INFO | __main__:run_weekly_pipeline:169 | Processing ASIANPAINT.NS
+2026-01-28 17:55:51 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ASIANPAINT.NS
+2026-01-28 17:55:52 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ASIANPAINT.NS, skipping
+2026-01-28 17:55:53 | INFO | __main__:run_weekly_pipeline:169 | Processing AXISBANK.NS
+2026-01-28 17:55:53 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for AXISBANK.NS
+2026-01-28 17:55:54 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for AXISBANK.NS, skipping
+2026-01-28 17:55:55 | INFO | __main__:run_weekly_pipeline:169 | Processing BAJAJ-AUTO.NS
+2026-01-28 17:55:55 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJAJ-AUTO.NS
+2026-01-28 17:55:57 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJAJ-AUTO.NS, skipping
+2026-01-28 17:55:58 | INFO | __main__:run_weekly_pipeline:169 | Processing BAJFINANCE.NS
+2026-01-28 17:55:58 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJFINANCE.NS
+2026-01-28 17:55:59 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJFINANCE.NS, skipping
+2026-01-28 17:56:00 | INFO | __main__:run_weekly_pipeline:169 | Processing BAJAJFINSV.NS
+2026-01-28 17:56:00 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BAJAJFINSV.NS
+2026-01-28 17:56:01 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BAJAJFINSV.NS, skipping
+2026-01-28 17:56:03 | INFO | __main__:run_weekly_pipeline:169 | Processing BPCL.NS
+2026-01-28 17:56:03 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BPCL.NS
+2026-01-28 17:56:04 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BPCL.NS, skipping
+2026-01-28 17:56:05 | INFO | __main__:run_weekly_pipeline:169 | Processing BHARTIARTL.NS
+2026-01-28 17:56:05 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BHARTIARTL.NS
+2026-01-28 17:56:07 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BHARTIARTL.NS, skipping
+2026-01-28 17:56:08 | INFO | __main__:run_weekly_pipeline:169 | Processing BRITANNIA.NS
+2026-01-28 17:56:08 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for BRITANNIA.NS
+2026-01-28 17:56:09 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for BRITANNIA.NS, skipping
+2026-01-28 17:56:10 | INFO | __main__:run_weekly_pipeline:169 | Processing CIPLA.NS
+2026-01-28 17:56:10 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for CIPLA.NS
+2026-01-28 17:56:12 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for CIPLA.NS, skipping
+2026-01-28 17:56:13 | INFO | __main__:run_weekly_pipeline:169 | Processing COALINDIA.NS
+2026-01-28 17:56:13 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for COALINDIA.NS
+2026-01-28 17:56:15 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for COALINDIA.NS, skipping
+2026-01-28 17:56:16 | INFO | __main__:run_weekly_pipeline:169 | Processing DIVISLAB.NS
+2026-01-28 17:56:16 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for DIVISLAB.NS
+2026-01-28 17:56:17 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for DIVISLAB.NS, skipping
+2026-01-28 17:56:19 | INFO | __main__:run_weekly_pipeline:169 | Processing DRREDDY.NS
+2026-01-28 17:56:19 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for DRREDDY.NS
+2026-01-28 17:56:20 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for DRREDDY.NS, skipping
+2026-01-28 17:56:21 | INFO | __main__:run_weekly_pipeline:169 | Processing EICHERMOT.NS
+2026-01-28 17:56:21 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for EICHERMOT.NS
+2026-01-28 17:56:23 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for EICHERMOT.NS, skipping
+2026-01-28 17:56:24 | INFO | __main__:run_weekly_pipeline:169 | Processing GRASIM.NS
+2026-01-28 17:56:24 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for GRASIM.NS
+2026-01-28 17:56:25 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for GRASIM.NS, skipping
+2026-01-28 17:56:26 | INFO | __main__:run_weekly_pipeline:169 | Processing HCLTECH.NS
+2026-01-28 17:56:26 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HCLTECH.NS
+2026-01-28 17:56:28 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HCLTECH.NS, skipping
+2026-01-28 17:56:29 | INFO | __main__:run_weekly_pipeline:169 | Processing HDFCBANK.NS
+2026-01-28 17:56:29 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCBANK.NS
+2026-01-28 17:56:30 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCBANK.NS, skipping
+2026-01-28 17:56:32 | INFO | __main__:run_weekly_pipeline:169 | Processing HDFCLIFE.NS
+2026-01-28 17:56:32 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCLIFE.NS
+2026-01-28 17:56:33 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCLIFE.NS, skipping
+2026-01-28 17:56:34 | INFO | __main__:run_weekly_pipeline:169 | Processing HEROMOTOCO.NS
+2026-01-28 17:56:34 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HEROMOTOCO.NS
+2026-01-28 17:56:35 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HEROMOTOCO.NS, skipping
+2026-01-28 17:56:36 | INFO | __main__:run_weekly_pipeline:169 | Processing HINDALCO.NS
+2026-01-28 17:56:36 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HINDALCO.NS
+2026-01-28 17:56:38 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HINDALCO.NS, skipping
+2026-01-28 17:56:39 | INFO | __main__:run_weekly_pipeline:169 | Processing HINDUNILVR.NS
+2026-01-28 17:56:39 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HINDUNILVR.NS
+2026-01-28 17:56:40 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HINDUNILVR.NS, skipping
+2026-01-28 17:56:41 | INFO | __main__:run_weekly_pipeline:169 | Processing ICICIBANK.NS
+2026-01-28 17:56:41 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ICICIBANK.NS
+2026-01-28 17:56:42 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ICICIBANK.NS, skipping
+2026-01-28 17:56:44 | INFO | __main__:run_weekly_pipeline:169 | Processing INDUSINDBK.NS
+2026-01-28 17:56:44 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for INDUSINDBK.NS
+2026-01-28 17:56:45 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for INDUSINDBK.NS, skipping
+2026-01-28 17:56:46 | INFO | __main__:run_weekly_pipeline:169 | Processing INFY.NS
+2026-01-28 17:56:46 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for INFY.NS
+2026-01-28 17:56:47 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for INFY.NS, skipping
+2026-01-28 17:56:49 | INFO | __main__:run_weekly_pipeline:169 | Processing ITC.NS
+2026-01-28 17:56:49 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-01-28 17:56:50 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-01-28 17:56:51 | INFO | __main__:run_weekly_pipeline:169 | Processing JSWSTEEL.NS
+2026-01-28 17:56:51 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for JSWSTEEL.NS
+2026-01-28 17:56:52 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for JSWSTEEL.NS, skipping
+2026-01-28 17:56:54 | INFO | __main__:run_weekly_pipeline:169 | Processing KOTAKBANK.NS
+2026-01-28 17:56:54 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for KOTAKBANK.NS
+2026-01-28 17:56:55 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for KOTAKBANK.NS, skipping
+2026-01-28 17:56:56 | INFO | __main__:run_weekly_pipeline:169 | Processing LT.NS
+2026-01-28 17:56:56 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for LT.NS
+2026-01-28 17:56:58 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for LT.NS, skipping
+2026-01-28 17:56:59 | INFO | __main__:run_weekly_pipeline:169 | Processing M&M.NS
+2026-01-28 17:56:59 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for M&M.NS
+2026-01-28 17:57:00 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for M&M.NS, skipping
+2026-01-28 17:57:01 | INFO | __main__:run_weekly_pipeline:169 | Processing MARUTI.NS
+2026-01-28 17:57:01 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for MARUTI.NS
+2026-01-28 17:57:03 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for MARUTI.NS, skipping
+2026-01-28 17:57:04 | INFO | __main__:run_weekly_pipeline:169 | Processing NESTLEIND.NS
+2026-01-28 17:57:04 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for NESTLEIND.NS
+2026-01-28 17:57:05 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for NESTLEIND.NS, skipping
+2026-01-28 17:57:06 | INFO | __main__:run_weekly_pipeline:169 | Processing NTPC.NS
+2026-01-28 17:57:06 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for NTPC.NS
+2026-01-28 17:57:08 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for NTPC.NS, skipping
+2026-01-28 17:57:09 | INFO | __main__:run_weekly_pipeline:169 | Processing ONGC.NS
+2026-01-28 17:57:09 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ONGC.NS
+2026-01-28 17:57:10 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ONGC.NS, skipping
+2026-01-28 17:57:11 | INFO | __main__:run_weekly_pipeline:169 | Processing POWERGRID.NS
+2026-01-28 17:57:11 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for POWERGRID.NS
+2026-01-28 17:57:12 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for POWERGRID.NS, skipping
+2026-01-28 17:57:14 | INFO | __main__:run_weekly_pipeline:169 | Processing RELIANCE.NS
+2026-01-28 17:57:14 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for RELIANCE.NS
+2026-01-28 17:57:15 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for RELIANCE.NS, skipping
+2026-01-28 17:57:17 | INFO | __main__:run_weekly_pipeline:169 | Processing SBIN.NS
+2026-01-28 17:57:17 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for SBIN.NS
+2026-01-28 17:57:18 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for SBIN.NS, skipping
+2026-01-28 17:57:19 | INFO | __main__:run_weekly_pipeline:169 | Processing SUNPHARMA.NS
+2026-01-28 17:57:19 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for SUNPHARMA.NS
+2026-01-28 17:57:21 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for SUNPHARMA.NS, skipping
+2026-01-28 17:57:22 | INFO | __main__:run_weekly_pipeline:169 | Processing TATACONSUM.NS
+2026-01-28 17:57:22 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATACONSUM.NS
+2026-01-28 17:57:23 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATACONSUM.NS, skipping
+2026-01-28 17:57:24 | INFO | __main__:run_weekly_pipeline:169 | Processing TATAMOTORS.NS
+2026-01-28 17:57:24 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATAMOTORS.NS
+2026-01-28 17:57:26 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATAMOTORS.NS, skipping
+2026-01-28 17:57:27 | INFO | __main__:run_weekly_pipeline:169 | Processing TATASTEEL.NS
+2026-01-28 17:57:27 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TATASTEEL.NS
+2026-01-28 17:57:28 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TATASTEEL.NS, skipping
+2026-01-28 17:57:30 | INFO | __main__:run_weekly_pipeline:169 | Processing TCS.NS
+2026-01-28 17:57:30 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TCS.NS
+2026-01-28 17:57:31 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TCS.NS, skipping
+2026-01-28 17:57:32 | INFO | __main__:run_weekly_pipeline:169 | Processing TECHM.NS
+2026-01-28 17:57:32 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TECHM.NS
+2026-01-28 17:57:33 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TECHM.NS, skipping
+2026-01-28 17:57:35 | INFO | __main__:run_weekly_pipeline:169 | Processing TITAN.NS
+2026-01-28 17:57:35 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TITAN.NS
+2026-01-28 17:57:36 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TITAN.NS, skipping
+2026-01-28 17:57:37 | INFO | __main__:run_weekly_pipeline:169 | Processing ULTRACEMCO.NS
+2026-01-28 17:57:37 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ULTRACEMCO.NS
+2026-01-28 17:57:38 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ULTRACEMCO.NS, skipping
+2026-01-28 17:57:40 | INFO | __main__:run_weekly_pipeline:169 | Processing WIPRO.NS
+2026-01-28 17:57:40 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for WIPRO.NS
+2026-01-28 17:57:41 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for WIPRO.NS, skipping
+2026-01-28 17:57:42 | INFO | __main__:run_weekly_pipeline:289 | Weekly snapshot written: data\snapshots\2026-01-28\snapshot.json
+2026-01-28 17:57:42 | INFO | __main__:run_weekly_pipeline:290 | Market summary written: data\snapshots\2026-01-28\market_summary.json
+2026-01-28 17:57:42 | INFO | __main__:run_weekly_pipeline:291 | ===== Weekly TRACE MARKETS run completed =====

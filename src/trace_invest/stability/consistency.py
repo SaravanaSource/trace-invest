@@ -12,7 +12,7 @@ def _extract_series(rows: List[Dict], keyword: str) -> Dict[str, float]:
 
         name = str(row.get("index", "")).lower()
 
-        if keyword in name:
+        if keyword in name or keyword.replace("_", " ") in name:
             return {
                 k: v
                 for k, v in row.items()
@@ -31,7 +31,7 @@ def _std(values):
 def analyze_consistency(processed: Dict) -> Dict:
     financials = processed.get("financials") or []
 
-    roe_series = _extract_series(financials, "roe")
+    roe_series = _extract_series(financials, "return on equity")
     margin_series = _extract_series(financials, "operating margin")
 
     roe_vals = []

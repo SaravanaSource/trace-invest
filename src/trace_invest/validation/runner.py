@@ -6,6 +6,8 @@ from trace_invest.stability.registry import STABILITY_ENGINES
 from trace_invest.stability.stability_score import compute_stability_score
 from trace_invest.valuation.registry import VALUATION_ENGINES
 from trace_invest.intelligence.master_score import compute_master_score
+from trace_invest.validation.governance_score import compute_governance_score
+
 
 
 def run_validation(processed: Dict) -> Dict:
@@ -29,6 +31,9 @@ def run_validation(processed: Dict) -> Dict:
 
         if result.get("risk") == "HIGH":
             total_flags += 1
+
+    governance_summary = compute_governance_score(details)
+
 
     for engine in STABILITY_ENGINES:
         result = engine(processed)
@@ -57,6 +62,7 @@ def run_validation(processed: Dict) -> Dict:
         "total_flags": total_flags,
         "overall_risk": _overall_risk(total_flags),
         "details": details,
+        "governance": governance_summary,
         "stability": stability_summary,
         "master": master,
     }

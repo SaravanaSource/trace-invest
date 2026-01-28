@@ -1,40 +1,73 @@
-from typing import Dict, List
+from typing import Dict
+
+from trace_invest.validation.fraud import check_basic_fraud_flags
+from trace_invest.validation.registry import GOVERNANCE_ENGINES
+from trace_invest.stability.registry import STABILITY_ENGINES
+from trace_invest.stability.stability_score import compute_stability_score
+from trace_invest.valuation.registry import VALUATION_ENGINES
+from trace_invest.intelligence.master_score import compute_master_score
 
 
-def check_governance_flags(governance: Dict) -> Dict:
+def run_validation(processed: Dict) -> Dict:
     """
-    Governance and promoter risk checks.
+    Runs all validation engines.
     """
 
-    flags: List[str] = []
+    fraud_result = check_basic_fraud_flags(
+        processed.get("financials", {})
+    )
 
-    if governance.get("promoter_pledging_pct", 0) > 25:
-        flags.append(
-            "High promoter share pledging"
-        )
+    details = {
+        "fraud": fraud_result
+    }
 
-    if governance.get("auditor_changes_last_5y", 0) >= 2:
-        flags.append(
-            "Frequent auditor changes"
-        )
+    total_flags = fraud_result["flag_count"]
 
-    if governance.get("independent_directors_pct", 100) < 33:
-        flags.append(
-            "Low independent director representation"
-        )
+    for engine in GOVERNANCE_ENGINES:
+        result = engine(processed)
+        details[result["name"]] = result
+
+        if result.get("risk") == "HIGH":
+            total_flags += 1
+
+    governance_summary = compute_governance_score(details)
+
+
+    for engine in STABILITY_ENGINES:
+        result = engine(processed)
+        details[result["name"]] = result
+
+        if result.get("risk") == "HIGH":
+            total_flags += 1
+    
+    stability_summary = compute_stability_score(details)
+
+  
+    for engine in VALUATION_ENGINES:
+        result = engine(processed)
+        details[result["name"]] = result
+
+        if result.get("risk") == "HIGH":
+            total_flags += 1
+
+    master = compute_master_score({
+            "governance": governance_summary,
+            "stability": stability_summary,
+            "details": details,
+        })
 
     return {
-        "layer": "governance",
-        "flag_count": len(flags),
-        "flags": flags,
-        "risk_level": _risk_level(len(flags)),
+        "total_flags": total_flags,
+        "overall_risk": _overall_risk(total_flags),
+        "details": details,
+        "stability": stability_summary,
+        "master": master,
     }
 
 
-def _risk_level(flag_count: int) -> str:
-    if flag_count == 0:
+def _overall_risk(total_flags: int) -> str:
+    if total_flags == 0:
         return "LOW"
-    if flag_count <= 2:
+    if total_flags <= 3:
         return "MEDIUM"
     return "HIGH"
-

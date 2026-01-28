@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-01-27",
+  "run_timestamp": "2026-01-27T04:59:26.906821+00:00",
+  "decisions": [
+    {
+      "timestamp": "2026-01-27T04:59:29.515003",
+      "stock": "ITC",
+      "decision_zone": "EXIT",
+      "conviction_score": 13,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      }
+    }
+  ]
+}

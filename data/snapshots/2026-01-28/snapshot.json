@@ -1,0 +1,5755 @@
+{
+  "run_date": "2026-01-28",
+  "run_timestamp": "2026-01-28T12:25:21.211118+00:00",
+  "decisions": [
+    {
+      "timestamp": "2026-01-28T12:25:45.501278",
+      "stock": "Adani Enterprises",
+      "decision_zone": "EXIT",
+      "conviction_score": 5,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 1,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "WEAK",
+            "risk": "MEDIUM",
+            "value": 0.032,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 72,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 76,
+          "stability_band": "STRONG",
+          "weak_areas": [
+            "revenue_cagr:WEAK"
+          ]
+        },
+        "master": {
+          "master_score": 71,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:MANAGED. Business performance is stable across years. Weak area: revenue cagr:WEAK. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:25:47.854902",
+      "stock": "Adani Ports",
+      "decision_zone": "EXIT",
+      "conviction_score": 13,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      },
+      "validation": {
+        "total_flags": 5,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "VOLATILE",
+            "risk": "HIGH",
+            "explanation": "Large swings in effective tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 40,
+          "governance_band": "HIGH",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:VOLATILE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 51,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "High governance risk detected. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:VOLATILE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:25:50.318198",
+      "stock": "Apollo Hospitals",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 5,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 46,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:25:52.840761",
+      "stock": "Asian Paints",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 5,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 49,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:25:54.980815",
+      "stock": "Axis Bank",
+      "decision_zone": "EXIT",
+      "conviction_score": 23,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "MINOR_MISMATCH",
+            "risk": "MEDIUM",
+            "explanation": "One year of positive profit but negative operating cash flow"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.162,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:MINOR_MISMATCH",
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "revenue_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 63,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:MINOR MISMATCH. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Business shows mixed stability. Weak area: revenue cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:25:57.511142",
+      "stock": "Bajaj Auto",
+      "decision_zone": "EXIT",
+      "conviction_score": 20,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "MINOR_MISMATCH",
+            "risk": "MEDIUM",
+            "explanation": "One year of positive profit but negative operating cash flow"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.127,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 44,
+          "governance_band": "HIGH",
+          "top_risks": [
+            "earnings_quality:MINOR_MISMATCH",
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 84,
+          "stability_band": "STRONG",
+          "weak_areas": []
+        },
+        "master": {
+          "master_score": 67,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "High governance risk detected. Key issue: earnings quality:MINOR MISMATCH. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business performance is stable across years. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:25:59.882199",
+      "stock": "Bajaj Finance",
+      "decision_zone": "EXIT",
+      "conviction_score": 20,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "REPEATED_MISMATCH",
+            "risk": "HIGH",
+            "explanation": "Profit positive but operating cash flow negative in 4 years"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.281,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 56,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:REPEATED_MISMATCH",
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 84,
+          "stability_band": "STRONG",
+          "weak_areas": []
+        },
+        "master": {
+          "master_score": 68,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:REPEATED MISMATCH. Key issue: unusual items:PERSISTENT. Business performance is stable across years. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:02.240849",
+      "stock": "Bajaj Finserv",
+      "decision_zone": "EXIT",
+      "conviction_score": 25,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Healthy free cash flow yield"
+        ]
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "REPEATED_MISMATCH",
+            "risk": "HIGH",
+            "explanation": "Profit positive but operating cash flow negative in 4 years"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.254,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 56,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:REPEATED_MISMATCH",
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 84,
+          "stability_band": "STRONG",
+          "weak_areas": []
+        },
+        "master": {
+          "master_score": 72,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:REPEATED MISMATCH. Key issue: unusual items:PERSISTENT. Business performance is stable across years. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:04.783020",
+      "stock": "BPCL",
+      "decision_zone": "EXIT",
+      "conviction_score": 15,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [],
+        "valuation": [
+          "Attractive PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Debt not increasing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.084,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 80,
+          "governance_band": "LOW",
+          "top_risks": [
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 71,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "No major governance red flags detected. Key issue: unusual items:PERSISTENT. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:07.178611",
+      "stock": "Bharti Airtel",
+      "decision_zone": "EXIT",
+      "conviction_score": 5,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 5,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "VOLATILE",
+            "risk": "HIGH",
+            "explanation": "Large swings in effective tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 40,
+          "governance_band": "HIGH",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:VOLATILE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 47,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "High governance risk detected. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:VOLATILE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:09.814604",
+      "stock": "Britannia",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 5,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 49,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:12.394620",
+      "stock": "Cipla",
+      "decision_zone": "EXIT",
+      "conviction_score": 8,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Debt not increasing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "WEAK",
+            "risk": "MEDIUM",
+            "value": 0.019,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 72,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE"
+          ]
+        },
+        "stability": {
+          "stability_score": 60,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "revenue_cagr:WEAK",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 65,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Business shows mixed stability. Weak area: revenue cagr:WEAK. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:15.688760",
+      "stock": "Coal India",
+      "decision_zone": "REDUCE",
+      "conviction_score": 45,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Attractive PE",
+          "Reasonable PB",
+          "Healthy free cash flow yield"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:18.170077",
+      "stock": "Divis Labs",
+      "decision_zone": "EXIT",
+      "conviction_score": 15,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.078,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 54,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:20.816240",
+      "stock": "Dr Reddy's",
+      "decision_zone": "EXIT",
+      "conviction_score": 23,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:23.480691",
+      "stock": "Eicher Motors",
+      "decision_zone": "EXIT",
+      "conviction_score": 15,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 55,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:25.922890",
+      "stock": "Grasim",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Consistent revenue growth"
+        ],
+        "valuation": [
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 5,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "REPEATED_MISMATCH",
+            "risk": "HIGH",
+            "explanation": "Profit positive but operating cash flow negative in 3 years"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 32,
+          "governance_band": "HIGH",
+          "top_risks": [
+            "earnings_quality:REPEATED_MISMATCH",
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 64,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "revenue_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 44,
+          "master_band": "POOR"
+        }
+      },
+      "narrative": "High governance risk detected. Key issue: earnings quality:REPEATED MISMATCH. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows mixed stability. Weak area: revenue cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:28.466619",
+      "stock": "HCL Technologies",
+      "decision_zone": "EXIT",
+      "conviction_score": 5,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:31.061480",
+      "stock": "HDFC Bank",
+      "decision_zone": "EXIT",
+      "conviction_score": 33,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 0 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 68,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 58,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:33.316346",
+      "stock": "HDFC Life",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Net income or operating cash flow history unavailable"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 0 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "VOLATILE",
+            "risk": "HIGH",
+            "explanation": "Large swings in effective tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.101,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:VOLATILE"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 54,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:VOLATILE. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:35.860948",
+      "stock": "Hero MotoCorp",
+      "decision_zone": "EXIT",
+      "conviction_score": 18,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Consistent revenue growth"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:38.411590",
+      "stock": "Hindalco",
+      "decision_zone": "EXIT",
+      "conviction_score": 10,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Consistent revenue growth"
+        ],
+        "valuation": [
+          "Attractive PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 55,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:40.795583",
+      "stock": "HUL",
+      "decision_zone": "EXIT",
+      "conviction_score": 5,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 72,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 54,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:MANAGED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:43.010815",
+      "stock": "ICICI Bank",
+      "decision_zone": "REDUCE",
+      "conviction_score": 38,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "MINOR_MISMATCH",
+            "risk": "MEDIUM",
+            "explanation": "One year of positive profit but negative operating cash flow"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 68,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:MINOR_MISMATCH",
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 58,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:MINOR MISMATCH. Key issue: unusual items:PERSISTENT. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:45.739798",
+      "stock": "IndusInd Bank",
+      "decision_zone": "EXIT",
+      "conviction_score": 10,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage"
+        ],
+        "valuation": [
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "REPEATED_MISMATCH",
+            "risk": "HIGH",
+            "explanation": "Profit positive but operating cash flow negative in 2 years"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.063,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 56,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:REPEATED_MISMATCH",
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 62,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:REPEATED MISMATCH. Key issue: unusual items:PERSISTENT. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:48.067384",
+      "stock": "Infosys",
+      "decision_zone": "EXIT",
+      "conviction_score": 18,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Healthy free cash flow yield"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:50.756422",
+      "stock": "ITC",
+      "decision_zone": "EXIT",
+      "conviction_score": 13,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:53.525282",
+      "stock": "JSW Steel",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.11,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 54,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:55.805458",
+      "stock": "Kotak Bank",
+      "decision_zone": "EXIT",
+      "conviction_score": 33,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "MINOR_MISMATCH",
+            "risk": "MEDIUM",
+            "explanation": "One year of positive profit but negative operating cash flow"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:MINOR_MISMATCH",
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 55,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:MINOR MISMATCH. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:26:58.406398",
+      "stock": "Larsen & Toubro",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 59,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:00.643173",
+      "stock": "Mahindra & Mahindra",
+      "decision_zone": "EXIT",
+      "conviction_score": 5,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "REPEATED_MISMATCH",
+            "risk": "HIGH",
+            "explanation": "Profit positive but operating cash flow negative in 2 years"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 32,
+          "governance_band": "HIGH",
+          "top_risks": [
+            "earnings_quality:REPEATED_MISMATCH",
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 64,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "revenue_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 54,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "High governance risk detected. Key issue: earnings quality:REPEATED MISMATCH. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows mixed stability. Weak area: revenue cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:03.444625",
+      "stock": "Maruti",
+      "decision_zone": "EXIT",
+      "conviction_score": 10,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 56,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:05.848166",
+      "stock": "Nestle India",
+      "decision_zone": "EXIT",
+      "conviction_score": 30,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Consistent revenue growth",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 3 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.175,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": -0.214,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 72,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 62,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:MANAGED. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:08.415412",
+      "stock": "NTPC",
+      "decision_zone": "EXIT",
+      "conviction_score": 13,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 72,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 60,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:MANAGED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:10.862154",
+      "stock": "ONGC",
+      "decision_zone": "EXIT",
+      "conviction_score": 30,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage"
+        ],
+        "valuation": [
+          "Attractive PE",
+          "Reasonable PB",
+          "Healthy free cash flow yield"
+        ]
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "VOLATILE",
+            "risk": "HIGH",
+            "explanation": "Large swings in effective tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.084,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:VOLATILE",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 64,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:VOLATILE. Key issue: balance sheet stress:MANAGED. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:13.448023",
+      "stock": "Power Grid",
+      "decision_zone": "EXIT",
+      "conviction_score": 13,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 52,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:16.100859",
+      "stock": "Reliance",
+      "decision_zone": "EXIT",
+      "conviction_score": 13,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 55,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:18.540552",
+      "stock": "SBI",
+      "decision_zone": "REDUCE",
+      "conviction_score": 45,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Attractive PE",
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "MINOR_MISMATCH",
+            "risk": "MEDIUM",
+            "explanation": "One year of positive profit but negative operating cash flow"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.14,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 68,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:MINOR_MISMATCH",
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 66,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:MINOR MISMATCH. Key issue: unusual items:PERSISTENT. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:21.392967",
+      "stock": "Sun Pharma",
+      "decision_zone": "EXIT",
+      "conviction_score": 5,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.056,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 64,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 69,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:MANAGED. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:23.971020",
+      "stock": "Tata Consumer",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 60,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 55,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:26.697203",
+      "stock": "Tata Motors",
+      "decision_zone": "EXIT",
+      "conviction_score": 10,
+      "overall_risk": "LOW",
+      "rationale": {
+        "quality": [
+          "Low leverage"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 0,
+        "overall_risk": "LOW",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Net income or operating cash flow history unavailable"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "NONE",
+            "risk": "LOW",
+            "explanation": "No unusual or special items reported"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Tax rate history unavailable"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Free cash flow data unavailable"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Debt or EBITDA data unavailable"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Revenue history unavailable"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Free cash flow history unavailable"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 84,
+          "governance_band": "LOW",
+          "top_risks": []
+        },
+        "stability": {
+          "stability_score": 80,
+          "stability_band": "STRONG",
+          "weak_areas": []
+        },
+        "master": {
+          "master_score": 78,
+          "master_band": "ELITE"
+        }
+      },
+      "narrative": "No major governance red flags detected. Business performance is stable across years. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:29.242785",
+      "stock": "Tata Steel",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [],
+        "valuation": [
+          "Reasonable PB"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 56,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:31.566912",
+      "stock": "TCS",
+      "decision_zone": "EXIT",
+      "conviction_score": 28,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage",
+          "Healthy operating margins"
+        ],
+        "valuation": [
+          "Reasonable PE"
+        ]
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.133,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 72,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 68,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:MANAGED. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:34.014812",
+      "stock": "Tech Mahindra",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Low leverage"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 2,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Debt not increasing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "MODERATE",
+            "risk": "LOW",
+            "value": 0.074,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 80,
+          "governance_band": "LOW",
+          "top_risks": [
+            "unusual_items:PERSISTENT"
+          ]
+        },
+        "stability": {
+          "stability_score": 68,
+          "stability_band": "AVERAGE",
+          "weak_areas": [
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 71,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "No major governance red flags detected. Key issue: unusual items:PERSISTENT. Business shows mixed stability. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:36.638646",
+      "stock": "Titan",
+      "decision_zone": "EXIT",
+      "conviction_score": 15,
+      "overall_risk": "MEDIUM",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 3,
+        "overall_risk": "MEDIUM",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "REPEATED_MISMATCH",
+            "risk": "HIGH",
+            "explanation": "Profit positive but operating cash flow negative in 2 years"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "STABLE",
+            "risk": "LOW",
+            "explanation": "Tax rate stable across years"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "MANAGED",
+            "risk": "MEDIUM",
+            "explanation": "Debt rising but EBITDA also growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "STRONG",
+            "risk": "LOW",
+            "value": 0.299,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "INVALID",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Non-positive FCF values"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "earnings_quality:REPEATED_MISMATCH",
+            "unusual_items:PERSISTENT",
+            "balance_sheet_stress:MANAGED"
+          ]
+        },
+        "stability": {
+          "stability_score": 84,
+          "stability_band": "STRONG",
+          "weak_areas": []
+        },
+        "master": {
+          "master_score": 60,
+          "master_band": "GOOD"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: earnings quality:REPEATED MISMATCH. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:MANAGED. Business performance is stable across years. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:39.233553",
+      "stock": "UltraTech Cement",
+      "decision_zone": "EXIT",
+      "conviction_score": 0,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Low leverage",
+          "Consistent revenue growth"
+        ],
+        "valuation": []
+      },
+      "validation": {
+        "total_flags": 6,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 5 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "VOLATILE",
+            "risk": "HIGH",
+            "explanation": "Large swings in effective tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "EXPENSIVE",
+            "risk": "HIGH",
+            "explanation": "Multiple valuation metrics stretched"
+          }
+        },
+        "governance": {
+          "governance_score": 40,
+          "governance_band": "HIGH",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:VOLATILE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 41,
+          "master_band": "POOR"
+        }
+      },
+      "narrative": "High governance risk detected. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:VOLATILE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation is expensive.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    },
+    {
+      "timestamp": "2026-01-28T12:27:41.742703",
+      "stock": "Wipro",
+      "decision_zone": "EXIT",
+      "conviction_score": 23,
+      "overall_risk": "HIGH",
+      "rationale": {
+        "quality": [
+          "Strong ROE",
+          "Low leverage"
+        ],
+        "valuation": [
+          "Reasonable PE",
+          "Reasonable PB",
+          "Healthy free cash flow yield"
+        ]
+      },
+      "validation": {
+        "total_flags": 4,
+        "overall_risk": "HIGH",
+        "details": {
+          "fraud": {
+            "layer": "fraud",
+            "flag_count": 0,
+            "flags": [],
+            "risk_level": "LOW"
+          },
+          "earnings_quality": {
+            "name": "earnings_quality",
+            "status": "CLEAN",
+            "risk": "LOW",
+            "explanation": "Operating cash flow aligns with profits"
+          },
+          "unusual_items": {
+            "name": "unusual_items",
+            "status": "PERSISTENT",
+            "risk": "HIGH",
+            "explanation": "Unusual/special items present in 4 years"
+          },
+          "tax_volatility": {
+            "name": "tax_volatility",
+            "status": "MODERATE",
+            "risk": "MEDIUM",
+            "explanation": "Moderate variation in tax rate"
+          },
+          "capital_allocation": {
+            "name": "capital_allocation",
+            "status": "DISCIPLINED",
+            "risk": "LOW",
+            "explanation": "Positive FCF not accompanied by rising debt"
+          },
+          "balance_sheet_stress": {
+            "name": "balance_sheet_stress",
+            "status": "STRESSED",
+            "risk": "HIGH",
+            "explanation": "Debt rising while EBITDA not growing"
+          },
+          "median_roe": {
+            "name": "median_roe",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "ROE history unavailable"
+          },
+          "median_operating_margin": {
+            "name": "median_operating_margin",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "value": null,
+            "explanation": "Operating margin history unavailable"
+          },
+          "revenue_cagr": {
+            "name": "revenue_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Revenue compound annual growth rate"
+          },
+          "fcf_cagr": {
+            "name": "fcf_cagr",
+            "status": "DECLINING",
+            "risk": "HIGH",
+            "value": NaN,
+            "explanation": "Free cash flow compound annual growth rate"
+          },
+          "consistency": {
+            "name": "consistency",
+            "status": "NO_DATA",
+            "risk": "UNKNOWN",
+            "explanation": "Not enough data for consistency analysis"
+          },
+          "valuation_sanity": {
+            "name": "valuation_sanity",
+            "status": "REASONABLE",
+            "risk": "LOW",
+            "explanation": "Valuation within sane ranges"
+          }
+        },
+        "governance": {
+          "governance_score": 52,
+          "governance_band": "MEDIUM",
+          "top_risks": [
+            "unusual_items:PERSISTENT",
+            "tax_volatility:MODERATE",
+            "balance_sheet_stress:STRESSED"
+          ]
+        },
+        "stability": {
+          "stability_score": 48,
+          "stability_band": "WEAK",
+          "weak_areas": [
+            "revenue_cagr:DECLINING",
+            "fcf_cagr:DECLINING"
+          ]
+        },
+        "master": {
+          "master_score": 56,
+          "master_band": "AVERAGE"
+        }
+      },
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: tax volatility:MODERATE. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "trend": {
+        "trend": "NO_DATA",
+        "delta": null
+      }
+    }
+  ]
+}

@@ -10,10 +10,7 @@ from trace_invest.intelligence.conviction import conviction_score
 from trace_invest.outputs.signals import generate_signal
 from trace_invest.outputs.journal import create_journal_entry
 from trace_invest.config.loader import load_config
-from trace_invest.ingestion.fundamentals import (
-    fetch_fundamentals,
-    write_raw_fundamentals,
-)
+from trace_invest.ingestion.fundamentals import (fetch_fundamentals,write_raw_fundamentals,)
 from trace_invest.processing.fundamentals import build_processed_fundamentals
 from trace_invest.quality.coverage import coverage_score
 from trace_invest.quality.freshness import freshness_score
@@ -21,6 +18,16 @@ from trace_invest.quality.confidence import confidence_band
 from trace_invest.quality.raw_profiler import profile_raw_fundamentals
 from trace_invest.quality.raw_schema import inspect_raw_schema
 from trace_invest.quality.raw_field_inventory import build_raw_field_inventory
+from trace_invest.outputs.rankings import generate_rankings
+from trace_invest.outputs.watchlist import generate_long_term_watchlist
+from trace_invest.outputs.narrative import generate_narrative
+from trace_invest.outputs.sectors import generate_sector_summary
+from trace_invest.outputs.history import update_stock_history
+from trace_invest.outputs.trends import compute_trend
+from trace_invest.outputs.sector_trends import generate_sector_trends
+
+
+
 
 
 # -----------------------------------------------------------
@@ -136,8 +143,9 @@ def run_weekly_pipeline():
     # -------------------------------------------------------
 
     config = load_config()
-    stocks = config["universe"]["universe"]["stocks"]
-    # stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+    # stocks = config["universe"]["universe"]["stocks"]
+    
+    stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
 
     logger.info(f"Universe size: {len(stocks)}")
 
@@ -195,15 +203,75 @@ def run_weekly_pipeline():
 
             journal = create_journal_entry(name, signal)
             journal["validation"] = validation
+            journal["narrative"] = generate_narrative(journal)
+
 
             snapshot["decisions"].append(journal)
+            update_stock_history(journal, run_date)
             
+            trend = compute_trend(symbol)
+            journal["trend"] = trend
+
             time.sleep(1)
 
 
         except Exception:
             logger.exception(f"FAILED processing {symbol}")
             continue
+    
+
+    # -------------------------------------------------------
+    # Rankings
+    # -------------------------------------------------------
+
+    rankings = generate_rankings(snapshot["decisions"])
+    rankings_path = snapshot_dir / "rankings.json"
+    rankings_path.write_text(json.dumps(rankings, indent=2))
+
+    # -------------------------------------------------------
+    # Sector Trends
+    # -------------------------------------------------------
+
+    sector_trends = generate_sector_trends(
+        snapshot["decisions"],
+        stocks
+    )
+
+    (snapshot_dir / "sector_trends.json").write_text(
+        json.dumps(sector_trends, indent=2)
+    )
+
+
+
+    # -------------------------------------------------------
+    # Sector Summary
+    # -------------------------------------------------------
+
+    sector_summary = generate_sector_summary(
+        snapshot["decisions"],
+        stocks
+    )
+
+    (snapshot_dir / "sectors.json").write_text(
+        json.dumps(sector_summary, indent=2)
+    )
+
+
+
+    # -------------------------------------------------------
+    # Watchlist
+    # -------------------------------------------------------
+
+    watchlist = generate_long_term_watchlist(snapshot["decisions"])
+
+    print(watchlist)
+
+    watchlist_dir = Path("data/watchlists")
+    watchlist_dir.mkdir(parents=True, exist_ok=True)
+
+    watchlist_path = watchlist_dir / "long_term.json"
+    watchlist_path.write_text(json.dumps(watchlist, indent=2))
+
 
     # -------------------------------------------------------
     # Market Summary

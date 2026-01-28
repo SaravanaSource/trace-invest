@@ -1,0 +1,633 @@
+{
+  "top_master": [
+    {
+      "symbol": "Tata Motors",
+      "master_score": 78,
+      "master_band": "ELITE",
+      "governance_band": "LOW",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bajaj Finserv",
+      "master_score": 72,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Adani Enterprises",
+      "master_score": 71,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "BPCL",
+      "master_score": 71,
+      "master_band": "GOOD",
+      "governance_band": "LOW",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tech Mahindra",
+      "master_score": 71,
+      "master_band": "GOOD",
+      "governance_band": "LOW",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Sun Pharma",
+      "master_score": 69,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bajaj Finance",
+      "master_score": 68,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "TCS",
+      "master_score": 68,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bajaj Auto",
+      "master_score": 67,
+      "master_band": "GOOD",
+      "governance_band": "HIGH",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "SBI",
+      "master_score": 66,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Cipla",
+      "master_score": 65,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ONGC",
+      "master_score": 64,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Axis Bank",
+      "master_score": 63,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "IndusInd Bank",
+      "master_score": 62,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Nestle India",
+      "master_score": 62,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "NTPC",
+      "master_score": 60,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Titan",
+      "master_score": 60,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Coal India",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Dr Reddy's",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HCL Technologies",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Hero MotoCorp",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Infosys",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ITC",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Larsen & Toubro",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HDFC Bank",
+      "master_score": 58,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ICICI Bank",
+      "master_score": 58,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Maruti",
+      "master_score": 56,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tata Steel",
+      "master_score": 56,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Wipro",
+      "master_score": 56,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Eicher Motors",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    }
+  ],
+  "bottom_master": [
+    {
+      "symbol": "UltraTech Cement",
+      "master_score": 41,
+      "master_band": "POOR",
+      "governance_band": "HIGH",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Grasim",
+      "master_score": 44,
+      "master_band": "POOR",
+      "governance_band": "HIGH",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Apollo Hospitals",
+      "master_score": 46,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bharti Airtel",
+      "master_score": 47,
+      "master_band": "AVERAGE",
+      "governance_band": "HIGH",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Asian Paints",
+      "master_score": 49,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Britannia",
+      "master_score": 49,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Adani Ports",
+      "master_score": 51,
+      "master_band": "AVERAGE",
+      "governance_band": "HIGH",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Power Grid",
+      "master_score": 52,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Divis Labs",
+      "master_score": 54,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HDFC Life",
+      "master_score": 54,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HUL",
+      "master_score": 54,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "JSW Steel",
+      "master_score": 54,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Mahindra & Mahindra",
+      "master_score": 54,
+      "master_band": "AVERAGE",
+      "governance_band": "HIGH",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Eicher Motors",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Hindalco",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Kotak Bank",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Reliance",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tata Consumer",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Maruti",
+      "master_score": 56,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tata Steel",
+      "master_score": 56,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Wipro",
+      "master_score": 56,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HDFC Bank",
+      "master_score": 58,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ICICI Bank",
+      "master_score": 58,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Coal India",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Dr Reddy's",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HCL Technologies",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Hero MotoCorp",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Infosys",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ITC",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Larsen & Toubro",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    }
+  ],
+  "low_governance": [
+    {
+      "symbol": "BPCL",
+      "master_score": 71,
+      "master_band": "GOOD",
+      "governance_band": "LOW",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tata Motors",
+      "master_score": 78,
+      "master_band": "ELITE",
+      "governance_band": "LOW",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tech Mahindra",
+      "master_score": 71,
+      "master_band": "GOOD",
+      "governance_band": "LOW",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    }
+  ],
+  "strong_stability": [
+    {
+      "symbol": "Adani Enterprises",
+      "master_score": 71,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bajaj Auto",
+      "master_score": 67,
+      "master_band": "GOOD",
+      "governance_band": "HIGH",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bajaj Finance",
+      "master_score": 68,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Bajaj Finserv",
+      "master_score": 72,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Tata Motors",
+      "master_score": 78,
+      "master_band": "ELITE",
+      "governance_band": "LOW",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Titan",
+      "master_score": 60,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "STRONG",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    }
+  ],
+  "top_improving": [],
+  "top_deteriorating": []
+}

@@ -1,0 +1,22 @@
+{
+  "top_master": [
+    {
+      "symbol": "ITC",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK"
+    }
+  ],
+  "bottom_master": [
+    {
+      "symbol": "ITC",
+      "master_score": 59,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK"
+    }
+  ],
+  "low_governance": [],
+  "strong_stability": []
+}

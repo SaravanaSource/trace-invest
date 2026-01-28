@@ -1,0 +1,9 @@
+{
+  "total_stocks": 1,
+  "by_decision_zone": {
+    "EXIT": 1
+  },
+  "by_overall_risk": {
+    "HIGH": 1
+  }
+}

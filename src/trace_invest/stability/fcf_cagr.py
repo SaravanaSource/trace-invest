@@ -12,7 +12,7 @@ def _extract_series(rows: List[Dict], keyword: str) -> Dict[str, float]:
 
         name = str(row.get("index", "")).lower()
 
-        if keyword in name:
+        if keyword in name or keyword.replace("_", " ") in name:
             return {
                 k: v
                 for k, v in row.items()
