@@ -50,8 +50,8 @@ def write_raw_prices(symbol: str, df: pd.DataFrame) -> None:
 
 def run_weekly_price_ingestion() -> None:
     config = load_config()
-    # stocks = config["universe"]["universe"]["stocks"]
-    stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+    stocks = config["universe"]["universe"]["stocks"]
+    # stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
 
     logger.info("Starting weekly price ingestion")
 

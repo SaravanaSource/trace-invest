@@ -2,6 +2,7 @@ from pathlib import Path
 import json
 import time
 from datetime import datetime, timezone
+import csv
 
 from trace_invest.utils.logger import setup_logger
 from trace_invest.ingestion.prices import run_weekly_price_ingestion
@@ -25,6 +26,25 @@ from trace_invest.outputs.sectors import generate_sector_summary
 from trace_invest.outputs.history import update_stock_history
 from trace_invest.outputs.trends import compute_trend
 from trace_invest.outputs.sector_trends import generate_sector_trends
+from trace_invest.technical.trend import compute_price_trend
+from trace_invest.technical.momentum import compute_momentum
+from trace_invest.technical.score import compute_technical_score
+from trace_invest.technical.entry_filter import passes_entry_filter
+from trace_invest.portfolio.engine import evaluate_portfolio_action
+from trace_invest.portfolio.store import load_portfolio, save_portfolio
+from trace_invest.portfolio.mutate import apply_portfolio_action
+from trace_invest.portfolio.valuation import compute_portfolio_valuation
+from trace_invest.portfolio.rebalance import compute_rebalance_actions
+from trace_invest.portfolio.exit_manager import evaluate_exit_override
+
+
+
+
+
+
+
+
+
 
 
 
@@ -114,12 +134,41 @@ def generate_market_summary(decisions: list) -> dict:
     return summary
 
 
+
+
+def load_prices(symbol: str):
+    path = Path(f"data/raw/prices/{symbol}.csv")
+
+    if not path.exists():
+        return []
+
+    rows = []
+
+    try:
+        with path.open() as f:
+            reader = csv.DictReader(f)
+            for r in reader:
+                rows.append({
+                    "date": r.get("date") or r.get("Date"),
+                    "close": float(r.get("close") or r.get("Close") or 0),
+                })
+    except Exception:
+        return []
+
+    return rows
+
+
+
 # -----------------------------------------------------------
 # Main Pipeline
 # -----------------------------------------------------------
 
 def run_weekly_pipeline():
+
     logger.info("===== Weekly TRACE MARKETS run started =====")
+
+    portfolio = load_portfolio()
+
 
     # -------------------------------------------------------
     # Snapshot setup
@@ -143,9 +192,9 @@ def run_weekly_pipeline():
     # -------------------------------------------------------
 
     config = load_config()
-    # stocks = config["universe"]["universe"]["stocks"]
-    
-    stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
+    stocks = config["universe"]["universe"]["stocks"]
+
+    # stocks = json.loads(Path(config["universe"]["universe"]["stocks_file"]).read_text())
 
     logger.info(f"Universe size: {len(stocks)}")
 
@@ -160,6 +209,8 @@ def run_weekly_pipeline():
     # -------------------------------------------------------
     # Per-stock processing
     # -------------------------------------------------------
+
+    latest_prices = {}
 
     for stock in stocks:
         name = stock["name"]
@@ -205,6 +256,45 @@ def run_weekly_pipeline():
             journal["validation"] = validation
             journal["narrative"] = generate_narrative(journal)
 
+            prices = load_prices(symbol)
+
+            if prices:
+                latest_prices[symbol] = prices[-1]["close"]
+
+
+            technical = compute_price_trend(prices)
+            momentum = compute_momentum(prices)
+            tech_score = compute_technical_score(technical, momentum)
+
+            journal["technical"] = technical
+            journal["momentum"] = momentum
+            journal["technical_score"] = tech_score
+
+            entry = passes_entry_filter(journal)
+            journal["entry_filter"] = entry
+
+            exit_override = evaluate_exit_override(journal)
+            journal["exit_override"] = exit_override
+            if journal.get("exit_override", {}).get("exit_override"):
+                portfolio_action = {
+                    "action": "SELL",
+                    "symbol": journal["stock"]
+                }
+            else:
+                portfolio_action = evaluate_portfolio_action(
+                    portfolio,
+                    journal
+                )
+
+            price = prices[-1]["close"] if prices else None
+
+            if price:
+                portfolio = apply_portfolio_action(
+                    portfolio,
+                    portfolio_action,
+                    price
+                )
+
 
             snapshot["decisions"].append(journal)
             update_stock_history(journal, run_date)
@@ -219,6 +309,27 @@ def run_weekly_pipeline():
             logger.exception(f"FAILED processing {symbol}")
             continue
     
+
+    portfolio_summary = compute_portfolio_valuation(
+    portfolio,
+    latest_prices
+    )
+
+    (Path("data/portfolio_summary.json")
+    .write_text(json.dumps(portfolio_summary, indent=2)))
+
+    save_portfolio(portfolio)
+
+
+    rebalance_actions = compute_rebalance_actions(
+    portfolio,
+    latest_prices,
+    snapshot["decisions"]
+    )
+
+    (Path("data/rebalance_actions.json")
+    .write_text(json.dumps(rebalance_actions, indent=2)))
+
 
     # -------------------------------------------------------
     # Rankings

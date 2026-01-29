@@ -1,9 +1,9 @@
 {
-  "run_date": "2026-01-28",
-  "run_timestamp": "2026-01-28T13:27:37.864709+00:00",
+  "run_date": "2026-01-29",
+  "run_timestamp": "2026-01-29T07:39:17.251309+00:00",
   "decisions": [
     {
-      "timestamp": "2026-01-28T13:27:41.168768",
+      "timestamp": "2026-01-29T07:39:20.543111",
       "stock": "ITC",
       "decision_zone": "EXIT",
       "conviction_score": 13,
@@ -143,9 +143,14 @@
           "technical_band": "WEAK"
         }
       },
-      "portfolio_action": {
-        "action": "HOLD",
-        "symbol": "ITC"
+      "exit_override": {
+        "exit_override": false,
+        "reasons": {
+          "master_band": "AVERAGE",
+          "governance_band": "MEDIUM",
+          "trend": null,
+          "technical_band": "WEAK"
+        }
       },
       "trend": {
         "trend": "NO_DATA",
@@ -153,7 +158,7 @@
       }
     },
     {
-      "timestamp": "2026-01-28T13:27:43.344621",
+      "timestamp": "2026-01-29T07:39:22.696797",
       "stock": "HDFC Bank",
       "decision_zone": "EXIT",
       "conviction_score": 33,
@@ -294,9 +299,14 @@
           "technical_band": "WEAK"
         }
       },
-      "portfolio_action": {
-        "action": "HOLD",
-        "symbol": "HDFC Bank"
+      "exit_override": {
+        "exit_override": false,
+        "reasons": {
+          "master_band": "AVERAGE",
+          "governance_band": "MEDIUM",
+          "trend": null,
+          "technical_band": "WEAK"
+        }
       },
       "trend": {
         "trend": "NO_DATA",
@@ -304,7 +314,7 @@
       }
     },
     {
-      "timestamp": "2026-01-28T13:27:45.498791",
+      "timestamp": "2026-01-29T07:39:24.874371",
       "stock": "TCS",
       "decision_zone": "EXIT",
       "conviction_score": 28,
@@ -443,9 +453,14 @@
           "technical_band": "WEAK"
         }
       },
-      "portfolio_action": {
-        "action": "HOLD",
-        "symbol": "TCS"
+      "exit_override": {
+        "exit_override": false,
+        "reasons": {
+          "master_band": "GOOD",
+          "governance_band": "MEDIUM",
+          "trend": null,
+          "technical_band": "WEAK"
+        }
       },
       "trend": {
         "trend": "NO_DATA",
@@ -453,14 +468,13 @@
       }
     },
     {
-      "timestamp": "2026-01-28T13:27:47.627913",
+      "timestamp": "2026-01-29T07:39:26.936484",
       "stock": "Larsen & Toubro",
       "decision_zone": "EXIT",
       "conviction_score": 0,
       "overall_risk": "HIGH",
       "rationale": {
         "quality": [
-          "Strong ROE",
           "Consistent revenue growth"
         ],
         "valuation": []
@@ -541,9 +555,9 @@
           },
           "valuation_sanity": {
             "name": "valuation_sanity",
-            "status": "REASONABLE",
-            "risk": "LOW",
-            "explanation": "Valuation within sane ranges"
+            "status": "RICH",
+            "risk": "MEDIUM",
+            "explanation": "One valuation metric stretched"
           }
         },
         "governance": {
@@ -563,11 +577,11 @@
           ]
         },
         "master": {
-          "master_score": 59,
+          "master_score": 55,
           "master_band": "AVERAGE"
         }
       },
-      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation appears reasonable.",
+      "narrative": "Some governance concerns exist. Key issue: unusual items:PERSISTENT. Key issue: balance sheet stress:STRESSED. Business shows unstable or weakening trends. Weak area: revenue cagr:DECLINING. Weak area: fcf cagr:DECLINING. Valuation looks stretched.",
       "technical": {
         "trend": "NO_DATA",
         "ma50": null,
@@ -590,9 +604,14 @@
           "technical_band": "WEAK"
         }
       },
-      "portfolio_action": {
-        "action": "HOLD",
-        "symbol": "Larsen & Toubro"
+      "exit_override": {
+        "exit_override": false,
+        "reasons": {
+          "master_band": "AVERAGE",
+          "governance_band": "MEDIUM",
+          "trend": null,
+          "technical_band": "WEAK"
+        }
       },
       "trend": {
         "trend": "NO_DATA",
@@ -600,7 +619,7 @@
       }
     },
     {
-      "timestamp": "2026-01-28T13:27:49.853827",
+      "timestamp": "2026-01-29T07:39:29.266513",
       "stock": "Asian Paints",
       "decision_zone": "EXIT",
       "conviction_score": 0,
@@ -737,9 +756,14 @@
           "technical_band": "WEAK"
         }
       },
-      "portfolio_action": {
-        "action": "HOLD",
-        "symbol": "Asian Paints"
+      "exit_override": {
+        "exit_override": false,
+        "reasons": {
+          "master_band": "AVERAGE",
+          "governance_band": "MEDIUM",
+          "trend": null,
+          "technical_band": "WEAK"
+        }
       },
       "trend": {
         "trend": "NO_DATA",
