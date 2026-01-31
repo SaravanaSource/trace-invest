@@ -4,6 +4,10 @@ from pathlib import Path
 
 SNAPSHOT_ROOT = Path("data/snapshots")
 
+BASE_DIR = Path(__file__).resolve().parents[3]
+SNAPSHOT_ROOT = BASE_DIR / "data" / "snapshots"
+
+
 
 def _sanitize(obj):
     if isinstance(obj, float):

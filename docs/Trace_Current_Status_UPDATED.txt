@@ -1,0 +1,91 @@
+
+TRACE CURRENT STATUS — UPDATED
+
+18) SAAS / APPLICATION LAYER (NEW)
+
+Frontend:
+- Framework: Next.js (App Router)
+- Styling: Tailwind CSS
+- Pages:
+  - /dashboard  → Market summary
+  - /stocks     → Stock universe list
+  - /stocks/[symbol] → Individual stock intelligence
+
+Backend API (FastAPI):
+- GET /market/summary
+- GET /stocks
+- GET /stocks/{symbol}
+
+Purpose:
+Expose TRACE intelligence through a user-facing SaaS layer.
+
+Status:
+FOUNDATIONAL – working routes, basic rendering, styling in progress.
+
+--------------------------------------------------
+
+19) API SERVICE LAYER
+
+FastAPI backend exposing processed TRACE outputs.
+
+Services:
+- Snapshot loader
+- Stock snapshot resolver
+- Market summary assembler
+
+Design:
+API is a thin adapter over deterministic engine outputs.
+No business logic duplication.
+
+--------------------------------------------------
+
+WHAT TRACE CURRENTLY IS
+
+A deterministic financial intelligence engine with:
+
+- Multi-engine forensic analysis
+- Multi-year stability analysis
+- Valuation sanity checking
+- Composite scoring
+- Per-stock historical memory
+- Trend awareness
+- Rankings & watchlists
+- Narrative generation
+- API service layer
+- Early-stage SaaS UI
+
+TRACE now exists as an ENGINE + API + APPLICATION stack.
+
+--------------------------------------------------
+
+WHAT TRACE IS NOT YET
+
+- No authenticated users
+- No portfolio tracking
+- No alerts
+- No real-time price streaming
+- UI is not yet production-polished
+
+--------------------------------------------------
+
+CURRENT PHASE
+
+Phase 3 — Productization
+
+Focus:
+- SaaS UI foundation
+- API hardening
+- Schema stabilization
+- Frontend-backend contract
+
+Not focusing on new financial logic.
+
+--------------------------------------------------
+
+NEAR TERM PRIORITIES
+
+1) Stabilize API responses
+2) Finalize Stock List endpoint
+3) Harden Snapshot Loader
+4) Improve UI layout system
+5) Introduce shared DTO schemas

@@ -1,0 +1,100 @@
+{
+  "top_master": [
+    {
+      "symbol": "TCS",
+      "master_score": 68,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HDFC Bank",
+      "master_score": 58,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ITC",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Larsen & Toubro",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Asian Paints",
+      "master_score": 49,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    }
+  ],
+  "bottom_master": [
+    {
+      "symbol": "Asian Paints",
+      "master_score": 49,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "ITC",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "Larsen & Toubro",
+      "master_score": 55,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "HDFC Bank",
+      "master_score": 58,
+      "master_band": "AVERAGE",
+      "governance_band": "MEDIUM",
+      "stability_band": "WEAK",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    },
+    {
+      "symbol": "TCS",
+      "master_score": 68,
+      "master_band": "GOOD",
+      "governance_band": "MEDIUM",
+      "stability_band": "AVERAGE",
+      "trend": "NO_DATA",
+      "trend_delta": null
+    }
+  ],
+  "low_governance": [],
+  "strong_stability": [],
+  "top_improving": [],
+  "top_deteriorating": []
+}

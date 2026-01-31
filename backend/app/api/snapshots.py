@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from backend.app.services.snapshot_loader import (
+from app.services.snapshot_loader import (
     list_snapshot_dates,
     load_snapshot_by_date,
     load_market_summary_by_date

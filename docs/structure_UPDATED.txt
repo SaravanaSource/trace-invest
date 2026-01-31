@@ -1,0 +1,55 @@
+
+TRACE MARKETS — REFERENCE PROJECT STRUCTURE
+This file documents architectural layout.
+Generated manually for clarity (not raw filesystem dump).
+
+trace-invest/
+├─ backend/
+│  ├─ app/
+│  │  ├─ main.py
+│  │  ├─ api/
+│  │  │  ├─ market.py
+│  │  │  └─ stocks.py
+│  │  ├─ services/
+│  │  │  ├─ snapshot_loader.py
+│  │  │  ├─ market_service.py
+│  │  │  └─ stock_service.py
+│  │  └─ models/
+│  └─ requirements.txt
+│
+├─ src/trace_invest/
+│  ├─ ingestion/
+│  ├─ processing/
+│  ├─ validation/
+│  ├─ stability/
+│  ├─ valuation/
+│  ├─ governance/
+│  ├─ decision/
+│  ├─ narrative/
+│  ├─ rankings/
+│  └─ history/
+│
+├─ data/
+│  ├─ snapshots/
+│  ├─ history/
+│  ├─ rankings.json
+│  ├─ sectors.json
+│  └─ watchlists/
+│
+├─ frontend/
+│  ├─ app/
+│  │  ├─ layout.tsx
+│  │  ├─ globals.css
+│  │  ├─ page.tsx
+│  │  ├─ dashboard/
+│  │  ├─ stocks/
+│  │  │  ├─ page.tsx
+│  │  │  └─ [symbol]/
+│  │  │     └─ page.tsx
+│  ├─ lib/
+│  │  └─ api.ts
+│  ├─ package.json
+│  └─ tailwind.config.js
+│
+├─ .env.example
+└─ README.md

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from backend.app.services.snapshot_loader import load_latest_market_summary
+from app.services.snapshot_loader import load_latest_market_summary
 
 router = APIRouter(prefix="/market", tags=["market"])
 

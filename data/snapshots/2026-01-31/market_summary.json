@@ -1,0 +1,10 @@
+{
+  "total_stocks": 5,
+  "by_decision_zone": {
+    "EXIT": 5
+  },
+  "by_overall_risk": {
+    "HIGH": 3,
+    "MEDIUM": 2
+  }
+}
