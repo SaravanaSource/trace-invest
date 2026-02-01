@@ -1,10 +1,13 @@
-streamlit
-pandas
-numpy
-pyyaml
-requests
-loguru
-yfinance
-python-dateutil
-pytz
+# Core API
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
 
+# Data handling
+pydantic==2.6.4
+python-dateutil==2.9.0.post0
+
+# IO / filesystem
+orjson==3.9.15
+
+# Optional but recommended
+python-dotenv==1.0.1
