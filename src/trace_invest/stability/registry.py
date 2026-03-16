@@ -3,6 +3,7 @@ from trace_invest.stability.median_operating_margin import analyze_median_operat
 from trace_invest.stability.revenue_cagr import analyze_revenue_cagr
 from trace_invest.stability.fcf_cagr import analyze_fcf_cagr
 from trace_invest.stability.consistency import analyze_consistency
+from trace_invest.stability.stability_taxonomy import analyze_stability_taxonomy
 
 
 STABILITY_ENGINES = [
@@ -11,5 +12,6 @@ STABILITY_ENGINES = [
     analyze_revenue_cagr,
     analyze_fcf_cagr,
     analyze_consistency,
+    analyze_stability_taxonomy,
 ]
 

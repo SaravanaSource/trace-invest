@@ -13,6 +13,9 @@ def compute_stability_score(details: Dict) -> Dict:
     max_total = 0
     weak = []
 
+    taxonomy = details.get("stability_taxonomy", {})
+    taxonomy_status = taxonomy.get("status")
+
     for name, result in details.items():
         if not name.startswith(("median_", "revenue_cagr", "fcf_cagr", "consistency")):
             continue
@@ -30,6 +33,13 @@ def compute_stability_score(details: Dict) -> Dict:
         score = 100
     else:
         score = round(100 - (total / max_total) * 100)
+
+    # Taxonomy override: only structural decline should force WEAK.
+    if taxonomy_status == "STRUCTURAL_DECLINE":
+        weak.append("stability_taxonomy:STRUCTURAL_DECLINE")
+        score = min(score, 49)
+    elif taxonomy_status in ("STABLE_LOW_GROWTH", "CYCLICAL"):
+        score = max(score, 50)
 
     if score >= 75:
         band = "STRONG"

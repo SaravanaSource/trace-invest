@@ -12,6 +12,7 @@ from trace_invest.outputs.signals import generate_signal
 from trace_invest.outputs.journal import create_journal_entry
 from trace_invest.config.loader import load_config
 from trace_invest.ingestion.fundamentals import (fetch_fundamentals,write_raw_fundamentals,)
+from trace_invest.validation.system_awareness import build_system_awareness
 from trace_invest.processing.fundamentals import build_processed_fundamentals
 from trace_invest.quality.coverage import coverage_score
 from trace_invest.quality.freshness import freshness_score
@@ -36,15 +37,6 @@ from trace_invest.portfolio.mutate import apply_portfolio_action
 from trace_invest.portfolio.valuation import compute_portfolio_valuation
 from trace_invest.portfolio.rebalance import compute_rebalance_actions
 from trace_invest.portfolio.exit_manager import evaluate_exit_override
-
-
-
-
-
-
-
-
-
 
 
 
@@ -254,6 +246,22 @@ def run_weekly_pipeline():
 
             journal = create_journal_entry(name, signal)
             journal["validation"] = validation
+            journal["data_confidence_score"] = validation.get("data_confidence_score")
+            journal["data_confidence_band"] = validation.get("data_confidence_band")
+                journal["system_awareness"] = build_system_awareness(journal, validation)
+            journal["quality"] = {
+                "coverage_score": coverage.get("coverage_ratio"),
+                "freshness": freshness.get("freshness"),
+                "confidence_band": confidence,
+            }
+            journal["governance"] = validation.get("governance")
+            journal["stability"] = validation.get("stability")
+            journal["master"] = validation.get("master")
+            journal["valuation"] = {
+                "valuation_sanity": validation.get("details", {}).get("valuation_sanity", {}).get("status")
+                if isinstance(validation.get("details", {}).get("valuation_sanity"), dict)
+                else validation.get("details", {}).get("valuation_sanity")
+            }
             journal["narrative"] = generate_narrative(journal)
 
             prices = load_prices(symbol)
@@ -296,11 +304,12 @@ def run_weekly_pipeline():
                 )
 
 
-            snapshot["decisions"].append(journal)
-            update_stock_history(journal, run_date)
-            
             trend = compute_trend(symbol)
             journal["trend"] = trend
+
+            update_stock_history(journal, run_date)
+
+            snapshot["decisions"].append(journal)
 
             time.sleep(1)
 
@@ -407,4 +416,5 @@ def run_weekly_pipeline():
 # -----------------------------------------------------------
 
 if __name__ == "__main__":
+    run_weekly_pipeline()
     run_weekly_pipeline()

@@ -2,16 +2,16 @@ universe:
   stocks:
     - name: ITC
       symbol: ITC.NS
-    - name: HDFC Bank
-      symbol: HDFCBANK.NS
-    - name: TCS
-      symbol: TCS.NS
-    - name: Larsen & Toubro
-      symbol: LT.NS
-    - name: Asian Paints
-      symbol: ASIANPAINT.NS
+    # - name: HDFC Bank
+    #   symbol: HDFCBANK.NS
+    # - name: TCS
+    #   symbol: TCS.NS
+    # - name: Larsen & Toubro
+    #   symbol: LT.NS
+    # - name: Asian Paints
+    #   symbol: ASIANPAINT.NS
 
-  # stocks_file: data/universe/nifty50.json
+  stocks_file: data/universe/nifty50.json
 
 
 

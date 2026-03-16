@@ -29,3 +29,14 @@ def get_snapshot_market(date: str):
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
 
+
+@router.get("/snapshots")
+def get_latest_snapshot():
+    dates = list_snapshot_dates()
+    if not dates:
+        raise HTTPException(status_code=404, detail="No snapshots found")
+
+    latest = sorted(dates)[-1]
+    snapshot = load_snapshot_by_date(latest)
+    return snapshot
+

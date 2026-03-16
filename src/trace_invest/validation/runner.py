@@ -7,6 +7,7 @@ from trace_invest.stability.stability_score import compute_stability_score
 from trace_invest.valuation.registry import VALUATION_ENGINES
 from trace_invest.intelligence.master_score import compute_master_score
 from trace_invest.validation.governance_score import compute_governance_score
+from trace_invest.validation.data_confidence import compute_data_confidence
 
 
 
@@ -58,9 +59,13 @@ def run_validation(processed: Dict) -> Dict:
             "details": details,
         })
 
+    data_confidence = compute_data_confidence(details)
+
     return {
         "total_flags": total_flags,
         "overall_risk": _overall_risk(total_flags),
+        "data_confidence_score": data_confidence.get("data_confidence_score"),
+        "data_confidence_band": data_confidence.get("data_confidence_band"),
         "details": details,
         "governance": governance_summary,
         "stability": stability_summary,

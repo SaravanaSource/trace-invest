@@ -15,6 +15,9 @@ def generate_signal(conviction_result: Dict) -> Dict:
     score = conviction_result["conviction_score"]
     zone = conviction_to_zone(score)
 
+    if conviction_result.get("data_confidence_band") == "LOW" and zone in ("EXIT", "REDUCE"):
+        zone = "HOLD"
+
     return {
         "conviction_score": score,
         "zone": zone,
