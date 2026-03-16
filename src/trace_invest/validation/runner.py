@@ -8,6 +8,10 @@ from trace_invest.valuation.registry import VALUATION_ENGINES
 from trace_invest.intelligence.master_score import compute_master_score
 from trace_invest.validation.governance_score import compute_governance_score
 from trace_invest.validation.data_confidence import compute_data_confidence
+from trace_invest.utils.logger import setup_logger
+
+
+logger = setup_logger()
 
 
 
@@ -27,8 +31,17 @@ def run_validation(processed: Dict) -> Dict:
     total_flags = fraud_result["flag_count"]
 
     for engine in GOVERNANCE_ENGINES:
-        result = engine(processed)
-        details[result["name"]] = result
+        try:
+            result = engine(processed)
+        except Exception as exc:  # defensive: never crash validation
+            logger.exception("Governance engine %s failed", getattr(engine, "__name__", "unknown"))
+            result = {
+                "name": getattr(engine, "__name__", "unknown"),
+                "risk": "UNKNOWN",
+                "error": str(exc),
+            }
+
+        details[result.get("name", getattr(engine, "__name__", "unknown"))] = result
 
         if result.get("risk") == "HIGH":
             total_flags += 1
@@ -37,8 +50,17 @@ def run_validation(processed: Dict) -> Dict:
 
 
     for engine in STABILITY_ENGINES:
-        result = engine(processed)
-        details[result["name"]] = result
+        try:
+            result = engine(processed)
+        except Exception as exc:
+            logger.exception("Stability engine %s failed", getattr(engine, "__name__", "unknown"))
+            result = {
+                "name": getattr(engine, "__name__", "unknown"),
+                "risk": "UNKNOWN",
+                "error": str(exc),
+            }
+
+        details[result.get("name", getattr(engine, "__name__", "unknown"))] = result
 
         if result.get("risk") == "HIGH":
             total_flags += 1
@@ -47,8 +69,17 @@ def run_validation(processed: Dict) -> Dict:
 
   
     for engine in VALUATION_ENGINES:
-        result = engine(processed)
-        details[result["name"]] = result
+        try:
+            result = engine(processed)
+        except Exception as exc:
+            logger.exception("Valuation engine %s failed", getattr(engine, "__name__", "unknown"))
+            result = {
+                "name": getattr(engine, "__name__", "unknown"),
+                "risk": "UNKNOWN",
+                "error": str(exc),
+            }
+
+        details[result.get("name", getattr(engine, "__name__", "unknown"))] = result
 
         if result.get("risk") == "HIGH":
             total_flags += 1
