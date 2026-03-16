@@ -54,14 +54,6 @@ def load_latest_snapshot():
     if not dates:
         raise FileNotFoundError("No snapshots found")
     snapshot = load_snapshot_by_date(dates[-1])
-    print("FULL SNAPSHOT KEYS:", snapshot.keys())
-    decisions = snapshot.get("decisions", [])
-    itc_snapshot = None
-    for d in decisions:
-        if isinstance(d, dict) and d.get("stock") == "ITC":
-            itc_snapshot = d
-            break
-    print("ITC SNAPSHOT:", itc_snapshot)
     return snapshot
 
 

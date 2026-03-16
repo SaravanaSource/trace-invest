@@ -46,7 +46,8 @@ def build_snapshot(run_date: Optional[str] = None) -> Dict:
 
     run_timestamp = datetime.now(timezone.utc).isoformat()
 
-    decisions = _build_decisions(config)
+    # Build decisions using the single run timestamp to keep snapshots deterministic
+    decisions = _build_decisions(config, run_timestamp)
     decisions = sorted(decisions, key=lambda d: (d.get("stock") or "").upper())
 
     previous_snapshot = _load_previous_snapshot(run_date)
@@ -85,7 +86,7 @@ def _write_reasoning_stories(snapshot_dir: Path, snapshot: Dict, decisions: List
         _write_json(reasoning_dir / filename, story)
 
 
-def _build_decisions(config: Dict) -> List[Dict]:
+def _build_decisions(config: Dict, run_timestamp: str) -> List[Dict]:
     universe = _load_universe(config)
     decisions: List[Dict] = []
 
@@ -114,7 +115,9 @@ def _build_decisions(config: Dict) -> List[Dict]:
         valuation_sanity = _extract_valuation_status(validation)
 
         decision = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            # Use the snapshot run timestamp so repeated runs with identical inputs
+            # produce identical outputs (deterministic and auditable).
+            "timestamp": run_timestamp,
             "stock": name or symbol,
             "symbol": symbol,
             "decision_zone": signal.get("zone"),
