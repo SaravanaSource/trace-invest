@@ -8,7 +8,14 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./data:/app/data:ro
+      - ./src/data:/app/src/data
+    environment:
+      - DATABASE_URL=postgresql://trace:tracepass@postgres:5432/trace
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/1
+    depends_on:
+      - postgres
+      - redis
     restart: unless-stopped
 
   frontend:
@@ -23,3 +30,34 @@ services:
       - api
     restart: unless-stopped
 
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: trace
+      POSTGRES_PASSWORD: tracepass
+      POSTGRES_DB: trace
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: celery -A trace_invest.tasks.celery_app.celery_app worker -Q alpha -l info
+    depends_on:
+      - redis
+      - postgres
+    volumes:
+      - ./src/data:/app/src/data
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+    driver: local
