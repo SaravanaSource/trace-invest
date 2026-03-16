@@ -1,6 +1,6 @@
 import os
 import hashlib
-from datetime import datetime
+from datetime import datetime, timezone
 
 OUTPUT = "TRACE_SYSTEM_STATE.md"
 
@@ -38,9 +38,13 @@ def allowed(path):
 with open(OUTPUT, "w", encoding="utf-8") as out:
 
     out.write("# TRACE SYSTEM STATE\n\n")
-    out.write(f"generated_at: {datetime.utcnow().isoformat()}Z\n\n")
+    out.write(f"generated_at: {datetime.now(timezone.utc).isoformat()}\n\n")
 
     for root, dirs, files in os.walk("."):
+        dirs[:] = sorted(
+            d for d in dirs if d not in {".git", ".next", "node_modules", "__pycache__"}
+        )
+        files = sorted(files)
         for name in files:
             rel = os.path.relpath(os.path.join(root, name), ".")
             rel = rel.replace("\\", "/")

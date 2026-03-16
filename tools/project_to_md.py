@@ -2,17 +2,35 @@ import os
 
 OUTPUT = "TRACE_CODEBASE.md"
 
-# Exact folders that contain REAL SOURCE CODE
+# Exact folders that contain real source code
 ALLOWED_PATH_PREFIXES = [
     "backend",
     "configs",
     "docs",
     "tools",
     "scripts",
+    "src/trace_invest",
     "frontend/app",
     "frontend/components",
-    "frontend/lib"
+    "frontend/lib",
 ]
+
+ALLOWED_EXACT_PATHS = {
+    "README.md",
+    "docker-compose.yml",
+    "pyproject.toml",
+    "requirements.txt",
+    "frontend/package.json",
+    "frontend/package-lock.json",
+    "frontend/next.config.ts",
+    "frontend/next.config.js",
+    "frontend/tsconfig.json",
+    "frontend/tailwind.config.js",
+    "frontend/tailwind.config.mjs",
+    "frontend/eslint.config.mjs",
+    "backend/Dockerfile",
+    "frontend/Dockerfile",
+}
 
 # Allowed file types
 ALLOWED_EXTENSIONS = {
@@ -35,7 +53,9 @@ ALLOWED_EXTENSIONS = {
 
 def allowed_path(path):
     path = path.replace("\\", "/")
-    return any(path.startswith(p) for p in ALLOWED_PATH_PREFIXES)
+    return path in ALLOWED_EXACT_PATHS or any(
+        path.startswith(prefix) for prefix in ALLOWED_PATH_PREFIXES
+    )
 
 def allowed_file(filename):
     return any(filename.lower().endswith(ext) for ext in ALLOWED_EXTENSIONS)
@@ -43,6 +63,9 @@ def allowed_file(filename):
 files = []
 
 for root, dirs, filenames in os.walk("."):
+    dirs[:] = sorted(
+        d for d in dirs if d not in {".git", ".next", "node_modules", "__pycache__"}
+    )
     for name in filenames:
         rel = os.path.relpath(os.path.join(root, name), ".")
         rel = rel.replace("\\", "/")
