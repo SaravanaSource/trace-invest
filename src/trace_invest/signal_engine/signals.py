@@ -15,7 +15,8 @@ def compute_signals(processed: Dict, history: Dict) -> List[Dict]:
     revenue_prev = fin.get("revenue_prev_ttm") or fin.get("revenue_prev")
     if isinstance(revenue, (int, float)) and isinstance(revenue_prev, (int, float)):
         # treat >=10% growth as acceleration (deterministic boundary)
-        if revenue_prev > 0 and revenue >= revenue_prev * 1.1:
+        # use tolerant comparison to avoid floating-point rounding issues
+        if revenue_prev > 0 and (revenue / float(revenue_prev)) >= (1.1 - 1e-9):
             signals.append({
                 "signal_name": "revenue_acceleration",
                 "signal_strength": round((revenue / revenue_prev - 1) * 100, 2),

@@ -26,7 +26,22 @@ def compute_universe_signals() -> Dict[str, List[Dict]]:
     for d in decisions:
         sym = (d.get("symbol") or d.get("stock") or "").upper()
         fin = fetch_financials_from_local(sym) or {}
-        processed = {"financials": fin.get("financials", {})}
+        # normalize financials payloads: some sources return lists (rows) while
+        # signal engine expects a dict of named metrics (e.g., revenue_ttm, fcf_ttm).
+        raw_fin = fin.get("financials", {})
+        if isinstance(raw_fin, list) and raw_fin:
+            # Heuristic: convert first/last dict row into flattened mapping.
+            first = raw_fin[0] if isinstance(raw_fin[0], dict) else {}
+            flat = {}
+            for k, v in first.items():
+                try:
+                    # try numeric conversion when possible
+                    flat[k] = float(v) if (v is not None and (isinstance(v, (int, float)) or str(v).replace('.', '', 1).replace('-', '', 1).isdigit())) else v
+                except Exception:
+                    flat[k] = v
+            processed = {"financials": flat}
+        else:
+            processed = {"financials": raw_fin or {}}
         history_path = BASE_DIR / "data" / "history" / f"{sym}.json"
         history = {}
         try:

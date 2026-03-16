@@ -44,6 +44,44 @@ Phase-2 introduces continuous market intelligence features (scaffolded and parti
 
 CI: basic `pytest` GitHub Actions workflow added at `.github/workflows/ci.yml`.
 
+### Phase-2 Quickstart
+
+- Build company history (writes `data/history/{SYMBOL}.json`) — PowerShell:
+
+```powershell
+Set-Location trace-invest
+$env:PYTHONPATH='src'
+& .venv/Scripts/python.exe tools/build_history.py
+```
+
+- Start backend (FastAPI) — PowerShell (default port 8000):
+
+```powershell
+Set-Location trace-invest
+$env:PYTHONPATH='src;backend'
+& .venv/Scripts/python.exe -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+```
+
+If port `8000` is already in use, start on `8001` instead by changing `--port 8000` to `--port 8001`.
+
+- Start frontend (Next.js) — inside the `frontend` folder:
+
+```powershell
+Set-Location trace-invest/frontend
+npm run dev -- --webpack    # development (webpack fallback)
+# or for a production preview:
+npm run build
+$env:PORT=3000; npm run start
+```
+
+- Phase-2 API endpoints (read-only):
+
+- `GET /phase2/opportunities`
+- `GET /phase2/portfolio`
+- `GET /phase2/alerts`
+
+These endpoints are implemented in `backend/app/api/phase2.py` and consumed by the frontend pages under `frontend/app`.
+
 Next steps: implement external ingestion connectors, expand signals, refine portfolio rules, and add Alert Center UX details.
 
 
