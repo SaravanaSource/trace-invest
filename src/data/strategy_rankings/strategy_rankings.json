@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-03-16T15:41:12.333871Z",
+  "rankings": [
+    {
+      "strategy": "momentum_breakout_volatility_drop",
+      "alpha_score": 1742.44,
+      "CAGR": 0.26,
+      "sharpe": 42.8661,
+      "max_drawdown": 0.0,
+      "consistency": 1.0
+    },
+    {
+      "strategy": "earnings_acceleration_earnings_acceleration",
+      "alpha_score": 863.19,
+      "CAGR": 0.1604,
+      "sharpe": 20.9594,
+      "max_drawdown": 0.0,
+      "consistency": 1.0
+    },
+    {
+      "strategy": "volatility_drop_volatility_drop",
+      "alpha_score": 807.21,
+      "CAGR": 0.0666,
+      "sharpe": 19.6304,
+      "max_drawdown": 0.0,
+      "consistency": 1.0
+    },
+    {
+      "strategy": "insider_accumulation_momentum_breakout",
+      "alpha_score": 536.32,
+      "CAGR": 0.1025,
+      "sharpe": 12.8312,
+      "max_drawdown": 0.0,
+      "consistency": 1.0
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TRACE Research UI (Light)</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; }
+      .card { border: 1px solid #ddd; padding: 12px; margin: 8px 0; background: #fafafa }
+      pre { white-space: pre-wrap; background: #fff; padding: 8px; border: 1px solid #eee }
+    </style>
+  </head>
+  <body>
+    <h1>TRACE Research (Light)</h1>
+    <div id="status">Loading...</div>
+
+    <h2>Strategies</h2>
+    <div id="strategies"></div>
+
+    <h2>Backtests</h2>
+    <div id="backtests"></div>
+
+    <h2>Performance</h2>
+    <div id="performance"></div>
+
+    <h2>Factors</h2>
+    <div id="factors"></div>
+
+    <script>
+      async function fetchAndRender(path, targetId) {
+        const t = document.getElementById(targetId);
+        t.innerText = 'Loading...';
+        try {
+          const res = await fetch('/research/' + path);
+          const json = await res.json();
+          if (Array.isArray(json[path]) || typeof json === 'object') {
+            t.innerHTML = '';
+            const content = document.createElement('pre');
+            content.textContent = JSON.stringify(json, null, 2);
+            t.appendChild(content);
+          } else {
+            t.textContent = JSON.stringify(json);
+          }
+        } catch (e) {
+          t.textContent = 'Error: ' + e;
+        }
+      }
+
+      fetchAndRender('strategies','strategies');
+      fetchAndRender('backtests','backtests');
+      fetchAndRender('performance','performance');
+      fetchAndRender('factors','factors');
+
+      document.getElementById('status').textContent = 'Loaded (light UI served from backend)';
+    </script>
+  </body>
+ </html>

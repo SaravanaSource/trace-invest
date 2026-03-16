@@ -84,6 +84,43 @@ These endpoints are implemented in `backend/app/api/phase2.py` and consumed by t
 
 Next steps: implement external ingestion connectors, expand signals, refine portfolio rules, and add Alert Center UX details.
 
+## Phase-3 Research (initial implementation)
+
+Phase-3 brings research and backtesting capabilities. The research layer has been scaffolded and core, deterministic components implemented for initial experimentation and reproducible results:
+
+- **Factor library:** `src/trace_invest/research/factor_library/` (value, quality, momentum, growth, volatility).
+- **Strategy runner:** `src/trace_invest/research/strategy_engine/strategy_runner.py`.
+- **Backtesting engine:** `src/trace_invest/research/backtesting_engine/backtest.py`.
+- **Performance engine:** `src/trace_invest/research/performance_engine/`.
+- **Research assistant:** `src/trace_invest/research/research_assistant/`.
+
+Artifacts and tests:
+
+- Persisted outputs: `data/strategies/`, `data/backtests/`, `data/performance_reports/`.
+- Tests: `tests/test_phase3.py` exercises core research components and is present in the repo.
+
+### Phase-3 Quickstart
+
+- Run the Phase-2 pipeline (history, signals, portfolio, alerts) before Phase-3:
+
+```powershell
+Set-Location trace-invest
+$env:PYTHONPATH='src'
+& .venv/Scripts/python.exe tools/run_phase2_pipeline.py
+```
+
+- Run Phase-3 orchestration to generate strategy and backtest reports:
+
+```powershell
+Set-Location trace-invest
+$env:PYTHONPATH='src'
+& .venv/Scripts/python.exe tools/run_phase3.py
+```
+
+Outputs from Phase-3: `data/backtests/`, `data/performance_reports/`, `data/strategies/`.
+
+Note: notebook templates are not yet added; they're on the TODO list.
+
 
 ## What It Does Today
 

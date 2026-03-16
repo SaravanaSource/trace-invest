@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-03-16T15:44:30.000000Z",
+  "insights": [
+    {
+      "type": "opportunity",
+      "symbol": "AAA",
+      "reason": "20-day momentum 0.378 > 0.12",
+      "price": 124
+    },
+    {
+      "type": "opportunity",
+      "symbol": "CCC",
+      "reason": "20-day momentum 0.209 > 0.12",
+      "price": 41.7
+    }
+  ]
+}

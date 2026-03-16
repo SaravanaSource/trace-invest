@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-03-16T15:39:19.083068Z",
+  "signals": [
+    {
+      "signal_name": "momentum_breakout",
+      "symbol": "AAA",
+      "signal_strength": 0.3778,
+      "metrics_used": [
+        "20d_momentum"
+      ],
+      "explanation": "20-day momentum 0.378 > 0.12"
+    },
+    {
+      "signal_name": "volatility_drop",
+      "symbol": "AAA",
+      "signal_strength": 1.0,
+      "metrics_used": [
+        "20d_volatility"
+      ],
+      "explanation": "20-day volatility 0.0075 low"
+    },
+    {
+      "signal_name": "earnings_acceleration",
+      "symbol": "AAA",
+      "signal_strength": 0.3636,
+      "metrics_used": [
+        "eps_quarterly"
+      ],
+      "explanation": "EPS accelerating for 3 quarters"
+    },
+    {
+      "signal_name": "insider_accumulation",
+      "symbol": "AAA",
+      "signal_strength": 0.6,
+      "metrics_used": [
+        "insider.net_shares"
+      ],
+      "explanation": "insider net share purchases detected"
+    },
+    {
+      "signal_name": "volatility_drop",
+      "symbol": "BBB",
+      "signal_strength": 1.0,
+      "metrics_used": [
+        "20d_volatility"
+      ],
+      "explanation": "20-day volatility 0.0003 low"
+    },
+    {
+      "signal_name": "momentum_breakout",
+      "symbol": "CCC",
+      "signal_strength": 0.2087,
+      "metrics_used": [
+        "20d_momentum"
+      ],
+      "explanation": "20-day momentum 0.209 > 0.12"
+    },
+    {
+      "signal_name": "volatility_drop",
+      "symbol": "CCC",
+      "signal_strength": 1.0,
+      "metrics_used": [
+        "20d_volatility"
+      ],
+      "explanation": "20-day volatility 0.0038 low"
+    },
+    {
+      "signal_name": "earnings_acceleration",
+      "symbol": "CCC",
+      "signal_strength": 0.2353,
+      "metrics_used": [
+        "eps_quarterly"
+      ],
+      "explanation": "EPS accelerating for 3 quarters"
+    }
+  ]
+}

@@ -13,6 +13,11 @@ from backend.app.api.market import router as market_router
 from backend.app.api.snapshots import router as snapshots_router
 from trace_invest.api.history import router as history_router
 from backend.app.api.phase2 import router as phase2_router
+from trace_invest.api.research import router as research_router
+from trace_invest.api.alpha import router as alpha_router
+from trace_invest.api.auth import router as auth_router
+from trace_invest.api.portfolio import router as portfolio_router
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(title="Trace Markets API")
 
@@ -33,3 +38,12 @@ app.include_router(market_router)
 app.include_router(snapshots_router)
 app.include_router(history_router)
 app.include_router(phase2_router)
+app.include_router(research_router)
+app.include_router(alpha_router)
+app.include_router(auth_router)
+app.include_router(portfolio_router)
+
+# Serve a lightweight static research UI so frontend dev build is optional
+STATIC_DIR = BASE_DIR / "app" / "static"
+if STATIC_DIR.exists():
+    app.mount("/research-ui", StaticFiles(directory=str(STATIC_DIR / "research_ui"), html=True), name="research_ui")

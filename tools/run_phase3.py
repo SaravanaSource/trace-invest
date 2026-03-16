@@ -1,21 +1,103 @@
-"""Phase-3 orchestration: compute factors, run strategy, backtest, performance reports."""
+"""Phase-3 orchestration pipeline.
+
+Steps performed deterministically:
+- load latest snapshot to build universe
+- compute factor values for each symbol and write to `data/factors/<SYMBOL>.json`
+- load strategy definitions from `data/strategy_definitions/*.json` and run them (writes to `data/strategies`)
+- run backtests for generated strategies and write to `data/backtests`
+- analyze backtests and write reports to `data/performance_reports`
+
+This script is intentionally read-only for existing artifacts and deterministic.
+"""
+
 from pathlib import Path
 import json
+from typing import Dict, Any
 
 ROOT = Path(__file__).resolve().parents[1]
 
-def main():
-    print("Phase-3 orchestration: generating sample factor outputs and running a demo strategy")
-    # demo: compute factors for universe by reusing existing snapshot decisions
+
+def _load_latest_snapshot() -> Dict[str, Any]:
     snap_dir = ROOT / "data" / "snapshots"
+    if not snap_dir.exists():
+        return {}
     dates = sorted([d.name for d in snap_dir.iterdir() if d.is_dir()])
     if not dates:
-        print("No snapshots found; run snapshot first")
+        return {}
+    p = snap_dir / dates[-1] / "snapshot.json"
+    if not p.exists():
+        return {}
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def compute_factors_for_universe(universe: Dict[str, Any]):
+    from trace_invest.research.factor_library import FACTOR_REGISTRY
+
+    out_dir = ROOT / "data" / "factors"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    for item in universe:
+        sym = item.get("symbol")
+        processed = item.get("processed") or {}
+        history = item.get("history") or {}
+        facts = {}
+        for name, fn in FACTOR_REGISTRY.items():
+            try:
+                res = fn(sym, processed, history)
+                facts[name] = res
+            except Exception:
+                facts[name] = {"symbol": sym, "factor_name": name, "value": None, "metrics_used": [], "explanation": "error"}
+
+        p = out_dir / f"{sym}.json"
+        p.write_text(json.dumps(facts, indent=2), encoding="utf-8")
+
+
+def run_defined_strategies():
+    defs_dir = ROOT / "data" / "strategy_definitions"
+    outs = []
+    if not defs_dir.exists():
+        return outs
+    from trace_invest.research.strategy_engine.strategy_runner import run_strategy
+    for f in defs_dir.glob("*.json"):
+        sdef = json.loads(f.read_text(encoding="utf-8"))
+        out = run_strategy(sdef)
+        outs.append(out)
+    return outs
+
+
+def run_backtests_and_reports():
+    from trace_invest.research.backtesting_engine.backtest import run_backtest
+    from trace_invest.research.performance_engine.performance import analyze_backtest
+
+    strategies = ROOT / "data" / "strategies"
+    if not strategies.exists():
         return
-    snap = json.loads((snap_dir / dates[-1] / "snapshot.json").read_text(encoding="utf-8"))
+    for s in strategies.iterdir():
+        if not s.is_dir():
+            continue
+        name = s.name
+        res_path = s / "results.json"
+        if not res_path.exists():
+            continue
+        res = json.loads(res_path.read_text(encoding="utf-8"))
+        positions = res.get("rows", [])
+        if positions and "weight" not in positions[0]:
+            total = sum([float(r.get("score") or 0) for r in positions]) or 1.0
+            for r in positions:
+                r["weight"] = float(r.get("score") or 0) / total
+
+        bt = run_backtest(name, positions)
+        analyze_backtest(bt)
+
+
+def main():
+    print("Phase-3 pipeline: starting")
+    snap = _load_latest_snapshot()
     decisions = snap.get("decisions", [])
+
     universe = []
     from trace_invest.data_ingestion.financials_fetcher import fetch_financials_from_local
+
     for d in decisions:
         sym = (d.get("symbol") or d.get("stock") or "").upper()
         fin = fetch_financials_from_local(sym) or {}
@@ -26,94 +108,15 @@ def main():
             hist = json.loads(path.read_text(encoding="utf-8"))
         universe.append({"symbol": sym, "processed": processed, "history": hist})
 
-    # demo strategy
-    strategy = {"name": "Quality Growth", "rules": ["ROE > 18"], "ranking": {"top_n": 20}}
-    from trace_invest.research.strategy_engine.strategy_runner import run_strategy
-    out = run_strategy(strategy, universe)
-    print(f"Strategy returned {len(out)} symbols")
+    if universe:
+        compute_factors_for_universe(universe)
+    else:
+        print("No universe loaded from snapshots; skipping factor computation")
 
-    # run simple backtest if prices exist
-    from trace_invest.research.backtesting_engine.backtest import run_backtest
-    price_series = {}
-    for u in universe:
-        sym = u["symbol"]
-        p = ROOT / "data" / "raw" / "prices" / f"{sym.replace('.','_')}.csv"
-        if p.exists():
-            # load csv minimal
-            import csv
-            rows = []
-            with p.open() as fh:
-                rdr = csv.DictReader(fh)
-                for r in rdr:
-                    rows.append({"date": r.get("Date"), "close": r.get("Close")})
-            price_series[sym] = rows
-    if price_series:
-        res = run_backtest("quality_growth_demo", price_series, "2015-01-01", "2025-01-01")
-        print("Backtest:", res)
+    run_defined_strategies()
+    run_backtests_and_reports()
 
-    print("Phase-3 demo complete")
-
-
-if __name__ == '__main__':
-    main()
-"""Run Phase-3 research pipeline:
- - run Phase-2 pipeline (to ensure snapshots/signals exist)
- - run strategy definitions under data/strategies_definitions (if present)
- - run backtests for generated strategies
- - compute performance reports
-"""
-from pathlib import Path
-import subprocess
-import sys
-import json
-
-ROOT = Path(__file__).resolve().parents[1]
-
-
-def run_phase2():
-    subprocess.check_call([sys.executable, "tools/run_phase2_pipeline.py"], cwd=ROOT)
-
-
-def run_strategies():
-    defs_dir = ROOT / "data" / "strategy_definitions"
-    from trace_invest.research.strategy_engine.strategy_runner import run_strategy
-    if not defs_dir.exists():
-        return []
-    outs = []
-    for f in defs_dir.glob("*.json"):
-        sdef = json.loads(f.read_text(encoding="utf-8"))
-        out = run_strategy(sdef)
-        outs.append(out)
-    return outs
-
-
-def run_backtests():
-    from trace_invest.research.backtesting_engine.backtest import run_backtest
-    from trace_invest.research.performance_engine.performance import analyze_backtest
-    strategies = Path("data/strategies")
-    if not strategies.exists():
-        return
-    for s in strategies.iterdir():
-        if not s.is_dir():
-            continue
-        name = s.name
-        res = json.loads((s / "results.json").read_text(encoding="utf-8"))
-        positions = res.get("rows", [])
-        # map rows to weights if not present
-        if positions and "weight" not in positions[0]:
-            total = sum([r.get("score") or 0 for r in positions]) or 1
-            for r in positions:
-                r["weight"] = (r.get("score") or 0) / total
-
-        bt = run_backtest(name, positions)
-        analyze_backtest(bt)
-
-
-def main():
-    run_phase2()
-    run_strategies()
-    run_backtests()
-    print("Phase-3 pipeline complete")
+    print("Phase-3 pipeline: complete")
 
 
 if __name__ == '__main__':
