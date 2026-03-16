@@ -12,6 +12,25 @@ It is not a trading bot, not a prediction engine, and not an execution platform.
 - Backend API and frontend dashboard are wired and running locally.
 - Current local universe is configured to `ITC.NS` in [configs/universe.yaml](configs/universe.yaml).
 
+## Phase-1 Completion (2026-03-16)
+
+Summary of delivered Phase-1 items:
+
+- Deterministic snapshot engine: `tools/build_snapshot.py` and `src/trace_invest/pipeline/snapshot_builder.py` now produce auditable snapshot artifacts in `data/snapshots/YYYY-MM-DD/`.
+- Modular analyzers for governance, stability, valuation sanity, and fraud are implemented and integrated into the validation pipeline.
+- Conviction scoring and decision zone mapping implemented in `src/trace_invest/intelligence/conviction.py` (deterministic weights).
+- Per-stock reasoning stories generated under `reasoning/*.json` (e.g., `ITC_NS.json`).
+- FastAPI backend exposes snapshot reads only (no computation in API layer) and serves endpoints under `backend/app/api`.
+- Next.js dashboard wired to API and serving market/stock views (`frontend` build verified).
+- Added unit tests for analyzers and conviction logic; test suite passes locally.
+- TRACE_CODEBASE.md and TRACE_SYSTEM_STATE.md regenerated and pushed.
+
+Operational notes:
+
+- To reproduce Phase-1 outputs: run `f:/Projects/Trace_Finance/.venv/Scripts/python.exe tools/build_snapshot.py` and serve the backend/frontend as described below.
+- Artifacts to inspect: `data/snapshots/2026-03-16/snapshot.json`, `market_summary.json`, `metadata.json`, and `reasoning/ITC_NS.json`.
+
+
 ## What It Does Today
 
 1. Loads stock universe from config.
