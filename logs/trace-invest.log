@@ -4518,3 +4518,181 @@ UnboundLocalError: cannot access local variable 'portfolio' where it is not asso
 2026-01-31 08:43:39 | INFO | __main__:run_weekly_pipeline:400 | Weekly snapshot written: data\snapshots\2026-01-31\snapshot.json
 2026-01-31 08:43:39 | INFO | __main__:run_weekly_pipeline:401 | Market summary written: data\snapshots\2026-01-31\market_summary.json
 2026-01-31 08:43:39 | INFO | __main__:run_weekly_pipeline:402 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-01 10:16:16 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-01 10:16:16 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-01 10:16:16 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-01 10:16:16 | INFO | __main__:run_weekly_pipeline:168 | ===== Weekly TRACE MARKETS run started =====
+2026-02-01 10:16:16 | INFO | __main__:run_weekly_pipeline:199 | Universe size: 5
+2026-02-01 10:16:16 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-01 10:16:16 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-01 10:16:20 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-01 10:16:20 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for HDFCBANK.NS
+2026-02-01 10:16:20 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for HDFCBANK.NS. Skipping write.
+2026-02-01 10:16:20 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for TCS.NS
+2026-02-01 10:16:21 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for TCS.NS. Skipping write.
+2026-02-01 10:16:21 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for LT.NS
+2026-02-01 10:16:21 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for LT.NS. Skipping write.
+2026-02-01 10:16:21 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ASIANPAINT.NS
+2026-02-01 10:16:21 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ASIANPAINT.NS. Skipping write.
+2026-02-01 10:16:21 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-01 10:16:21 | INFO | __main__:run_weekly_pipeline:220 | Processing ITC.NS
+2026-02-01 10:16:21 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-01 10:16:22 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-01 10:16:23 | INFO | __main__:run_weekly_pipeline:220 | Processing HDFCBANK.NS
+2026-02-01 10:16:23 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for HDFCBANK.NS
+2026-02-01 10:16:23 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for HDFCBANK.NS, skipping
+2026-02-01 10:16:24 | INFO | __main__:run_weekly_pipeline:220 | Processing TCS.NS
+2026-02-01 10:16:24 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for TCS.NS
+2026-02-01 10:16:25 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for TCS.NS, skipping
+2026-02-01 10:16:26 | INFO | __main__:run_weekly_pipeline:220 | Processing LT.NS
+2026-02-01 10:16:26 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for LT.NS
+2026-02-01 10:16:27 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for LT.NS, skipping
+2026-02-01 10:16:28 | INFO | __main__:run_weekly_pipeline:220 | Processing ASIANPAINT.NS
+2026-02-01 10:16:28 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ASIANPAINT.NS
+2026-02-01 10:16:30 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ASIANPAINT.NS, skipping
+2026-02-01 10:16:31 | INFO | __main__:run_weekly_pipeline:400 | Weekly snapshot written: data\snapshots\2026-02-01\snapshot.json
+2026-02-01 10:16:31 | INFO | __main__:run_weekly_pipeline:401 | Market summary written: data\snapshots\2026-02-01\market_summary.json
+2026-02-01 10:16:31 | INFO | __main__:run_weekly_pipeline:402 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 18:50:54 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 18:50:54 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 18:50:54 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 18:50:54 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 18:50:54 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 18:50:54 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 18:50:54 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 18:51:00 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 18:51:00 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 18:51:00 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 18:51:00 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 18:51:04 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 18:51:05 | INFO | __main__:run_weekly_pipeline:391 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 18:51:05 | INFO | __main__:run_weekly_pipeline:392 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 18:51:05 | INFO | __main__:run_weekly_pipeline:393 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 18:51:05 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 18:51:05 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 18:51:05 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 18:51:05 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 18:51:06 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 18:51:06 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 18:51:06 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 18:51:06 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 18:51:06 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 18:51:08 | INFO | __main__:run_weekly_pipeline:391 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 18:51:08 | INFO | __main__:run_weekly_pipeline:392 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 18:51:08 | INFO | __main__:run_weekly_pipeline:393 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 19:49:03 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:49:03 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:49:03 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:49:03 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 19:49:04 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 19:49:04 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 19:49:04 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 19:49:05 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 19:49:05 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 19:49:05 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 19:49:05 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 19:49:07 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 19:49:08 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 19:49:08 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 19:49:08 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 19:49:08 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 19:49:09 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 19:49:09 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 19:49:09 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 19:49:09 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 19:49:09 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 19:49:09 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 19:49:09 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 19:49:10 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 19:49:11 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 19:49:11 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 19:49:11 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 19:56:36 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:56:36 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:56:36 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:56:36 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 19:56:36 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 19:56:36 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 19:56:36 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 19:56:38 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 19:56:38 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 19:56:38 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 19:56:38 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 19:56:40 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 19:56:41 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 19:56:41 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 19:56:41 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 19:56:41 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 19:56:41 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 19:56:41 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 19:56:41 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 19:56:42 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 19:56:42 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 19:56:42 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 19:56:42 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 19:56:43 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 19:56:44 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 19:56:44 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 19:56:44 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 19:59:53 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:59:53 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:59:53 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 19:59:53 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 19:59:53 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 19:59:53 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 19:59:53 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 19:59:55 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 19:59:55 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 19:59:55 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 19:59:55 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 19:59:58 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 19:59:59 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 19:59:59 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 19:59:59 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 19:59:59 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 19:59:59 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 19:59:59 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 19:59:59 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 20:00:00 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 20:00:00 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 20:00:00 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 20:00:00 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 20:00:01 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 20:00:02 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 20:00:02 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 20:00:02 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 20:06:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 20:06:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 20:06:59 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-02 20:06:59 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 20:06:59 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 20:06:59 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 20:06:59 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 20:07:01 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 20:07:01 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 20:07:01 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 20:07:01 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 20:07:04 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 20:07:05 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 20:07:05 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 20:07:05 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-02 20:07:05 | INFO | __main__:run_weekly_pipeline:159 | ===== Weekly TRACE MARKETS run started =====
+2026-02-02 20:07:05 | INFO | __main__:run_weekly_pipeline:190 | Universe size: 1
+2026-02-02 20:07:05 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:56 | Starting weekly price ingestion
+2026-02-02 20:07:05 | INFO | trace_invest.ingestion.prices:fetch_weekly_prices:24 | Fetching weekly prices for ITC.NS
+2026-02-02 20:07:05 | WARNING | trace_invest.ingestion.prices:write_raw_prices:44 | Raw price file already exists for ITC.NS. Skipping write.
+2026-02-02 20:07:05 | INFO | trace_invest.ingestion.prices:run_weekly_price_ingestion:66 | Weekly price ingestion completed
+2026-02-02 20:07:05 | INFO | __main__:run_weekly_pipeline:211 | Processing ITC.NS
+2026-02-02 20:07:05 | INFO | trace_invest.ingestion.fundamentals:fetch_fundamentals:28 | Fetching fundamentals for ITC.NS
+2026-02-02 20:07:06 | INFO | trace_invest.ingestion.fundamentals:write_raw_fundamentals:46 | Raw fundamentals already exist for ITC.NS, skipping
+2026-02-02 20:07:07 | INFO | __main__:run_weekly_pipeline:405 | Weekly snapshot written: data\snapshots\2026-02-02\snapshot.json
+2026-02-02 20:07:07 | INFO | __main__:run_weekly_pipeline:406 | Market summary written: data\snapshots\2026-02-02\market_summary.json
+2026-02-02 20:07:07 | INFO | __main__:run_weekly_pipeline:407 | ===== Weekly TRACE MARKETS run completed =====
+2026-02-07 15:12:56 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-07 19:02:57 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-02-07 19:08:46 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-03-16 09:16:52 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-03-16 11:16:18 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-03-16 11:33:24 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-03-16 11:59:18 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized
+2026-03-16 12:03:11 | INFO | trace_invest.utils.logger:setup_logger:34 | Logger initialized

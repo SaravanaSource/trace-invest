@@ -30,6 +30,22 @@ Operational notes:
 - To reproduce Phase-1 outputs: run `f:/Projects/Trace_Finance/.venv/Scripts/python.exe tools/build_snapshot.py` and serve the backend/frontend as described below.
 - Artifacts to inspect: `data/snapshots/2026-03-16/snapshot.json`, `market_summary.json`, `metadata.json`, and `reasoning/ITC_NS.json`.
 
+## Phase-2 Roadmap (initial implementation)
+
+Phase-2 introduces continuous market intelligence features (scaffolded and partially implemented):
+
+- Data ingestion stubs: `src/trace_invest/data_ingestion` (local deterministic fetchers and validators).
+- Company history builder: `tools/build_history.py` and `src/trace_invest/company_history_engine.py` (writes `data/history/{SYMBOL}.json`). Run `python tools/build_history.py` to regenerate history from snapshots.
+- Signal discovery: `src/trace_invest/signal_engine` (rule-based signals and opportunity ranking).
+- Portfolio engine: `src/trace_invest/portfolio_engine/engine.py` (deterministic allocations with caps).
+- Alerts engine: `src/trace_invest/alerts_engine` (conviction deltas, governance warnings, strong signals).
+- Backend Phase-2 API: `/phase2/opportunities`, `/phase2/portfolio`, `/phase2/alerts` (see `backend/app/api/phase2.py`).
+- Frontend pages: `/opportunities`, `/alerts`, `/portfolio` (simple initial UI pages wired to API).
+
+CI: basic `pytest` GitHub Actions workflow added at `.github/workflows/ci.yml`.
+
+Next steps: implement external ingestion connectors, expand signals, refine portfolio rules, and add Alert Center UX details.
+
 
 ## What It Does Today
 

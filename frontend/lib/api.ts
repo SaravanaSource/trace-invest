@@ -48,3 +48,21 @@ export async function getStockReasoning(symbol: string) {
 
   return res.json();
 }
+
+export async function getOpportunities() {
+  const res = await fetch(`${API_BASE}/phase2/opportunities`);
+  if (!res.ok) throw new Error("Failed to fetch opportunities");
+  return res.json();
+}
+
+export async function getPortfolio() {
+  const res = await fetch(`${API_BASE}/phase2/portfolio`);
+  if (!res.ok) throw new Error("Failed to fetch portfolio");
+  return res.json();
+}
+
+export async function getAlerts() {
+  const res = await fetch(`${API_BASE}/phase2/alerts`);
+  if (!res.ok) throw new Error("Failed to fetch alerts");
+  return res.json();
+}

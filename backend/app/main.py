@@ -12,6 +12,7 @@ from backend.app.api.stocks import router as stocks_router
 from backend.app.api.market import router as market_router
 from backend.app.api.snapshots import router as snapshots_router
 from trace_invest.api.history import router as history_router
+from backend.app.api.phase2 import router as phase2_router
 
 app = FastAPI(title="Trace Markets API")
 
@@ -31,3 +32,4 @@ app.include_router(stocks_router)
 app.include_router(market_router)
 app.include_router(snapshots_router)
 app.include_router(history_router)
+app.include_router(phase2_router)
