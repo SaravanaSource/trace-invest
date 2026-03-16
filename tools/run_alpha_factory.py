@@ -6,11 +6,12 @@ from trace_invest.alpha_factory.strategy_ranking.ranker import rank_strategies
 from trace_invest.alpha_factory.strategy_monitor.monitor import monitor_strategies
 import json
 import sys
+from trace_invest.config import data_path, ensure_data_dirs
 
 
 def run_pipeline():
-    root = Path(__file__).resolve().parents[1]
-    data_dir = root / "data"
+    ensure_data_dirs("backtests")
+    data_dir = data_path()
     print("Alpha Factory: running signal discovery...")
     s = discover_signals()
     print(f"discovered {len(s.get('signals', []))} signals")
@@ -21,7 +22,7 @@ def run_pipeline():
 
     # backtests: try to run an existing backtester if available else create placeholders
     # For determinism and speed we create simple placeholder monthly returns if no backtests exist.
-    bt_dir = data_dir / "backtests"
+    bt_dir = data_path("backtests")
     bt_dir.mkdir(parents=True, exist_ok=True)
     if not any(bt_dir.glob("*.json")):
         # create simple deterministic backtests from strategies

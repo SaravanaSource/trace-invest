@@ -9,6 +9,7 @@ from typing import Dict, List, Optional
 from zoneinfo import ZoneInfo
 
 from trace_invest.config.loader import load_config
+from trace_invest.config import data_path, ensure_data_dirs
 from trace_invest.processing.fundamentals import build_processed_fundamentals
 from trace_invest.validation.runner import run_validation
 from trace_invest.validation.system_awareness import build_system_awareness
@@ -29,8 +30,9 @@ from trace_invest.pipeline.reasoning_story import (
 
 
 SNAPSHOT_SCHEMA_VERSION = "v1"
-RAW_DIR = Path("data/raw/fundamentals")
-SNAPSHOT_ROOT = Path("data/snapshots")
+ensure_data_dirs("raw/fundamentals", "snapshots")
+RAW_DIR = data_path("raw", "fundamentals")
+SNAPSHOT_ROOT = data_path("snapshots")
 CONFIG_DIR = Path("configs")
 
 

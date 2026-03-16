@@ -5,8 +5,11 @@ from pathlib import Path
 import json
 from datetime import datetime
 
-DATA_DIR = Path(__file__).resolve().parents[3] / "data"
-HISTORY = DATA_DIR / "history"
+from trace_invest.config import data_path, ensure_data_dirs
+
+ensure_data_dirs("history")
+DATA_DIR = data_path()
+HISTORY = data_path("history")
 
 
 def daily_data_update():
