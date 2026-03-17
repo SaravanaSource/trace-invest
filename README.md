@@ -105,3 +105,19 @@ npx next start -p 3001
 
 ---
 Last update: 2026-03-16 — Phase-4/Phase-5 additions and Alpha Lab demo.
+
+## Recent UX updates — Dashboard (2026-03-17)
+
+- Decision-first Dashboard redesigned into a "Daily Control Center": clearer top-line insight, explicit "what to do" guidance, and a focused list of top opportunities.
+- Card / Top Idea UX changes:
+  - Numeric scores no longer shown when score <= 0; instead cards show a friendly state: "Emerging Signal" or "Under Evaluation".
+  - Technical signal names are mapped to human-friendly descriptions (examples: `volatility_drop` → "Stabilizing price movement", `momentum_breakout` → "Strong upward momentum").
+  - Each idea card now includes a mandatory "Why it matters" sentence: "This stock is showing early signs of potential movement and is worth monitoring." to help users understand relevance.
+  - The top idea (#1) is visually emphasized with a "🔥 Top Pick Today" badge and a subtle highlight ring.
+  - Confidence is shown with a compact visual (●●● High, ●●○ Medium, ●○○ Low) and a short textual label.
+  - Action copy was updated to be more directive and emotionally resonant: e.g. "Watch closely — potential opportunity forming" and CTAs now read "See Full Analysis →".
+  - Layout and typography adjustments: increased spacing, larger title, and reduced secondary text opacity for cleaner, trustable visuals.
+
+These changes were implemented in the frontend components and pages under `frontend/app/` (notably `frontend/app/components/Card.tsx` and `frontend/app/dashboard/page.tsx`). A production preview snapshot was captured at `frontend/dashboard_snapshot_updated.html`.
+
+If you want different thresholds, alternate language for the CTAs, or changes to the top-pick animation/colour, tell me and I will update the files and re-run the build.
