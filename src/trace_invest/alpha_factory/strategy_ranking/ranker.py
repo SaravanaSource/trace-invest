@@ -3,9 +3,12 @@ from pathlib import Path
 from math import sqrt
 from datetime import datetime
 
+from trace_invest.config import data_path, ensure_data_dirs
+
+ensure_data_dirs("backtests", "strategy_rankings")
 DATA_DIR = Path(__file__).resolve().parents[3] / "data"
-BACKTEST_DIR = DATA_DIR / "backtests"
-RANK_DIR = DATA_DIR / "strategy_rankings"
+BACKTEST_DIR = data_path("backtests")
+RANK_DIR = data_path("strategy_rankings")
 RANK_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -45,18 +48,35 @@ def rank_strategies(save_path: Path = None):
     rankings = []
     for f in sorted(BACKTEST_DIR.glob("*.json")):
         data = json.loads(f.read_text())
-        name = data.get("strategy_name") or f.stem
-        returns = data.get("monthly_returns") or data.get("returns") or []
-        m = _metrics_from_returns(returns)
-        # simple alpha score composition
-        alpha = 100 * (0.4 * (m.get("sharpe", 0)) + 0.3 * m.get("cagr", 0) + 0.2 * m.get("consistency", 0) + 0.1 * max(0, -m.get("max_dd", 0)))
+        name = data.get("strategy") or data.get("strategy_name") or f.stem
+        # prefer explicit metrics from backtester
+        cagr = data.get("CAGR") or data.get("cagr")
+        sharpe = data.get("sharpe_ratio") or data.get("sharpe")
+        max_dd = data.get("max_drawdown") or data.get("max_dd") or data.get("max_drawdown", 0)
+        vol = data.get("volatility") or data.get("vol") or 0.0
+
+        # fallback: if monthly returns present, compute metrics
+        if cagr is None and data.get("monthly_returns"):
+            m = _metrics_from_returns(data.get("monthly_returns"))
+            cagr = m.get("cagr")
+            sharpe = m.get("sharpe")
+            max_dd = m.get("max_dd")
+
+        # normalize values
+        cagr = float(cagr or 0)
+        sharpe = float(sharpe or 0)
+        max_dd = float(max_dd or 0)
+
+        # simple alpha score composition using available metrics
+        alpha = 100 * (0.4 * (sharpe) + 0.35 * cagr + 0.15 * max(0, -max_dd) + 0.1 * max(0, -vol))
+
         rankings.append({
             "strategy": name,
             "alpha_score": round(alpha, 2),
-            "CAGR": round(m["cagr"], 4),
-            "sharpe": round(m["sharpe"], 4),
-            "max_drawdown": round(m["max_dd"], 4),
-            "consistency": round(m["consistency"], 4),
+            "CAGR": round(cagr, 4),
+            "sharpe": round(sharpe, 4),
+            "max_drawdown": round(max_dd, 4),
+            "volatility": round(float(vol or 0), 4),
         })
 
     # deterministic sort: by alpha_score desc then name

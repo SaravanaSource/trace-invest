@@ -3,7 +3,8 @@ from pathlib import Path
 # Canonical data root for the repository. By default this resolves to
 # <repo>/trace-invest/src/data so all modules should use `data_path(...)`
 # to locate runtime artifacts in a single canonical location.
-PACKAGE_SRC = Path(__file__).resolve().parents[1]
+# PACKAGE_SRC points to the top-level `src/` directory so DATA_ROOT becomes `src/data`
+PACKAGE_SRC = Path(__file__).resolve().parents[2]
 DATA_ROOT = PACKAGE_SRC / "data"
 
 

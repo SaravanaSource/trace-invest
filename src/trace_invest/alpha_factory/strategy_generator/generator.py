@@ -3,9 +3,11 @@ from pathlib import Path
 from datetime import datetime
 from typing import List
 
-DATA_DIR = Path(__file__).resolve().parents[3] / "data"
-SIGNALS_FILE = DATA_DIR / "signals" / "signals.json"
-OUT_DIR = DATA_DIR / "generated_strategies"
+from trace_invest.config import data_path, ensure_data_dirs
+
+ensure_data_dirs("signals", "generated_strategies")
+SIGNALS_FILE = data_path("signals", "signals.json")
+OUT_DIR = data_path("generated_strategies")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -34,13 +36,17 @@ def generate_strategies(save_path: Path = None, max_strategies: int = 10):
     # group signals by name and pick deterministic ordering
     signals_sorted = sorted(signals, key=lambda s: (s.get("signal_name"), -s.get("signal_strength", 0)))
     strategies = []
-    # deterministic strategy generation: combine adjacent pairs of signals
-    for i in range(0, min(len(signals_sorted), max_strategies * 2), 2):
+    # deterministic strategy generation: combine signals from different symbols
+    # iterate signals and pair each with the next signal that has a different symbol
+    i = 0
+    while len(strategies) < max_strategies and i < len(signals_sorted):
         a = signals_sorted[i]
-        if i + 1 < len(signals_sorted):
-            b = signals_sorted[i + 1]
-        else:
-            b = None
+        # find next signal with different symbol
+        b = None
+        for j in range(i + 1, len(signals_sorted)):
+            if signals_sorted[j].get("symbol") != a.get("symbol"):
+                b = signals_sorted[j]
+                break
         name_parts = [a.get("signal_name")]
         rules = [ _rule_for_signal(a) ]
         if b:
@@ -48,12 +54,28 @@ def generate_strategies(save_path: Path = None, max_strategies: int = 10):
             rules.append(_rule_for_signal(b))
 
         strat_name = "_".join(name_parts)
+        # derive deterministic positions from the signals used
+        positions = []
+        symbols = [a.get("symbol")]
+        if b:
+            symbols.append(b.get("symbol"))
+        # equal weight positions with attached reasoning
+        weight = round(1.0 / len(symbols), 4) if symbols else 0.0
+        for s in symbols:
+            positions.append({"symbol": s, "weight": weight, "reasoning": {"from_signals": True}})
+
         strat = {
             "strategy_name": strat_name,
             "rules": rules,
+            "positions": positions,
             "created_at": datetime.utcnow().isoformat() + "Z",
         }
         strategies.append(strat)
+        # advance pointer; if we used b at j, skip to j+1 to avoid repeated reuse
+        if b:
+            i = j + 1
+        else:
+            i += 1
 
     out = {"generated_at": datetime.utcnow().isoformat() + "Z", "strategies": strategies}
     target = save_path or OUT_DIR / "generated_strategies.json"

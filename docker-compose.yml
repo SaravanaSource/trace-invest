@@ -58,6 +58,18 @@ services:
       - ./src/data:/app/src/data
     restart: unless-stopped
 
+  beat:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: celery -A trace_invest.tasks.celery_app.celery_app beat -l info
+    depends_on:
+      - redis
+      - postgres
+    volumes:
+      - ./src/data:/app/src/data
+    restart: unless-stopped
+
 volumes:
   pgdata:
     driver: local

@@ -1,4 +1,26 @@
 {
-  "strategy_name": "earnings_acceleration_earnings_acceleration",
-  "monthly_returns": [0.01,0.012,0.008,0.015,0.013,0.014,0.01,0.011,0.009,0.012,0.013,0.014,0.015,0.01,0.012,0.011,0.013,0.014,0.012,0.011,0.01,0.009,0.012,0.013,0.014,0.015,0.016,0.017,0.012,0.011,0.013,0.014,0.015,0.012,0.013,0.014]
+  "strategy": "earnings_acceleration_earnings_acceleration",
+  "start": "2023-03-18",
+  "end": "2026-03-17",
+  "CAGR": -0.0486,
+  "volatility": 0.4487,
+  "sharpe_ratio": -0.1082,
+  "max_drawdown": -0.6481,
+  "positions": [
+    {
+      "symbol": "AAA",
+      "weight": 0.5,
+      "reasoning": {
+        "from_signals": true
+      }
+    },
+    {
+      "symbol": "CCC",
+      "weight": 0.5,
+      "reasoning": {
+        "from_signals": true
+      }
+    }
+  ],
+  "generated_at": "2026-03-17T03:43:12.283447Z"
 }

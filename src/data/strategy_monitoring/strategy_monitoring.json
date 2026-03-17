@@ -1,29 +1,11 @@
 {
-  "generated_at": "2026-03-16T15:42:43.904065Z",
+  "generated_at": "2026-03-17T03:43:12.422671Z",
   "monitoring": [
-    {
-      "strategy": "earnings_acceleration_earnings_acceleration",
-      "monthly_return_last": 0.014,
-      "rolling_sharpe_12m": 28.6094,
-      "drawdown_trend_12m": 0.0276
-    },
-    {
-      "strategy": "insider_accumulation_momentum_breakout",
-      "monthly_return_last": 0.006,
-      "rolling_sharpe_12m": 10.5925,
-      "drawdown_trend_12m": -0.0066
-    },
     {
       "strategy": "momentum_breakout_volatility_drop",
       "monthly_return_last": 0.02,
       "rolling_sharpe_12m": 56.6498,
       "drawdown_trend_12m": -0.0112
-    },
-    {
-      "strategy": "volatility_drop_volatility_drop",
-      "monthly_return_last": 0.004,
-      "rolling_sharpe_12m": 19.6779,
-      "drawdown_trend_12m": -0.0042
     }
   ]
 }

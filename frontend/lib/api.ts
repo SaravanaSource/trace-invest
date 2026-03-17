@@ -56,8 +56,38 @@ export async function getOpportunities() {
 }
 
 export async function getPortfolio() {
-  const res = await fetch(`${API_BASE}/phase2/portfolio`);
+  const res = await fetch(`${API_BASE}/portfolio`);
   if (!res.ok) throw new Error("Failed to fetch portfolio");
+  return res.json();
+}
+
+export async function getWatchlists() {
+  const res = await fetch(`${API_BASE}/watchlist/list`);
+  if (!res.ok) throw new Error("Failed to fetch watchlists");
+  return res.json();
+}
+
+export async function createWatchlist(payload: { name: string; symbols: string[] }) {
+  const res = await fetch(`${API_BASE}/watchlist/create`, { method: "POST", body: JSON.stringify(payload), headers: { "Content-Type": "application/json" } });
+  if (!res.ok) throw new Error("Failed to create watchlist");
+  return res.json();
+}
+
+export async function getAdminMetrics() {
+  const res = await fetch(`${API_BASE}/admin/metrics`);
+  if (!res.ok) throw new Error("Failed to fetch admin metrics");
+  return res.json();
+}
+
+export async function getAlphaResults() {
+  const res = await fetch(`${API_BASE}/alpha/results`);
+  if (!res.ok) throw new Error("Failed to fetch alpha results");
+  return res.json();
+}
+
+export async function runAlphaNow(background = true) {
+  const res = await fetch(`${API_BASE}/alpha/run`, { method: "POST", body: JSON.stringify({ background }), headers: { "Content-Type": "application/json" } });
+  if (!res.ok) throw new Error("Failed to trigger alpha run");
   return res.json();
 }
 

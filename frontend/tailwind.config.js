@@ -7,14 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: "#020617",
-        panel: "#0f172a",
-        border: "rgba(255,255,255,0.08)",
-        muted: "#94a3b8",
-        text: "#e5e7eb",
-        good: "#22c55e",
-        warn: "#f59e0b",
-        bad: "#ef4444",
+        background: '#0F172A',
+        secondary: '#111827',
+        surface: '#1F2937',
+        borderSoft: 'rgba(255,255,255,0.05)',
+        textPrimary: '#F9FAFB',
+        textSecondary: '#9CA3AF',
+        textMuted: '#6B7280',
+        positive: '#22C55E',
+        warning: '#F59E0B',
+        negative: '#EF4444',
       },
       borderRadius: {
         xl: "16px",

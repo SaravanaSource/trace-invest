@@ -20,6 +20,10 @@ export default function RootLayout({
             <Link href="/stocks" className="block hover:text-text">
               Stocks
             </Link>
+            <Link href="/portfolio" className="block hover:text-text">Portfolio</Link>
+            <Link href="/watchlist" className="block hover:text-text">Watchlists</Link>
+            <Link href="/alerts" className="block hover:text-text">Alerts</Link>
+            <Link href="/admin" className="block hover:text-text">Admin</Link>
           </nav>
         </aside>
 

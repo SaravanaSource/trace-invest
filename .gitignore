@@ -26,3 +26,20 @@ src/trace_invest.egg-info/
 
 #logs
 logs/
+
+# Local snapshots, previews, and frontend build artifacts
+frontend/dashboard_snapshot*.html
+frontend/alpha-lab.png
+frontend/*.png
+
+# Local DB and generated data
+trace_invest.db
+src/data/backtests/*.json
+src/data/insights/*.json
+src/data/generated_strategies/*.json
+src/data/strategy_rankings/*.json
+src/data/strategy_monitoring/*.json
+
+# Next.js build output
+.next/
+node_modules/

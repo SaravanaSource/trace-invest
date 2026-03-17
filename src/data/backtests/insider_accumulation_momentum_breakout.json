@@ -1,4 +1,26 @@
 {
-  "strategy_name": "insider_accumulation_momentum_breakout",
-  "monthly_returns": [0.006,0.007,0.005,0.008,0.009,0.01,0.006,0.005,0.007,0.006,0.008,0.009,0.01,0.009,0.008,0.007,0.006,0.01,0.011,0.012,0.01,0.009,0.008,0.007,0.01,0.011,0.012,0.013,0.01,0.009,0.008,0.007,0.006,0.005,0.004,0.006]
+  "strategy": "insider_accumulation_momentum_breakout",
+  "start": "2023-03-18",
+  "end": "2026-03-17",
+  "CAGR": 0.1296,
+  "volatility": 0.2904,
+  "sharpe_ratio": 0.4461,
+  "max_drawdown": -0.4106,
+  "positions": [
+    {
+      "symbol": "AAA",
+      "weight": 0.5,
+      "reasoning": {
+        "from_signals": true
+      }
+    },
+    {
+      "symbol": "CCC",
+      "weight": 0.5,
+      "reasoning": {
+        "from_signals": true
+      }
+    }
+  ],
+  "generated_at": "2026-03-17T03:43:12.327606Z"
 }
