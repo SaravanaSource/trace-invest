@@ -1,3 +1,5 @@
-# Phase2 Verification Report
+# PHASE2_VERIFICATION_REPORT moved
 
-All Phase-2 artifacts present.
+This file has been moved to `docs/trace-invest/PHASE2_VERIFICATION_REPORT.md`.
+
+See: ../docs/trace-invest/PHASE2_VERIFICATION_REPORT.md

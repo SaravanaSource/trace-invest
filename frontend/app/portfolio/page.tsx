@@ -1,22 +1,20 @@
 import { getPortfolio } from "@/lib/api";
 
 export default async function PortfolioPage() {
-  let pf: any = { positions: [], cash: 0 };
-  try {
-    pf = await getPortfolio();
-  } catch (e) {
-    console.error(e);
-  }
+  const portfolio = await getPortfolio();
 
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold">Portfolio Builder</h1>
-      <div className="mt-4">Cash: {pf.cash}</div>
+      <div className="mt-4">Cash: {portfolio.cash}</div>
       <ul className="mt-4 space-y-2">
-        {pf.positions?.map((p: any) => (
-          <li key={p.symbol} className="p-2 bg-slate-800 rounded flex justify-between">
-            <div>{p.symbol}</div>
-            <div className="font-semibold">{p.weight}</div>
+        {(portfolio.positions || []).map((position: any) => (
+          <li
+            key={position.symbol}
+            className="flex justify-between rounded bg-slate-800 p-2"
+          >
+            <div>{position.symbol}</div>
+            <div className="font-semibold">{position.weight}</div>
           </li>
         ))}
       </ul>
