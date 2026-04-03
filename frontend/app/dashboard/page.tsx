@@ -1,167 +1,269 @@
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
-import { getAlerts, getAlphaResults, getMarketSummary } from "@/lib/api";
+import { getAlerts, getMarketPulse } from "@/lib/api";
+import type { MarketPulse, ValueCandidate } from "@/lib/local-data";
 
-type MarketSummary = {
-  total_stocks: number;
-  by_decision_zone: Record<string, number>;
-  by_overall_risk: Record<string, number>;
-  upgrades?: number;
-  downgrades?: number;
-  market_tone?: string;
-};
+function scoreTone(score: number) {
+  if (score >= 80) {
+    return "Prime Setup";
+  }
+  if (score >= 65) {
+    return "Strong Watch";
+  }
+  if (score >= 50) {
+    return "Selective";
+  }
+  return "Needs Patience";
+}
+
+function formatPercent(value: number | null) {
+  if (value === null) {
+    return "N/A";
+  }
+  const prefix = value > 0 ? "+" : "";
+  return `${prefix}${value.toFixed(1)}%`;
+}
+
+function metricLabel(candidate: ValueCandidate) {
+  return [
+    `${candidate.signal_count} active signals`,
+    `${candidate.strategy_count} supporting strategies`,
+    `confidence ${candidate.confidence}`,
+  ].join(" | ");
+}
 
 export default async function Dashboard() {
-  const summary: MarketSummary = await getMarketSummary();
-  const alphaResponse = await getAlphaResults();
+  const pulse: MarketPulse = await getMarketPulse();
   const alerts = await getAlerts();
-
-  const alpha = (alphaResponse?.results || []).flatMap((entry: any) => {
-    const positions = Array.isArray(entry.result?.positions) ? entry.result.positions : [];
-    if (positions.length === 0) {
-      return [];
-    }
-
-    return positions.map((position: any) => ({
-      symbol: position.symbol,
-      name: position.name || "",
-      summary: entry.strategy || entry.result?.strategy || "",
-      score: entry.result?.score || 0,
-      confidence: Number(entry.result?.score || 0) >= 20 ? "High" : "Medium",
-    }));
-  });
-
-  const tone = (summary.market_tone || "UNKNOWN").toUpperCase();
-  const toneExplainer =
-    tone === "CAUTIOUS"
-      ? "Market showing uncertainty - avoid aggressive positions."
-      : tone === "BULLISH"
-        ? "Market showing strength - prioritize high-conviction ideas."
-        : tone === "BEARISH"
-          ? "Market trending lower - favor risk management and cash."
-          : "Mixed signals - focus on high-confidence opportunities.";
+  const pinned = pulse.pinned_stock;
+  const runnerUps = pulse.candidates.slice(1, 5);
 
   return (
-    <div className="max-w-5xl space-y-6 p-6">
-      <h1 className="text-3xl font-bold">Daily Control Center</h1>
-      <div className="text-sm text-white/70">AI-powered signals updated weekly</div>
-
-      <div className="grid gap-4 md:grid-cols-4">
-        <Card>
-          <div className="text-sm text-white/60">Market tone</div>
-          <div className="mt-2 text-2xl font-bold">{tone}</div>
-          <div className="mt-2 text-sm text-textSecondary">{toneExplainer}</div>
-        </Card>
-        <Card>
-          <div className="text-sm text-white/60">Coverage</div>
-          <div className="mt-2 text-2xl font-bold">{summary.total_stocks}</div>
-          <div className="mt-2 text-sm text-textSecondary">stocks in latest snapshot</div>
-        </Card>
-        <Card>
-          <div className="text-sm text-white/60">Upgrades</div>
-          <div className="mt-2 text-2xl font-bold">{summary.upgrades || 0}</div>
-          <div className="mt-2 text-sm text-textSecondary">decision improvements</div>
-        </Card>
-        <Card>
-          <div className="text-sm text-white/60">Downgrades</div>
-          <div className="mt-2 text-2xl font-bold">{summary.downgrades || 0}</div>
-          <div className="mt-2 text-sm text-textSecondary">names to review carefully</div>
-        </Card>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-3">
-        <div className="md:col-span-2">
-          <Card>
-            <div className="text-sm text-white/60">What you should do today</div>
-            <ul className="mt-3 ml-5 list-disc space-y-2 text-sm">
-              <li>Prioritize the top ranked ideas before scanning the full universe.</li>
-              <li>Review any high-risk or downgraded names in alerts.</li>
-              <li>Use stock reasoning pages before adding anything to a watchlist.</li>
-            </ul>
-          </Card>
-        </div>
-
-        <Card>
-          <div className="text-sm text-white/60">Current posture</div>
-          <div className="mt-3 space-y-2 text-sm text-textSecondary">
-            <div>Decision zones: {Object.entries(summary.by_decision_zone || {}).map(([key, value]) => `${key} ${value}`).join(", ") || "No data"}</div>
-            <div>Risk mix: {Object.entries(summary.by_overall_risk || {}).map(([key, value]) => `${key} ${value}`).join(", ") || "No data"}</div>
-          </div>
-        </Card>
-      </div>
-
-      <div>
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">Top opportunities right now</h2>
-          <div className="text-sm text-white/60">Alpha Lab - ranked from local artifacts</div>
-        </div>
-
-        <div className="mt-4 space-y-4">
-          {alpha.slice(0, 3).map((idea: any, index: number) => {
-            const isTop = index === 0;
-            const numericScore = Number(idea.score || 0);
-            return (
-              <div
-                key={`${idea.symbol}-${index}`}
-                className={`card-bg rounded-xl border border-borderSoft p-6 transition-transform ${
-                  isTop ? "scale-105 ring-4 ring-yellow-400/20" : ""
-                }`}
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <div className="text-sm muted">#{index + 1}</div>
-                    <div className="mt-1 text-lg font-semibold">
-                      {idea.symbol}
-                      <span className="ml-2 text-sm muted">{idea.name || ""}</span>
-                    </div>
-                    <div className="mt-2 text-sm text-textSecondary">
-                      {idea.summary || "Model-ranked opportunity ready for review."}
-                    </div>
-                  </div>
-                  <div className="rounded-full bg-positive px-3 py-1 text-lg font-bold text-black">
-                    {numericScore.toFixed(1)}
-                  </div>
-                </div>
-                <div className="mt-3 text-sm text-textSecondary">
-                  Confidence: {idea.confidence}
-                </div>
-                <div className="mt-4">
-                  <Link
-                    href={`/stocks/${encodeURIComponent(idea.symbol)}`}
-                    className="secondary-cta"
-                  >
-                    See Full Analysis
-                  </Link>
-                </div>
+    <div className="max-w-6xl space-y-6 p-6">
+      <Card>
+        <div className="hero-panel overflow-hidden rounded-2xl border border-borderSoft p-8">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl space-y-4">
+              <div className="text-xs uppercase tracking-[0.35em] text-white/55">
+                Market Pulse
               </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {alerts.length > 0 ? (
-        <Card>
-          <div className="flex items-start gap-3">
-            <div className="text-2xl">Alert</div>
-            <div>
-              <div className="text-sm text-white/60">Risk Alert</div>
-              <div className="mt-1 text-base font-semibold">
-                {alerts.length} alert(s) need review
+              <h1 className="text-3xl font-extrabold leading-tight lg:text-5xl">
+                {pulse.headline}
+              </h1>
+              <p className="max-w-2xl text-base leading-7 text-textSecondary">
+                {pulse.summary}
+              </p>
+              <div className="inline-flex rounded-full border border-emerald-300/20 bg-emerald-300/10 px-4 py-2 text-sm text-emerald-100">
+                {pulse.action}
               </div>
-              <div className="mt-2 text-sm text-textSecondary">
-                {alerts[0].message || alerts[0].reason || "Latest snapshot flagged a risk change."}
+            </div>
+
+            <div className="grid min-w-[280px] gap-3 sm:grid-cols-3 lg:w-[360px] lg:grid-cols-1">
+              <div className="rounded-2xl border border-border bg-white/5 p-4">
+                <div className="text-xs uppercase tracking-[0.25em] text-white/45">Tone</div>
+                <div className="mt-2 text-2xl font-bold">{pulse.tone}</div>
+              </div>
+              <div className="rounded-2xl border border-border bg-white/5 p-4">
+                <div className="text-xs uppercase tracking-[0.25em] text-white/45">Pinned Stock</div>
+                <div className="mt-2 text-2xl font-bold">{pinned?.symbol || "None"}</div>
+              </div>
+              <div className="rounded-2xl border border-border bg-white/5 p-4">
+                <div className="text-xs uppercase tracking-[0.25em] text-white/45">As Of</div>
+                <div className="mt-2 text-lg font-bold">{pulse.as_of || "No snapshot"}</div>
               </div>
             </div>
           </div>
+        </div>
+      </Card>
+
+      <div className="grid gap-4 lg:grid-cols-[1.45fr_0.95fr]">
+        <Card>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <div className="text-xs uppercase tracking-[0.28em] text-white/50">
+                Best Value Candidate
+              </div>
+              <h2 className="mt-2 text-2xl font-bold">
+                {pinned ? `${pinned.symbol} is the stock to start with.` : "No stock is pinned yet."}
+              </h2>
+              <div className="mt-3 max-w-2xl text-sm leading-7 text-textSecondary">
+                {pinned?.narrative ||
+                  "Once more local market breadth is available, the dashboard will pin the best current setup here."}
+              </div>
+            </div>
+            {pinned ? (
+              <div className="rounded-2xl bg-positive px-4 py-3 text-right text-black shadow-lg shadow-emerald-500/20">
+                <div className="text-xs font-bold uppercase tracking-[0.2em]">Opportunity Score</div>
+                <div className="mt-1 text-3xl font-extrabold">{pinned.score.toFixed(1)}</div>
+                <div className="text-xs font-semibold">{scoreTone(pinned.score)}</div>
+              </div>
+            ) : null}
+          </div>
+
+          {pinned ? (
+            <>
+              <div className="mt-6 grid gap-3 md:grid-cols-4">
+                <div className="rounded-2xl border border-border bg-white/4 p-4">
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/45">Alpha Strength</div>
+                  <div className="mt-2 text-2xl font-bold">{pinned.alpha_score.toFixed(0)}</div>
+                </div>
+                <div className="rounded-2xl border border-border bg-white/4 p-4">
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/45">Price Move</div>
+                  <div className="mt-2 text-2xl font-bold">{formatPercent(pinned.price_change_pct)}</div>
+                </div>
+                <div className="rounded-2xl border border-border bg-white/4 p-4">
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/45">Valuation View</div>
+                  <div className="mt-2 text-2xl font-bold">{pinned.valuation_view}</div>
+                </div>
+                <div className="rounded-2xl border border-border bg-white/4 p-4">
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/45">Risk</div>
+                  <div className="mt-2 text-2xl font-bold">{pinned.risk_level}</div>
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/5 p-5">
+                  <div className="text-xs uppercase tracking-[0.22em] text-emerald-100/70">
+                    Why It Looks Valuable
+                  </div>
+                  <div className="mt-3 space-y-3 text-sm leading-7 text-emerald-50">
+                    {pinned.reasons.map((reason) => (
+                      <div key={reason}>{reason}</div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-amber-300/15 bg-amber-300/5 p-5">
+                  <div className="text-xs uppercase tracking-[0.22em] text-amber-100/70">
+                    What Could Go Wrong
+                  </div>
+                  <div className="mt-3 space-y-3 text-sm leading-7 text-amber-50">
+                    {pinned.risks.map((risk) => (
+                      <div key={risk}>{risk}</div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  href={`/stocks/${encodeURIComponent(pinned.symbol)}`}
+                  className="primary-cta"
+                >
+                  Open {pinned.symbol} Analysis
+                </Link>
+                <Link
+                  href={`/stocks/${encodeURIComponent(pinned.symbol)}/reasoning`}
+                  className="secondary-cta"
+                >
+                  Read Reasoning
+                </Link>
+              </div>
+            </>
+          ) : null}
         </Card>
-      ) : null}
+
+        <div className="space-y-4">
+          <Card>
+            <div className="text-xs uppercase tracking-[0.28em] text-white/50">What Is Happening Now</div>
+            <div className="mt-4 space-y-4 text-sm leading-7 text-textSecondary">
+              <div>
+                <span className="font-semibold text-text">Breadth:</span> {pulse.breadth_view}
+              </div>
+              <div>
+                <span className="font-semibold text-text">Risk Pressure:</span> {pulse.risk_view}
+              </div>
+              <div>
+                <span className="font-semibold text-text">Setup Leadership:</span> {pulse.leadership_view}
+              </div>
+            </div>
+          </Card>
+
+          <Card>
+            <div className="text-xs uppercase tracking-[0.28em] text-white/50">Evidence Stack</div>
+            <div className="mt-4 space-y-3 text-sm leading-7 text-textSecondary">
+              {pulse.evidence.map((item) => (
+                <div key={item}>{item}</div>
+              ))}
+            </div>
+          </Card>
+
+          {alerts.length > 0 ? (
+            <Card>
+              <div className="text-xs uppercase tracking-[0.28em] text-white/50">Risk Alert</div>
+              <div className="mt-3 text-lg font-semibold">
+                {alerts.length} alert{alerts.length === 1 ? "" : "s"} need review
+              </div>
+              <div className="mt-3 text-sm leading-7 text-textSecondary">
+                {alerts[0].message || alerts[0].reason || "Latest snapshot flagged a risk change."}
+              </div>
+            </Card>
+          ) : null}
+        </div>
+      </div>
+
+      <Card>
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <div className="text-xs uppercase tracking-[0.28em] text-white/50">Next Best Names</div>
+            <h2 className="mt-2 text-2xl font-bold">Runner-up valuable stocks</h2>
+          </div>
+          <Link href="/stocks" className="secondary-cta">
+            Explore All Stocks
+          </Link>
+        </div>
+
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {runnerUps.map((candidate) => (
+            <div key={candidate.symbol} className="rounded-2xl border border-border bg-white/4 p-5">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="text-lg font-bold">{candidate.symbol}</div>
+                  <div className="mt-1 text-xs uppercase tracking-[0.22em] text-white/45">
+                    {scoreTone(candidate.score)}
+                  </div>
+                </div>
+                <div className="rounded-full border border-white/10 px-3 py-1 text-sm font-semibold text-white/80">
+                  {candidate.score.toFixed(1)}
+                </div>
+              </div>
+
+              <div className="mt-4 text-sm leading-7 text-textSecondary">
+                {candidate.reasons[0]}
+              </div>
+
+              <div className="mt-4 text-xs uppercase tracking-[0.18em] text-white/45">
+                {metricLabel(candidate)}
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-2 text-xs">
+                <span className="rounded-full bg-white/6 px-3 py-1 text-white/70">
+                  risk {candidate.risk_level}
+                </span>
+                <span className="rounded-full bg-white/6 px-3 py-1 text-white/70">
+                  valuation {candidate.valuation_view}
+                </span>
+                <span className="rounded-full bg-white/6 px-3 py-1 text-white/70">
+                  recent {formatPercent(candidate.recent_change_pct)}
+                </span>
+              </div>
+
+              <div className="mt-5">
+                <Link
+                  href={`/stocks/${encodeURIComponent(candidate.symbol)}`}
+                  className="secondary-cta"
+                >
+                  Review {candidate.symbol}
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
 
       <div className="flex flex-wrap gap-3">
         <Link href="/alpha-lab" className="secondary-cta">
           View Alpha Lab
-        </Link>
-        <Link href="/stocks" className="secondary-cta">
-          Check Top Stocks
         </Link>
         <form method="post" action="/api/run-alpha" className="m-0">
           <button type="submit" className="primary-cta">

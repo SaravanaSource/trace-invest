@@ -50,6 +50,15 @@ export async function getMarketSummary() {
   }
 }
 
+export async function getMarketPulse() {
+  if (typeof window !== "undefined") {
+    return browserJson("/api/market/pulse");
+  }
+
+  const local = await import("./local-data");
+  return local.getMarketPulseLocal();
+}
+
 export async function getLatestSnapshot() {
   if (typeof window !== "undefined") {
     return browserJson("/api/snapshots/latest");
